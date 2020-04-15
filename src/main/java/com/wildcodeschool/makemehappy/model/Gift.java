@@ -2,7 +2,7 @@ package com.wildcodeschool.makemehappy.model;
 
 public class Gift {
 
-    private  String nameGift;
+    private String nameGift;
     private int price;
     private int note;
     private String urlDealer;
@@ -19,17 +19,7 @@ public class Gift {
         this.description = description;
     }
 
-    public Gift() {
-
-    }
-
-    public Gift(String nameGift,int price, int note) {
-        this.nameGift = nameGift;
-        this.price = price;
-        this.note = note;
-    }
-
-
+    public Gift() {}
 
     public String getNameGift() {
 
