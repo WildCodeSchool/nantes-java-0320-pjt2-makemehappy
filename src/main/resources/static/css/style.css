@@ -1,0 +1,135 @@
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START VARIABLE DECLARATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+:root {
+
+    /*
+    *   RAPPEL
+    *   ``````
+    *   Pour déclarer une variable css:
+    *   --endroit-élément-propriété: valeur;
+    *
+    *   Pour utilisation d'une variable :
+    *   sélecteur {
+    *       propriété: var(nomDeLaVariable);
+    *   }
+    */
+
+    /****** the size ******/
+
+
+    /****** the colors ******/
+    --generality-color-font: #002962;
+    --generality-color-first: #007AC3;
+    --generality-color-background: #FFFFFF;
+    --generality-color-second: #FDBC2D;
+    --generality-color-third: #F1502F;
+
+    /****** the border ******/
+
+
+    /****** the text ******/
+
+
+    /****** the box ******/
+
+
+    /****** Paddings ******/
+
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END VARIABLE DECLARATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START MOBILE VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/* ----------   START OF GENERALITY  ------------------ */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* ----------   END OF GENERALITY  ------------------ */
+/* ----------   START OF INDEX  ------------------ */
+/*START SECTION 1*/
+
+/*END SECTION 1*/
+/*START SECTION 2*/
+
+/*END SECTION 2*/
+/* ----------   END OF INDEX  ------------------ */
+/* ----------   START OF DASHBOARD  ------------------ */
+/*START SECTION 1*/
+
+/*END SECTION 1*/
+/*START SECTION 2*/
+
+/*END SECTION 2*/
+/* ----------   END OF DASHBOARD  ------------------ */
+/* ----------   START OF DASHBOARD-EMPTY  ------------------ */
+/*START SECTION 1*/
+
+/*END SECTION 1*/
+/*START SECTION 2*/
+
+/*END SECTION 2*/
+/* ----------   END OF DASHBOARD-EMPTY  ------------------ */
+/* ----------   START OF PAGE  ------------------ */
+/*START SECTION 1*/
+
+/*END SECTION 1*/
+/*START SECTION 2*/
+
+/*END SECTION 2*/
+/* ----------   END OF PAGE  ------------------ */
+/* ----------   START OF PAGE  ------------------ */
+/*START SECTION 1*/
+
+/*END SECTION 1*/
+/*START SECTION 2*/
+
+/*END SECTION 2*/
+/* ----------   END OF PAGE  ------------------ */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END MOBILE VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START DESKTOP VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+@media only screen and (min-width: 900px) {
+
+    /* ----------   START OF GENERALITY  ------------------ */
+
+    /* ----------   END OF GENERALITY  ------------------ */
+    /* ----------   START OF INDEX  ------------------ */
+    /*START SECTION 1*/
+
+    /*END SECTION 1*/
+    /*START SECTION 2*/
+
+    /*END SECTION 2*/
+    /* ----------   END OF INDEX  ------------------ */
+    /* ----------   START OF DASHBOARD  ------------------ */
+    /*START SECTION 1*/
+
+    /*END SECTION 1*/
+    /*START SECTION 2*/
+
+    /*END SECTION 2*/
+    /* ----------   END OF DASHBOARD  ------------------ */
+    /* ----------   START OF DASHBOARD-EMPTY  ------------------ */
+    /*START SECTION 1*/
+
+    /*END SECTION 1*/
+    /*START SECTION 2*/
+
+    /*END SECTION 2*/
+    /* ----------   END OF DASHBOARD-EMPTY  ------------------ */
+    /* ----------   START OF PAGE  ------------------ */
+    /*START SECTION 1*/
+
+    /*END SECTION 1*/
+    /*START SECTION 2*/
+
+    /*END SECTION 2*/
+    /* ----------   END OF PAGE  ------------------ */
+    /* ----------   START OF PAGE  ------------------ */
+    /*START SECTION 1*/
+
+    /*END SECTION 1*/
+    /*START SECTION 2*/
+
+    /*END SECTION 2*/
+    /* ----------   END OF PAGE  ------------------ */
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END DESKTOP VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
