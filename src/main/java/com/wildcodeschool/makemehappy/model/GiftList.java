@@ -1,4 +1,4 @@
-package model;
+package com.wildcodeschool.makemehappy.model;
 
 import java.util.Date;
 
