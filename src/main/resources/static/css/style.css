@@ -135,6 +135,23 @@
 }
 /*-----------------END SECTION OF GIFT-LIST-----------------*/
 /* ----------   START OF GIFT CREATE  ------------------ */
+.gift-list-logo-avatar-img-logo {
+    background-image: url("/image/logo-genie-130*130.png");
+    width: var(--mobile-logo_xl-width);
+    height: var(--mobile-logo_xl-height);
+    border-radius: var(--mobile-logo-border_radius);
+    margin: 1rem auto;
+}
+.gift-list-h1 {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+.gift-list-h2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
 .gift-create-image img {
     max-width: 26.5em;
     border-radius: 10px;
@@ -160,16 +177,14 @@
 
 .gift-create-block {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 26.5em;
+    justify-content: space-around;
+    width: 20em;
     padding-top: 0;
 }
 
 .gift-create-checkbox {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 20em;
 }
 
