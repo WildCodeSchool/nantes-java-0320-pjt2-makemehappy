@@ -111,7 +111,7 @@ h2 {
     padding-top: 1rem;
 }
 
-img {
+.gift-create-image img {
     max-width: 26.5em;
     border-radius: 10px;
     border: none;
@@ -168,11 +168,12 @@ form div input {
 .gift-create-bouton input {
     width: 8em;
     height: 3em;
-    border-radius: 10px;
-    border: none;
-    box-shadow: 3px 5px 3px black;
+    border-radius: var(--generality-button-border_radius);
+    border: var(--generality-button-border);
+    box-shadow: var(--generality-button-box_shadow);
     color: aliceblue;
     background-color: cadetblue;
+
 }
 
 .gift-create-nameCadeau input{
