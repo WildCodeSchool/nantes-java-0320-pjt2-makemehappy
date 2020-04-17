@@ -88,23 +88,6 @@
 /* ----------   END OF INDEX  ------------------ */
 /* ----------   START OF DASHBOARD  ------------------ */
 /*START SECTION 1*/
-.pink {
-    border: 1px solid rgba(0,0,0,1.125);
-}
-
-.red {
-    text-align: center;
-}
-
-a:hover{
-    text-decoration: none;
-}
-
-
-a:link {
-    text-decoration: none;
-
-}
 
 /*END SECTION 1*/
 /*START SECTION 2*/
@@ -155,7 +138,37 @@ a:link {
 
     /*END SECTION 1*/
     /*START SECTION 2*/
+    header{
+        justify-content: center;
+        display: flex;
+        color: var(--generality-color-first);
+    }
 
+    .flex1 {
+        margin-bottom: 3em;
+    }
+
+    .red {
+        text-align: center;
+    }
+
+    a:hover{
+        text-decoration: none;
+    }
+
+
+    a:link {
+        text-decoration: none;
+
+    }
+
+    .btn-toolbar1{
+        justify-content: flex-end;
+    }
+
+    .btn-group+.btn-group {
+        margin-left: 15px;
+    }
     /*END SECTION 2*/
     /* ----------   END OF DASHBOARD  ------------------ */
     /* ----------   START OF DASHBOARD-EMPTY  ------------------ */
