@@ -88,6 +88,23 @@
 /* ----------   END OF INDEX  ------------------ */
 /* ----------   START OF DASHBOARD  ------------------ */
 /*START SECTION 1*/
+.pink {
+    border: 1px solid rgba(0,0,0,1.125);
+}
+
+.red {
+    text-align: center;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+
+a:link {
+    text-decoration: none;
+
+}
 
 /*END SECTION 1*/
 /*START SECTION 2*/
