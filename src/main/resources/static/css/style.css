@@ -276,13 +276,13 @@
     padding: var(--mobile-padding-logo_avatar);
 }
 .fragment-mobile-logo-avatar-img-logo {
-    background-image: url("../../static/image/logo-genie-65*65.png");
+    background-image: url("/image/logo-genie-65*65.png");
     width: var(--mobile-logo_xs-width);
     height: var(--mobile-logo_xs-height);
     border-radius: var(--mobile-logo-border_radius);
 }
 .fragment-mobile-logo-avatar-img-avatar {
-    background-image: url("../../static/image/girl.svg");
+    background-image: url("/image/girl.svg");
     width: var(--mobile-avatar-width);
     height: var(--mobile-avatar-height);
     border-radius: var(--mobile-avatar-border_radius);
