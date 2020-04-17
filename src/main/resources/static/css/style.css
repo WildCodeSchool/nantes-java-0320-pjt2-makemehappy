@@ -103,13 +103,6 @@
 /*END SECTION 2*/
 /* ----------   END OF DASHBOARD-EMPTY  ------------------ */
 /* ----------   START OF GIFT CREATE  ------------------ */
-h1, h2 {
-    text-align: center;
-}
-
-h2 {
-    padding-top: 1rem;
-}
 
 .gift-create-image img {
     max-width: 26.5em;
@@ -118,7 +111,7 @@ h2 {
     box-shadow: 3px 5px 3px black;
 }
 
-form {
+.gift-create-form form {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -126,12 +119,12 @@ form {
     padding-top: 4em;
 }
 
-form div {
+.gift-create-form form div {
     padding-top: 2em;
 }
 
-form div input {
-    height: 2em;
+.gift-create-form form div input {
+    height: 3em;
 }
 
 .gift-create-block {
@@ -168,12 +161,12 @@ form div input {
 .gift-create-bouton input {
     width: 8em;
     height: 3em;
-    border-radius: var(--generality-button-border_radius);
+    background-color: var(--generality-color-first);
+    color: var(--generality-color-font_second);
     border: var(--generality-button-border);
+    padding: var(--generality-padding-button);
+    border-radius: var(--generality-button-border_radius);
     box-shadow: var(--generality-button-box_shadow);
-    color: aliceblue;
-    background-color: cadetblue;
-
 }
 
 .gift-create-nameCadeau input{
