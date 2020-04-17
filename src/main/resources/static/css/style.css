@@ -111,8 +111,30 @@
 
 /*END SECTION 2*/
 /* ----------   END OF DASHBOARD-EMPTY  ------------------ */
-/* ----------   START OF GIFT CREATE  ------------------ */
+/* ----------   START OF GIFT-LIST  ------------------ */
+/*START SECTION 1*/
+.giftlist-h2 {
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+    color: #002962;
+    text-align: center;
+}
 
+.container1, .container2 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.giftlist-img {
+    text-align: center;
+    border-radius: 2rem;
+    height: 200px;
+    width: 200px;
+}
+/*-----------------END SECTION OF GIFT-LIST-----------------*/
+/* ----------   START OF GIFT CREATE  ------------------ */
 .gift-create-image img {
     max-width: 26.5em;
     border-radius: 10px;
