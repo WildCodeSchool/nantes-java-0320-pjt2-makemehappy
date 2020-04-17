@@ -14,25 +14,31 @@
     */
 
     /****** the size ******/
-
+    --generality-size-icon: 1rem;
 
     /****** the colors ******/
-    --generality-color-font: #002962;
+    --generality-color-font_primary: #002962;
+    --generality-color-font_second: #FFFFFF;
     --generality-color-first: #007AC3;
     --generality-color-background: #FFFFFF;
     --generality-color-second: #FDBC2D;
     --generality-color-third: #F1502F;
 
     /****** the border ******/
+    --generality-button-border: none;
+    --generality-button-border_radius: 5px;
+    --generality-button-box_shadow: 0px 1px 3px black;
 
 
     /****** the text ******/
+    --generality-text-font_size: 0.9rem;
 
 
     /****** the box ******/
 
 
     /****** Paddings ******/
+    --generality-padding-button: 0.2rem 0.5rem;
 
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END VARIABLE DECLARATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -41,8 +47,36 @@
 *{
     margin: 0;
     padding: 0;
+    color: var(--generality-color-font_primary);
 }
 
+.button{
+    margin-left: 30px;
+    background-color: var(--generality-color-first);
+    color: var(--generality-color-font_second);
+    border: var(--generality-button-border);
+    padding: var(--generality-padding-button);
+    border-radius: var(--generality-button-border_radius);
+    box-shadow: var(--generality-button-box_shadow);
+}
+
+.fas, .far {
+    font-size: var(--generality-size-icon);
+    color: var(--generality-color-first);
+}
+
+#user-delete {
+    font-size: var(--generality-size-icon);
+    color: var(--generality-color-third);
+}
+
+.color-title {
+    color: var(--generality-color-first);
+}
+
+.color-icon-primary {
+    color: var(--generality-color-second);
+}
 /* ----------   END OF GENERALITY  ------------------ */
 /* ----------   START OF INDEX  ------------------ */
 /*START SECTION 1*/
