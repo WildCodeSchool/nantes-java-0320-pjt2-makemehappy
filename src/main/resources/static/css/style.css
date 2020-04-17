@@ -168,11 +168,12 @@ form div input {
 .gift-create-bouton input {
     width: 8em;
     height: 3em;
-    border-radius: 10px;
-    border: none;
-    box-shadow: 3px 5px 3px black;
-    color: aliceblue;
-    background-color: cadetblue;
+    background-color: var(--generality-color-first);
+    color: var(--generality-color-font_second);
+    border: var(--generality-button-border);
+    padding: var(--generality-padding-button);
+    border-radius: var(--generality-button-border_radius);
+    box-shadow: var(--generality-button-box_shadow);
 }
 
 .gift-create-nameCadeau input{
@@ -226,13 +227,58 @@ form div input {
 }
 
 /* ----------   END OF GIFT CREATE  ------------------ */
-/* ----------   START OF PAGE  ------------------ */
-/*START SECTION 1*/
+/* ----------   START OF LIST CREATE  ------------------ */
 
-/*END SECTION 1*/
-/*START SECTION 2*/
+.list-create-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 4em;
+}
 
-/*END SECTION 2*/
+.list-create-date input {
+    width: 35em;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 3px 5px 3px gainsboro;
+}
+
+.list-create-name input {
+    width: 35em;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 3px 5px 3px gainsboro;
+}
+
+.list-create-description textarea {
+    width: 35em;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 3px 5px 3px gainsboro;
+}
+
+.list-create-button input {
+    background-color: var(--generality-color-first);
+    color: var(--generality-color-font_second);
+    border: var(--generality-button-border);
+    padding: var(--generality-padding-button);
+    border-radius: var(--generality-button-border_radius);
+    box-shadow: var(--generality-button-box_shadow);
+    width: 8em;
+}
+
+.list-create-name input:hover {
+    background-color: aliceblue;
+}
+
+.list-create-date input:hover {
+    background-color: aliceblue;
+}
+
+.list-create-description textarea:hover {
+    background-color: aliceblue;
+}
 /* ----------   END OF PAGE  ------------------ */
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END MOBILE VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START DESKTOP VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
