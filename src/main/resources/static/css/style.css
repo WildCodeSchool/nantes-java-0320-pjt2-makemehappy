@@ -90,12 +90,10 @@ form {
     justify-content: space-around;
     align-items: center;
     padding-top: 4em;
-
 }
 
 form div {
     padding-top: 2em;
-
 }
 
 form div input {
@@ -147,7 +145,6 @@ form div input {
     border-radius: 10px;
     border: none;
     box-shadow: 3px 5px 3px gainsboro;
-
 }
 
 .gift-create-price input {
