@@ -8,5 +8,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class GiftController {
 
+    @GetMapping("/test")
+    public String showTest() {
+        return "gift-create";
+    }
+
 
 }
