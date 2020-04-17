@@ -15,6 +15,12 @@
 
     /****** the size ******/
     --generality-size-icon: 1rem;
+    --mobile-logo_xs-width: 65px;
+    --mobile-logo_xs-height: 65px;
+    --mobile-logo_xl-width: 130px;
+    --mobile-logo_xl-height: 130px;
+    --mobile-avatar-width: 65px;
+    --mobile-avatar-height: 65px;
 
     /****** the colors ******/
     --generality-color-font_primary: #002962;
@@ -28,6 +34,8 @@
     --generality-button-border: none;
     --generality-button-border_radius: 5px;
     --generality-button-box_shadow: 0px 1px 3px black;
+    --mobile-logo-border_radius: 50%;
+    --mobile-avatar-border_radius: 50%;
 
 
     /****** the text ******/
@@ -39,6 +47,7 @@
 
     /****** Paddings ******/
     --generality-padding-button: 0.2rem 0.5rem;
+    --mobile-padding-logo_avatar: 1rem;
 
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END VARIABLE DECLARATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -50,7 +59,7 @@
     color: var(--generality-color-font_primary);
 }
 
-.button{
+.button {
     margin-left: 30px;
     background-color: var(--generality-color-first);
     color: var(--generality-color-font_second);
@@ -103,22 +112,15 @@
 /*END SECTION 2*/
 /* ----------   END OF DASHBOARD-EMPTY  ------------------ */
 /* ----------   START OF GIFT CREATE  ------------------ */
-h1, h2 {
-    text-align: center;
-}
 
-h2 {
-    padding-top: 1rem;
-}
-
-img {
+.gift-create-image img {
     max-width: 26.5em;
     border-radius: 10px;
     border: none;
     box-shadow: 3px 5px 3px black;
 }
 
-form {
+.gift-create-form form {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -126,12 +128,12 @@ form {
     padding-top: 4em;
 }
 
-form div {
+.gift-create-form form div {
     padding-top: 2em;
 }
 
-form div input {
-    height: 2em;
+.gift-create-form form div input {
+    height: 3em;
 }
 
 .gift-create-block {
@@ -227,6 +229,7 @@ form div input {
 }
 
 /* ----------   END OF GIFT CREATE  ------------------ */
+
 /* ----------   START OF LIST CREATE  ------------------ */
 
 .list-create-form {
@@ -278,6 +281,27 @@ form div input {
 
 .list-create-description textarea:hover {
     background-color: aliceblue;
+}
+/* ----------   START OF FRAGMENT MOBILE LOGO AVATAR  ------------------ */
+.fragment-mobile-logo-avatar-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.fragment-mobile-logo-header {
+    padding: var(--mobile-padding-logo_avatar);
+}
+.fragment-mobile-logo-avatar-img-logo {
+    background-image: url("../../static/image/logo-genie-65*65.png");
+    width: var(--mobile-logo_xs-width);
+    height: var(--mobile-logo_xs-height);
+    border-radius: var(--mobile-logo-border_radius);
+}
+.fragment-mobile-logo-avatar-img-avatar {
+    background-image: url("../../static/image/girl.svg");
+    width: var(--mobile-avatar-width);
+    height: var(--mobile-avatar-height);
+    border-radius: var(--mobile-avatar-border_radius);
 }
 /* ----------   END OF PAGE  ------------------ */
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END MOBILE VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
