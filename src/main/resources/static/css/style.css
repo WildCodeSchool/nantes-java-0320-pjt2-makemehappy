@@ -142,6 +142,8 @@
         justify-content: center;
         display: flex;
         color: var(--generality-color-first);
+        margin-top: 3em;
+        margin-bottom: 3em;
     }
 
     .flex1 {
