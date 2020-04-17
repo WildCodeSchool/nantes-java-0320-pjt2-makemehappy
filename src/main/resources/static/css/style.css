@@ -14,25 +14,40 @@
     */
 
     /****** the size ******/
-
+    --generality-size-icon: 1rem;
+    --mobile-logo_xs-width: 65px;
+    --mobile-logo_xs-height: 65px;
+    --mobile-logo_xl-width: 130px;
+    --mobile-logo_xl-height: 130px;
+    --mobile-avatar-width: 65px;
+    --mobile-avatar-height: 65px;
 
     /****** the colors ******/
-    --generality-color-font: #002962;
+    --generality-color-font_primary: #002962;
+    --generality-color-font_second: #FFFFFF;
     --generality-color-first: #007AC3;
     --generality-color-background: #FFFFFF;
     --generality-color-second: #FDBC2D;
     --generality-color-third: #F1502F;
 
     /****** the border ******/
+    --generality-button-border: none;
+    --generality-button-border_radius: 5px;
+    --generality-button-box_shadow: 0px 1px 3px black;
+    --mobile-logo-border_radius: 50%;
+    --mobile-avatar-border_radius: 50%;
 
 
     /****** the text ******/
+    --generality-text-font_size: 0.9rem;
 
 
     /****** the box ******/
 
 
     /****** Paddings ******/
+    --generality-padding-button: 0.2rem 0.5rem;
+    --mobile-padding-logo_avatar: 1rem;
 
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END VARIABLE DECLARATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -41,9 +56,36 @@
 *{
     margin: 0;
     padding: 0;
-
+    color: var(--generality-color-font_primary);
 }
 
+.button {
+    margin-left: 30px;
+    background-color: var(--generality-color-first);
+    color: var(--generality-color-font_second);
+    border: var(--generality-button-border);
+    padding: var(--generality-padding-button);
+    border-radius: var(--generality-button-border_radius);
+    box-shadow: var(--generality-button-box_shadow);
+}
+
+.fas, .far {
+    font-size: var(--generality-size-icon);
+    color: var(--generality-color-first);
+}
+
+#user-delete {
+    font-size: var(--generality-size-icon);
+    color: var(--generality-color-third);
+}
+
+.color-title {
+    color: var(--generality-color-first);
+}
+
+.color-icon-primary {
+    color: var(--generality-color-second);
+}
 /* ----------   END OF GENERALITY  ------------------ */
 /* ----------   START OF INDEX  ------------------ */
 /*START SECTION 1*/
@@ -91,24 +133,148 @@
     height: 200px;
     width: 200px;
 }
+/* ----------   START OF GIFT CREATE  ------------------ */
+.gift-create-image img {
+    max-width: 26.5em;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 3px 5px 3px black;
+}
 
+.gift-create-form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 4em;
+}
 
-/*END SECTION 1*/
-/*START SECTION 2*/
+.gift-create-form form div {
+    padding-top: 2em;
+}
 
-/*END SECTION 2*/
-/* ----------   END OF PAGE  ------------------ */
-/* ----------   START OF PAGE  ------------------ */
-/*START SECTION 1*/
+.gift-create-form form div input {
+    height: 3em;
+}
 
-/*END SECTION 1*/
-/*START SECTION 2*/
+.gift-create-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 26.5em;
+    padding-top: 0;
+}
 
-/*END SECTION 2*/
+.gift-create-checkbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 20em;
+}
+
+.gift-create-block-bouton {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 26.5em;
+    padding-top: 0;
+}
+
+.gift-create-bouton {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 10em;
+    align-items: center;
+}
+
+.gift-create-bouton input {
+    width: 8em;
+    height: 3em;
+    background-color: var(--generality-color-first);
+    color: var(--generality-color-font_second);
+    border: var(--generality-button-border);
+    padding: var(--generality-padding-button);
+    border-radius: var(--generality-button-border_radius);
+    box-shadow: var(--generality-button-box_shadow);
+}
+
+.gift-create-nameCadeau input{
+    border-radius: 10px;
+    border: none;
+    box-shadow: 3px 5px 3px gainsboro;
+}
+
+.gift-create-price input {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 3px 5px 3px gainsboro;
+}
+
+.gift-create-urlDealer input {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 3px 5px 3px gainsboro;
+}
+
+.gift-create-urlPicture input {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 3px 5px 3px gainsboro;
+}
+
+.gift-create-message textarea {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 3px 5px 3px gainsboro;
+}
+
+.gift-create-message textarea:hover {
+    background-color: aliceblue;
+}
+
+.gift-create-nameCadeau input:hover {
+    background-color: aliceblue;
+}
+
+.gift-create-price input:hover {
+    background-color: aliceblue;
+}
+
+.gift-create-urlDealer input:hover {
+    background-color: aliceblue;
+}
+
+.gift-create-urlPicture input:hover {
+    background-color: aliceblue;
+}
+
+/* ----------   END OF GIFT CREATE  ------------------ */
+/* ----------   START OF FRAGMENT MOBILE LOGO AVATAR  ------------------ */
+.fragment-mobile-logo-avatar-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+.fragment-mobile-logo-header {
+    padding: var(--mobile-padding-logo_avatar);
+}
+.fragment-mobile-logo-avatar-img-logo {
+    background-image: url("../../static/image/logo-genie-65*65.png");
+    width: var(--mobile-logo_xs-width);
+    height: var(--mobile-logo_xs-height);
+    border-radius: var(--mobile-logo-border_radius);
+}
+.fragment-mobile-logo-avatar-img-avatar {
+    background-image: url("../../static/image/girl.svg");
+    width: var(--mobile-avatar-width);
+    height: var(--mobile-avatar-height);
+    border-radius: var(--mobile-avatar-border_radius);
+}
 /* ----------   END OF PAGE  ------------------ */
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END MOBILE VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START DESKTOP VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 768px) {
 
     /* ----------   START OF GENERALITY  ------------------ */
 
