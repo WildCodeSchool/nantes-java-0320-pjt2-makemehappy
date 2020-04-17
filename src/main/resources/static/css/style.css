@@ -71,7 +71,7 @@
 /* ----------   END OF DASHBOARD-EMPTY  ------------------ */
 /* ----------   START OF GIFT-LIST  ------------------ */
 /*START SECTION 1*/
-h2 {
+.giftlist-h2 {
     margin-top: 6rem;
     margin-bottom: 3rem;
     color: #002962;
@@ -85,7 +85,7 @@ h2 {
     text-align: center;
 }
 
-img {
+.giftlist-img {
     text-align: center;
     border-radius: 2rem;
     height: 200px;
