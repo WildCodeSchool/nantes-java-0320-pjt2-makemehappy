@@ -42,7 +42,7 @@
 
     /****** the text ******/
     --generality-text-font_size: 1.5rem;
-
+    --generality-title_xl-font_size: 2.2rem;
 
     /****** the box ******/
 
@@ -50,6 +50,7 @@
     /****** Paddings ******/
     --generality-padding-button: 0.2rem 0.5rem;
     --mobile-padding-logo_avatar: 1rem;
+    --mobile-padding-logo_title_xl: 1rem;
 
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END VARIABLE DECLARATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -135,7 +136,6 @@
 /*END SECTION 2*/
 /* ----------   END OF DASHBOARD-EMPTY  ------------------ */
 /* ----------   START OF GIFT-LIST  ------------------ */
-/*START SECTION 1*/
 .giftlist-h2 {
     margin-top: 6rem;
     margin-bottom: 3rem;
@@ -181,7 +181,6 @@
     border: none;
     box-shadow: 3px 5px 3px black;
 }
-
 .gift-create-form form {
     display: flex;
     flex-direction: column;
@@ -189,28 +188,23 @@
     align-items: center;
     padding-top: 4em;
 }
-
 .gift-create-form form div {
     padding-top: 2em;
 }
-
 .gift-create-form form div input {
     height: 3em;
 }
-
 .gift-create-block {
     display: flex;
     justify-content: space-around;
     width: 20em;
     padding-top: 0;
 }
-
 .gift-create-checkbox {
     display: flex;
     justify-content: space-evenly;
     width: 20em;
 }
-
 .gift-create-block-bouton {
     display: flex;
     flex-direction: row;
@@ -218,7 +212,6 @@
     width: 26.5em;
     padding-top: 0;
 }
-
 .gift-create-bouton {
     display: flex;
     flex-direction: row;
@@ -226,7 +219,6 @@
     width: 10em;
     align-items: center;
 }
-
 .gift-create-bouton input {
     width: 8em;
     height: 3em;
@@ -237,57 +229,46 @@
     border-radius: var(--generality-button-border_radius);
     box-shadow: var(--generality-button-box_shadow);
 }
-
 .gift-create-nameCadeau input{
     border-radius: 10px;
     border: none;
     box-shadow: 3px 5px 3px gainsboro;
 }
-
 .gift-create-price input {
     border-radius: 10px;
     border: none;
     box-shadow: 3px 5px 3px gainsboro;
 }
-
 .gift-create-urlDealer input {
     border-radius: 10px;
     border: none;
     box-shadow: 3px 5px 3px gainsboro;
 }
-
 .gift-create-urlPicture input {
     border-radius: 10px;
     border: none;
     box-shadow: 3px 5px 3px gainsboro;
 }
-
 .gift-create-message textarea {
     border-radius: 10px;
     border: none;
     box-shadow: 3px 5px 3px gainsboro;
 }
-
 .gift-create-message textarea:hover {
     background-color: aliceblue;
 }
-
 .gift-create-nameCadeau input:hover {
     background-color: aliceblue;
 }
-
 .gift-create-price input:hover {
     background-color: aliceblue;
 }
-
 .gift-create-urlDealer input:hover {
     background-color: aliceblue;
 }
-
 .gift-create-urlPicture input:hover {
     background-color: aliceblue;
 }
-
 /* ----------   END OF GIFT CREATE  ------------------ */
 /* ----------   START OF FRAGMENT MOBILE LOGO AVATAR  ------------------ */
 .fragment-mobile-logo-avatar-header {
@@ -310,7 +291,24 @@
     height: var(--mobile-avatar-height);
     border-radius: var(--mobile-avatar-border_radius);
 }
-/* ----------   END OF PAGE  ------------------ */
+/* ----------   END OF FRAGMENT MOBILE LOGO AVATAR  ------------------ */
+/* ----------   START OF FRAGMENT MOBILE LOGO ET TITRE XL  ------------------ */
+.fragment-mobile-logo-title-xl {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: var(--mobile-padding-logo_title_xl);
+}
+.fragment-mobile-logo-xl {
+    background-image: url("/image/logo-genie-130*130.png");
+    width: var(--mobile-logo_xl-width);
+    height: var(--mobile-logo_xl-height);
+}
+.fragment-mobile-title-xl {
+    font-size: var(--generality-title_xl-font_size);
+}
+/* ----------   END OF FRAGMENT MOBILE LOGO ET TITRE XL  ------------------ */
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END MOBILE VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START DESKTOP VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 @media only screen and (min-width: 768px) {
