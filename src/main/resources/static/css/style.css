@@ -38,6 +38,8 @@
     --generality-button-box_shadow: 0px 1px 3px black;
     --mobile-logo-border_radius: 50%;
     --mobile-avatar-border_radius: 50%;
+    --generality-input-border_radius: 15px;
+    --generality-input-border: 2px solid gray;
 
 
     /****** the text ******/
@@ -47,10 +49,12 @@
     /****** the box ******/
 
 
-    /****** Paddings ******/
+    /****** Padding/Margin ******/
     --generality-padding-button: 0.2rem 0.5rem;
     --mobile-padding-logo_avatar: 1rem;
     --mobile-padding-logo_title_xl: 1rem;
+    --generality-paddind_left-input: 1rem;
+    --generality-margin_top-input: 2vh;
 
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END VARIABLE DECLARATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -63,7 +67,6 @@
     font-size: var(--generality-text-font_size);
     font-family: 'Roboto', sans-serif;
 }
-
 .button {
     display: block;
     background-color: var(--generality-color-first);
@@ -80,23 +83,40 @@
     margin-top: 5vh;
     font-weight: bold;
 }
-
+.generality-input {
+    border-radius: var(--generality-input-border_radius);
+    border : var(--generality-input-border);
+    padding-left: var(--generality-paddind_left-input);
+    margin-top: var(--generality-margin_top-input);
+}
 .fas, .far {
     font-size: var(--generality-size-icon);
     color: var(--generality-color-first);
 }
-
 #user-delete {
     font-size: var(--generality-size-icon);
     color: var(--generality-color-third);
 }
-
 .color-title {
     color: var(--generality-color-first);
 }
-
 .color-icon-primary {
     color: var(--generality-color-second);
+}
+.path-error {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 3vh;
+}
+.path-error p {
+    font-size: calc(var(--generality-text-font_size) - 0.5rem);
+    color: gray;
+}
+.path-error a {
+    font-size: calc(var(--generality-text-font_size) - 0.5rem);
+    color: black;
+    font-style: italic;
 }
 /* ----------   END OF GENERALITY  ------------------ */
 /* ----------   START OF HOME PAGE  ------------------ */
@@ -135,6 +155,24 @@
 
 /*END SECTION 2*/
 /* ----------   END OF DASHBOARD-EMPTY  ------------------ */
+/* ----------   START OF CONNECTION  ------------------ */
+.connection-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50vh;
+    margin-top: 10vh;
+    justify-content: center;
+}
+.connection-main p {
+    text-align: center;
+}
+.user-connection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* ----------   END OF CONNECTION  ------------------ */
 /* ----------   START OF GIFT-LIST  ------------------ */
 .giftlist-h2 {
     margin-top: 6rem;

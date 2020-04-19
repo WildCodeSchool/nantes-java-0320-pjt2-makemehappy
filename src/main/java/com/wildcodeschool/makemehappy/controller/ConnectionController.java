@@ -15,12 +15,12 @@ public class ConnectionController {
     @GetMapping("/connection")
     public String showConnectionPage() {
 
-        return "home-page";
+        return "connection";
     }
 
     @GetMapping("/new-profile")
     public String showNewProfilPage() {
 
-        return "home-page";
+        return "new-profile";
     }
 }
