@@ -18,7 +18,7 @@ public class ConnectionController {
         return "home-page";
     }
 
-    @GetMapping("/new-profil")
+    @GetMapping("/new-profile")
     public String showNewProfilPage() {
 
         return "home-page";
