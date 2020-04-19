@@ -17,8 +17,8 @@
     --generality-size-icon: 1rem;
     --mobile-logo_xs-width: 65px;
     --mobile-logo_xs-height: 65px;
-    --mobile-logo_xl-width: 130px;
-    --mobile-logo_xl-height: 130px;
+    --mobile-logo_xl-width: 250px;
+    --mobile-logo_xl-height: 250px;
     --mobile-avatar-width: 65px;
     --mobile-avatar-height: 65px;
     --generality-button-width: 30vw;
@@ -42,7 +42,7 @@
 
     /****** the text ******/
     --generality-text-font_size: 1.5rem;
-    --generality-title_xl-font_size: 2.2rem;
+    --generality-title_xl-font_size: 3rem;
 
     /****** the box ******/
 
@@ -50,7 +50,7 @@
     /****** Paddings ******/
     --generality-padding-button: 0.2rem 0.5rem;
     --mobile-padding-logo_avatar: 1rem;
-    --mobile-padding-logo_title_xl: 1rem;
+    --mobile-padding-logo_title_xl: 5rem;
 
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END VARIABLE DECLARATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -106,7 +106,6 @@
     align-items: center;
     height: 50vh;
     justify-content: center;
-    margin-top: 10vh;
 }
 .home-page-main > div > p {
     text-align: center;
@@ -301,12 +300,13 @@
     padding: var(--mobile-padding-logo_title_xl);
 }
 .fragment-mobile-logo-xl {
-    background-image: url("/image/logo-genie-130*130.png");
+    background-image: url("/image/logo-genie-250*250.png");
     width: var(--mobile-logo_xl-width);
     height: var(--mobile-logo_xl-height);
 }
 .fragment-mobile-title-xl {
     font-size: var(--generality-title_xl-font_size);
+    color: var(--generality-color-first);
 }
 /* ----------   END OF FRAGMENT MOBILE LOGO ET TITRE XL  ------------------ */
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END MOBILE VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
