@@ -21,6 +21,8 @@
     --mobile-logo_xl-height: 130px;
     --mobile-avatar-width: 65px;
     --mobile-avatar-height: 65px;
+    --generality-button-width: 30vw;
+    --generality-button-height: 3vh;
 
     /****** the colors ******/
     --generality-color-font_primary: #002962;
@@ -32,16 +34,15 @@
 
     /****** the border ******/
     --generality-button-border: none;
-    --generality-button-border_radius: 5px;
+    --generality-button-border_radius: 15px;
     --generality-button-box_shadow: 0px 1px 3px black;
     --mobile-logo-border_radius: 50%;
     --mobile-avatar-border_radius: 50%;
 
 
     /****** the text ******/
-    --generality-text-font_size: 0.9rem;
+    --generality-text-font_size: 1.5rem;
     --generality-title_xl-font_size: 2.2rem;
-
 
     /****** the box ******/
 
@@ -59,16 +60,25 @@
     margin: 0;
     padding: 0;
     color: var(--generality-color-font_primary);
+    font-size: var(--generality-text-font_size);
+    font-family: 'Roboto', sans-serif;
 }
 
 .button {
-    margin-left: 30px;
+    display: block;
     background-color: var(--generality-color-first);
     color: var(--generality-color-font_second);
     border: var(--generality-button-border);
     padding: var(--generality-padding-button);
     border-radius: var(--generality-button-border_radius);
     box-shadow: var(--generality-button-box_shadow);
+    width: var(--generality-button-width);
+    height: var(--generality-button-height);
+    text-align: center;
+    line-height: var(--generality-button-height);
+    text-decoration: none;
+    margin-top: 5vh;
+    font-weight: bold;
 }
 
 .fas, .far {
@@ -89,14 +99,26 @@
     color: var(--generality-color-second);
 }
 /* ----------   END OF GENERALITY  ------------------ */
-/* ----------   START OF INDEX  ------------------ */
-/*START SECTION 1*/
-
-/*END SECTION 1*/
-/*START SECTION 2*/
-
-/*END SECTION 2*/
-/* ----------   END OF INDEX  ------------------ */
+/* ----------   START OF HOME PAGE  ------------------ */
+.home-page-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50vh;
+    justify-content: center;
+    margin-top: 10vh;
+}
+.home-page-main > div > p {
+    text-align: center;
+}
+.forgot-password {
+    margin-top: 1vh;
+}
+.forgot-password a {
+    font-style: italic;
+    font-size: calc(var(--generality-text-font_size) - 0.5rem);
+}
+/* ----------   END OF HOME PAGE  ------------------ */
 /* ----------   START OF DASHBOARD  ------------------ */
 /*START SECTION 1*/
 
@@ -114,7 +136,6 @@
 /*END SECTION 2*/
 /* ----------   END OF DASHBOARD-EMPTY  ------------------ */
 /* ----------   START OF GIFT-LIST  ------------------ */
-/*START SECTION 1*/
 .giftlist-h2 {
     margin-top: 6rem;
     margin-bottom: 3rem;
@@ -160,7 +181,6 @@
     border: none;
     box-shadow: 3px 5px 3px black;
 }
-
 .gift-create-form form {
     display: flex;
     flex-direction: column;
@@ -168,28 +188,23 @@
     align-items: center;
     padding-top: 4em;
 }
-
 .gift-create-form form div {
     padding-top: 2em;
 }
-
 .gift-create-form form div input {
     height: 3em;
 }
-
 .gift-create-block {
     display: flex;
     justify-content: space-around;
     width: 20em;
     padding-top: 0;
 }
-
 .gift-create-checkbox {
     display: flex;
     justify-content: space-evenly;
     width: 20em;
 }
-
 .gift-create-block-bouton {
     display: flex;
     flex-direction: row;
@@ -197,7 +212,6 @@
     width: 26.5em;
     padding-top: 0;
 }
-
 .gift-create-bouton {
     display: flex;
     flex-direction: row;
@@ -205,7 +219,6 @@
     width: 10em;
     align-items: center;
 }
-
 .gift-create-bouton input {
     width: 8em;
     height: 3em;
@@ -216,57 +229,46 @@
     border-radius: var(--generality-button-border_radius);
     box-shadow: var(--generality-button-box_shadow);
 }
-
 .gift-create-nameCadeau input{
     border-radius: 10px;
     border: none;
     box-shadow: 3px 5px 3px gainsboro;
 }
-
 .gift-create-price input {
     border-radius: 10px;
     border: none;
     box-shadow: 3px 5px 3px gainsboro;
 }
-
 .gift-create-urlDealer input {
     border-radius: 10px;
     border: none;
     box-shadow: 3px 5px 3px gainsboro;
 }
-
 .gift-create-urlPicture input {
     border-radius: 10px;
     border: none;
     box-shadow: 3px 5px 3px gainsboro;
 }
-
 .gift-create-message textarea {
     border-radius: 10px;
     border: none;
     box-shadow: 3px 5px 3px gainsboro;
 }
-
 .gift-create-message textarea:hover {
     background-color: aliceblue;
 }
-
 .gift-create-nameCadeau input:hover {
     background-color: aliceblue;
 }
-
 .gift-create-price input:hover {
     background-color: aliceblue;
 }
-
 .gift-create-urlDealer input:hover {
     background-color: aliceblue;
 }
-
 .gift-create-urlPicture input:hover {
     background-color: aliceblue;
 }
-
 /* ----------   END OF GIFT CREATE  ------------------ */
 /* ----------   START OF FRAGMENT MOBILE LOGO AVATAR  ------------------ */
 .fragment-mobile-logo-avatar-header {

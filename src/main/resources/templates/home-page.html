@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>home page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/68562b10c3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header th:replace="mobile-title.html :: mobile-logo-title-xl">
+        to replace
+    </header>
+    <div class="home-page-main">
+        <div>
+            <p>Veuillez vous enregistrer <br> ou <br> créer votre compte</p>
+        </div>
+        <div>
+            <a class="button" href="/connection.html">connexion</a>
+        </div>
+        <div class="forgot-password">
+            <a href="#">mot de passe oublié</a>
+        </div>
+        <div>
+            <a class="button" href="/new-profile.html">créer un compte</a>
+        </div>
+    </div>
+</body>
+</html>
