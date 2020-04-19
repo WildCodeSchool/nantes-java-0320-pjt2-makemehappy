@@ -21,6 +21,8 @@
     --mobile-logo_xl-height: 130px;
     --mobile-avatar-width: 65px;
     --mobile-avatar-height: 65px;
+    --generality-button-width: 30vw;
+    --generality-button-height: 3vh;
 
     /****** the colors ******/
     --generality-color-font_primary: #002962;
@@ -32,14 +34,14 @@
 
     /****** the border ******/
     --generality-button-border: none;
-    --generality-button-border_radius: 5px;
+    --generality-button-border_radius: 15px;
     --generality-button-box_shadow: 0px 1px 3px black;
     --mobile-logo-border_radius: 50%;
     --mobile-avatar-border_radius: 50%;
 
 
     /****** the text ******/
-    --generality-text-font_size: 0.9rem;
+    --generality-text-font_size: 1.5rem;
 
 
     /****** the box ******/
@@ -57,16 +59,25 @@
     margin: 0;
     padding: 0;
     color: var(--generality-color-font_primary);
+    font-size: var(--generality-text-font_size);
+    font-family: 'Roboto', sans-serif;
 }
 
 .button {
-    margin-left: 30px;
+    display: block;
     background-color: var(--generality-color-first);
     color: var(--generality-color-font_second);
     border: var(--generality-button-border);
     padding: var(--generality-padding-button);
     border-radius: var(--generality-button-border_radius);
     box-shadow: var(--generality-button-box_shadow);
+    width: var(--generality-button-width);
+    height: var(--generality-button-height);
+    text-align: center;
+    line-height: var(--generality-button-height);
+    text-decoration: none;
+    margin-top: 5vh;
+    font-weight: bold;
 }
 
 .fas, .far {
@@ -87,14 +98,26 @@
     color: var(--generality-color-second);
 }
 /* ----------   END OF GENERALITY  ------------------ */
-/* ----------   START OF INDEX  ------------------ */
-/*START SECTION 1*/
-
-/*END SECTION 1*/
-/*START SECTION 2*/
-
-/*END SECTION 2*/
-/* ----------   END OF INDEX  ------------------ */
+/* ----------   START OF HOME PAGE  ------------------ */
+.home-page-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50vh;
+    justify-content: center;
+    margin-top: 10vh;
+}
+.home-page-main > div > p {
+    text-align: center;
+}
+.forgot-password {
+    margin-top: 1vh;
+}
+.forgot-password a {
+    font-style: italic;
+    font-size: calc(var(--generality-text-font_size) - 0.5rem);
+}
+/* ----------   END OF HOME PAGE  ------------------ */
 /* ----------   START OF DASHBOARD  ------------------ */
 /*START SECTION 1*/
 
