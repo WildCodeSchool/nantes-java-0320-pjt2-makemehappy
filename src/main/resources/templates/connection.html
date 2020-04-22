@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>connexion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/68562b10c3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header th:replace="fragments/mobile-title.html :: mobile-logo-title-xl"></header>
+    <div class="connection-main">
+        <div>
+            <p>
+                Veuillez saisir <br> votre identifiant et votre mot de passe
+            </p>
+        </div>
+        <form action="submit" method="get" class="user-connection">
+            <div>
+                <input class="generality-input" type="text" name="pseudo" id="pseudo" required placeholder="Pseudo">
+            </div>
+            <div>
+                <input class="generality-input" type="password" name="password" id="password" required placeholder="Password">
+            </div>
+            <div>
+                <input class="button" type="submit" value="Connexion">
+            </div>
+            <div class="forgot-password">
+                <a href="#">mot de passe oublié</a>
+            </div>
+        </form>
+        <div class="path-error">
+            <p>Pas de compte ?</p>
+            <a href="/new-profile">Inscription</a>
+        </div>
+    </div>
+</body>
+</html>
