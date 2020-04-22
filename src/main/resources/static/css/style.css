@@ -112,7 +112,7 @@
 }
 .path-error p {
     font-size: calc(var(--generality-text-font_size) - 0.5rem);
-    scolor: gray;
+    color: gray;
 }
 .path-error a {
     font-size: calc(var(--generality-text-font_size) - 0.5rem);
