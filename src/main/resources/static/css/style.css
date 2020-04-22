@@ -126,6 +126,14 @@
     border: transparent;
     box-shadow: 2px 4px 2px gainsboro;
 }
+
+.bloc-p {
+    border-radius: 10px;
+    border: beige;
+    box-shadow: 2px 4px 2px gainsboro;
+    padding: 1rem;
+    text-align: center;
+}
 /* ----------   END OF GENERALITY  ------------------ */
 /* ----------   START OF HOME PAGE  ------------------ */
 .home-page-main {
@@ -403,9 +411,34 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 80vh;
+    height: 60vh;
 }
 
+.gift-user-reserved-image img {
+    width: 15rem;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 3px 5px 3px black;
+}
+
+.gift-user-reserved {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 15rem;
+
+}
+.gift-user-reserved-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 10rem;
+    width: 15rem;
+}
+
+.gift-user-reserved-message p {
+    padding: 2rem;
+}
 
 /* ----------   END GIFT USER RESERVED  ------------------ */
 /* ----------   START OF FRAGMENT MOBILE LOGO AVATAR  ------------------ */
