@@ -238,9 +238,6 @@
     height: 90vh;
 }
 
-/*.gift-create-form form div input {
-    height: 3em;
-}*/
 .gift-create-block {
     display: flex;
     justify-content: space-around;
@@ -260,8 +257,6 @@
 
 .gift-create-price input {
     width: 7rem;
-    margin-top: 0px;
-    padding-top: 0px;
 }
 
 .gift-create-message textarea:hover {
