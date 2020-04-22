@@ -167,7 +167,9 @@
 /* ----------   END OF DASHBOARD  ------------------ */
 /* ----------   START OF DASHBOARD-EMPTY  ------------------ */
 /*START SECTION 1*/
-
+.dashboard-empty-link-cards:hover{
+    text-decoration: none;
+}
 /*END SECTION 1*/
 /*START SECTION 2*/
 
