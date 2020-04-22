@@ -1,39 +1,4 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START VARIABLE DECLARATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
-    :root {
-        /*
-        *   RAPPEL
-        *   ``````
-        *   Pour déclarer une variable css:
-        *   --endroit-élément-propriété: valeur;
-        *
-        *   Pour utilisation d'une variable :
-        *   sélecteur {
-        *       propriété: var(nomDeLaVariable);
-        *   }
-        */
-        /****** the size ******/
-        --generality-color-font_primary: #002962;
-        --generality-color-font_second: #FFFFFF;
-        --generality-color-first: #007AC3;
-        --generality-color-background: #FFFFFF;
-        --generality-color-second: #FDBC2D;
-        --generality-color-third: #F1502F;
-        /****** the border ******/
-        --generality-button-border: none;
-        --generality-button-border_radius: 5px;
-        --generality-button-box_shadow: 0px 1px 3px black;
-        /****** the text ******/
-        --generality-text-font_size: 0.9rem;
-        /****** the box ******/
-        /****** Paddings ******/
-        --generality-padding-button: 0.2rem 0.5rem;
-    }
-    
-    
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END VARIABLE DECLARATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-    
-    
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START MOBILE VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START VARIABLE DECLARATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 :root {
@@ -176,18 +141,17 @@
 /* ----------   END OF HOME PAGE  ------------------ */
 /* ----------   START OF DASHBOARD  ------------------ */
 /*START SECTION 1*/
-     
-    .flex1 {
-        margin-bottom: 3em;
-    }
+.flex1 {
+    margin-bottom: 3em;
+}
     
-    .cardbodyclass {
-        text-align: center;
-    }
+.cardbodyclass {
+    text-align: center;
+}
     
-    .btn-group+.btn-group {
-        margin-left: 15px;
-    }
+.btn-group+.btn-group {
+    margin-left: 15px;
+}
 /*END SECTION 1*/
 /*START SECTION 2*/
 
@@ -503,4 +467,4 @@
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END MOBILE VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START DESKTOP VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {}
