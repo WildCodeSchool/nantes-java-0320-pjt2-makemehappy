@@ -395,10 +395,19 @@
     color: beige;
 }
 
-
-
-
 /* ----------   END GIFT  ------------------ */
+/* ----------   START OF GIFT USER RESERVED  ------------------ */
+
+.gift-user-reserved-bloc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 80vh;
+}
+
+
+/* ----------   END GIFT USER RESERVED  ------------------ */
 /* ----------   START OF FRAGMENT MOBILE LOGO AVATAR  ------------------ */
 .fragment-mobile-logo-avatar-header {
     display: flex;

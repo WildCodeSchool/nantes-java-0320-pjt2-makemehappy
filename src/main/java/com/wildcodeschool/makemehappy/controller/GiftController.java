@@ -18,5 +18,10 @@ public class GiftController {
         return "gift";
     }
 
+    @GetMapping("/gift-user-reserved")
+    public String showGiftUserReserved() {
+        return "gift-user-reserved";
+    }
+
 
 }
