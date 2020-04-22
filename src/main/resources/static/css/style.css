@@ -1,4 +1,6 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START VARIABLE DECLARATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START MOBILE VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START VARIABLE DECLARATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 :root {
 
     /*
@@ -147,7 +149,17 @@
 /* ----------   END OF HOME PAGE  ------------------ */
 /* ----------   START OF DASHBOARD  ------------------ */
 /*START SECTION 1*/
-
+.flex1 {
+    margin-bottom: 3em;
+}
+    
+.cardbodyclass {
+    text-align: center;
+}
+    
+.btn-group+.btn-group {
+    margin-left: 15px;
+}
 /*END SECTION 1*/
 /*START SECTION 2*/
 
@@ -430,50 +442,4 @@
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END MOBILE VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START DESKTOP VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-@media only screen and (min-width: 768px) {
-
-    /* ----------   START OF GENERALITY  ------------------ */
-
-    /* ----------   END OF GENERALITY  ------------------ */
-    /* ----------   START OF INDEX  ------------------ */
-    /*START SECTION 1*/
-
-    /*END SECTION 1*/
-    /*START SECTION 2*/
-
-    /*END SECTION 2*/
-    /* ----------   END OF INDEX  ------------------ */
-    /* ----------   START OF DASHBOARD  ------------------ */
-    /*START SECTION 1*/
-
-    /*END SECTION 1*/
-    /*START SECTION 2*/
-
-    /*END SECTION 2*/
-    /* ----------   END OF DASHBOARD  ------------------ */
-    /* ----------   START OF DASHBOARD-EMPTY  ------------------ */
-    /*START SECTION 1*/
-
-    /*END SECTION 1*/
-    /*START SECTION 2*/
-
-    /*END SECTION 2*/
-    /* ----------   END OF DASHBOARD-EMPTY  ------------------ */
-    /* ----------   START OF PAGE  ------------------ */
-    /*START SECTION 1*/
-
-    /*END SECTION 1*/
-    /*START SECTION 2*/
-
-    /*END SECTION 2*/
-    /* ----------   END OF PAGE  ------------------ */
-    /* ----------   START OF PAGE  ------------------ */
-    /*START SECTION 1*/
-
-    /*END SECTION 1*/
-    /*START SECTION 2*/
-
-    /*END SECTION 2*/
-    /* ----------   END OF PAGE  ------------------ */
-}
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END DESKTOP VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+@media only screen and (min-width: 768px) {}
