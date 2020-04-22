@@ -1,201 +1,238 @@
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START VARIABLE DECLARATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-:root {
+	/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START VARIABLE DECLARATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-    /*
-    *   RAPPEL
-    *   ``````
-    *   Pour déclarer une variable css:
-    *   --endroit-élément-propriété: valeur;
-    *
-    *   Pour utilisation d'une variable :
-    *   sélecteur {
-    *       propriété: var(nomDeLaVariable);
-    *   }
-    */
-
-    /****** the size ******/
-    --generality-size-icon: 1rem;
-
-    /****** the colors ******/
-    --generality-color-font_primary: #002962;
-    --generality-color-font_second: #FFFFFF;
-    --generality-color-first: #007AC3;
-    --generality-color-background: #FFFFFF;
-    --generality-color-second: #FDBC2D;
-    --generality-color-third: #F1502F;
-
-    /****** the border ******/
-    --generality-button-border: none;
-    --generality-button-border_radius: 5px;
-    --generality-button-box_shadow: 0px 1px 3px black;
-
-
-    /****** the text ******/
-    --generality-text-font_size: 0.9rem;
-
-
-    /****** the box ******/
-
-
-    /****** Paddings ******/
-    --generality-padding-button: 0.2rem 0.5rem;
-
-}
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END VARIABLE DECLARATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START MOBILE VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-/* ----------   START OF GENERALITY  ------------------ */
-*{
-    margin: 0;
-    padding: 0;
-    color: var(--generality-color-font_primary);
-}
-
-.button{
-    margin-left: 30px;
-    background-color: var(--generality-color-first);
-    color: var(--generality-color-font_second);
-    border: var(--generality-button-border);
-    padding: var(--generality-padding-button);
-    border-radius: var(--generality-button-border_radius);
-    box-shadow: var(--generality-button-box_shadow);
-}
-
-.fas, .far {
-    font-size: var(--generality-size-icon);
-    color: var(--generality-color-first);
-}
-
-#user-delete {
-    font-size: var(--generality-size-icon);
-    color: var(--generality-color-third);
-}
-
-.color-title {
-    color: var(--generality-color-first);
-}
-
-.color-icon-primary {
-    color: var(--generality-color-second);
-}
-/* ----------   END OF GENERALITY  ------------------ */
-/* ----------   START OF INDEX  ------------------ */
-/*START SECTION 1*/
-
-/*END SECTION 1*/
-/*START SECTION 2*/
-
-/*END SECTION 2*/
-/* ----------   END OF INDEX  ------------------ */
-/* ----------   START OF DASHBOARD  ------------------ */
-/*START SECTION 1*/
-
-/*END SECTION 1*/
-/*START SECTION 2*/
-
-/*END SECTION 2*/
-/* ----------   END OF DASHBOARD  ------------------ */
-/* ----------   START OF DASHBOARD-EMPTY  ------------------ */
-/*START SECTION 1*/
-
-/*END SECTION 1*/
-/*START SECTION 2*/
-
-/*END SECTION 2*/
-/* ----------   END OF DASHBOARD-EMPTY  ------------------ */
-/* ----------   START OF PAGE  ------------------ */
-/*START SECTION 1*/
-
-/*END SECTION 1*/
-/*START SECTION 2*/
-
-/*END SECTION 2*/
-/* ----------   END OF PAGE  ------------------ */
-/* ----------   START OF PAGE  ------------------ */
-/*START SECTION 1*/
-
-/*END SECTION 1*/
-/*START SECTION 2*/
-
-/*END SECTION 2*/
-/* ----------   END OF PAGE  ------------------ */
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END MOBILE VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START DESKTOP VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-@media only screen and (min-width: 900px) {
-
+    :root {
+        /*
+        *   RAPPEL
+        *   ``````
+        *   Pour déclarer une variable css:
+        *   --endroit-élément-propriété: valeur;
+        *
+        *   Pour utilisation d'une variable :
+        *   sélecteur {
+        *       propriété: var(nomDeLaVariable);
+        *   }
+        */
+        /****** the size ******/
+        --generality-color-font_primary: #002962;
+        --generality-color-font_second: #FFFFFF;
+        --generality-color-first: #007AC3;
+        --generality-color-background: #FFFFFF;
+        --generality-color-second: #FDBC2D;
+        --generality-color-third: #F1502F;
+        /****** the border ******/
+        --generality-button-border: none;
+        --generality-button-border_radius: 5px;
+        --generality-button-box_shadow: 0px 1px 3px black;
+        /****** the text ******/
+        --generality-text-font_size: 0.9rem;
+        /****** the box ******/
+        /****** Paddings ******/
+        --generality-padding-button: 0.2rem 0.5rem;
+    }
+    
+    
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END VARIABLE DECLARATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    
+    
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START MOBILE VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    
+    
     /* ----------   START OF GENERALITY  ------------------ */
-
+    
+    * {
+        margin: 0;
+        padding: 0;
+        color: var(--generality-color-font_primary);
+    }
+    
+    .button {
+        margin-left: 30px;
+        background-color: var(--generality-color-first);
+        color: var(--generality-color-font_second);
+        border: var(--generality-button-border);
+        padding: var(--generality-padding-button);
+        border-radius: var(--generality-button-border_radius);
+        box-shadow: var(--generality-button-box_shadow);
+    }
+    
+    .fas,
+    .far {
+        font-size: var(--generality-size-icon);
+        color: var(--generality-color-first);
+    }
+    
+    #user-delete {
+        font-size: var(--generality-size-icon);
+        color: var(--generality-color-third);
+    }
+    
+    .color-title {
+        color: var(--generality-color-first);
+    }
+    
+    .color-icon-primary {
+        color: var(--generality-color-second);
+    }
+    
+    
     /* ----------   END OF GENERALITY  ------------------ */
+    
+    
     /* ----------   START OF INDEX  ------------------ */
+    
+    
     /*START SECTION 1*/
-
+    
+    
     /*END SECTION 1*/
+    
+    
     /*START SECTION 2*/
-
+    
+    
     /*END SECTION 2*/
+    
+    
     /* ----------   END OF INDEX  ------------------ */
+    
+    
     /* ----------   START OF DASHBOARD  ------------------ */
+    
+    
     /*START SECTION 1*/
-
-    /*END SECTION 1*/
-    /*START SECTION 2*/
-    header{
-        justify-content: center;
+    
+    
+    .mylists-dashboardmobile {
+        justify-items: center;
         display: flex;
         color: var(--generality-color-first);
         margin-top: 3em;
         margin-bottom: 3em;
     }
-
+    
     .flex1 {
         margin-bottom: 3em;
     }
-
-    .red {
+    
+    .cardbodyclass {
         text-align: center;
     }
-
-    a:hover{
-        text-decoration: none;
-    }
-
-
-    a:link {
-        text-decoration: none;
-
-    }
-
-    .btn-toolbar1{
+    
+    .btn-toolbar1 {
         justify-content: flex-end;
     }
-
+    
     .btn-group+.btn-group {
         margin-left: 15px;
     }
+    
+    .card {
+        margin-bottom: 3em;
+    }
+    
+    
+    /*END SECTION 1*/
+    
+    
+    /*START SECTION 2*/
+    
+    
     /*END SECTION 2*/
+    
+    
     /* ----------   END OF DASHBOARD  ------------------ */
+    
+    
     /* ----------   START OF DASHBOARD-EMPTY  ------------------ */
+    
+    
     /*START SECTION 1*/
-
+    
+    
     /*END SECTION 1*/
+    
+    
     /*START SECTION 2*/
-
+    
+    
     /*END SECTION 2*/
+    
+    
     /* ----------   END OF DASHBOARD-EMPTY  ------------------ */
+    
+    
     /* ----------   START OF PAGE  ------------------ */
+    
+    
     /*START SECTION 1*/
-
+    
+    
     /*END SECTION 1*/
+    
+    
     /*START SECTION 2*/
-
+    
+    
     /*END SECTION 2*/
+    
+    
     /* ----------   END OF PAGE  ------------------ */
+    
+    
     /* ----------   START OF PAGE  ------------------ */
+    
+    
     /*START SECTION 1*/
-
+    
+    
     /*END SECTION 1*/
+    
+    
     /*START SECTION 2*/
-
+    
+    
     /*END SECTION 2*/
+    
+    
     /* ----------   END OF PAGE  ------------------ */
-}
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END DESKTOP VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    
+    
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END MOBILE VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    
+    
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START DESKTOP VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    
+    @media only screen and (min-width: 900px) {
+        /* ----------   START OF GENERALITY  ------------------ */
+        /* ----------   END OF GENERALITY  ------------------ */
+        /* ----------   START OF INDEX  ------------------ */
+        /*START SECTION 1*/
+        /*END SECTION 1*/
+        /*START SECTION 2*/
+        /*END SECTION 2*/
+        /* ----------   END OF INDEX  ------------------ */
+        /* ----------   START OF DASHBOARD  ------------------ */
+        /*START SECTION 1*/
+        /*END SECTION 1*/
+        /*START SECTION 2*/
+        /*END SECTION 2*/
+        /* ----------   END OF DASHBOARD  ------------------ */
+        /* ----------   START OF DASHBOARD-EMPTY  ------------------ */
+        /*START SECTION 1*/
+        /*END SECTION 1*/
+        /*START SECTION 2*/
+        /*END SECTION 2*/
+        /* ----------   END OF DASHBOARD-EMPTY  ------------------ */
+        /* ----------   START OF PAGE  ------------------ */
+        /*START SECTION 1*/
+        /*END SECTION 1*/
+        /*START SECTION 2*/
+        /*END SECTION 2*/
+        /* ----------   END OF PAGE  ------------------ */
+        /* ----------   START OF PAGE  ------------------ */
+        /*START SECTION 1*/
+        /*END SECTION 1*/
+        /*START SECTION 2*/
+        /*END SECTION 2*/
+        /* ----------   END OF PAGE  ------------------ */
+        /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END DESKTOP VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
