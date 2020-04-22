@@ -147,7 +147,7 @@
 }
 .path-error p {
     font-size: calc(var(--generality-text-font_size) - 0.5rem);
-    color: gray;
+    scolor: gray;
 }
 .path-error a {
     font-size: calc(var(--generality-text-font_size) - 0.5rem);
@@ -176,15 +176,7 @@
 /* ----------   END OF HOME PAGE  ------------------ */
 /* ----------   START OF DASHBOARD  ------------------ */
 /*START SECTION 1*/
- 
-    .mylists-dashboardmobile {
-        justify-items: center;
-        display: flex;
-        color: var(--generality-color-first);
-        margin-top: 3em;
-        margin-bottom: 3em;
-    }
-    
+     
     .flex1 {
         margin-bottom: 3em;
     }
@@ -193,16 +185,8 @@
         text-align: center;
     }
     
-    .btn-toolbar1 {
-        justify-content: flex-end;
-    }
-    
     .btn-group+.btn-group {
         margin-left: 15px;
-    }
-    
-    .card {
-        margin-bottom: 3em;
     }
 /*END SECTION 1*/
 /*START SECTION 2*/
