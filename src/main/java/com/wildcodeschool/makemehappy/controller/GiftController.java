@@ -9,8 +9,18 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class GiftController {
 
     @GetMapping("/gift-create")
-    public String showgiftCreate() {
+    public String showGiftCreate() {
         return "gift-create";
+    }
+
+    @GetMapping("/gift")
+    public String showGift() {
+        return "gift";
+    }
+
+    @GetMapping("/gift-user-reserved")
+    public String showGiftUserReserved() {
+        return "gift-user-reserved";
     }
 
 

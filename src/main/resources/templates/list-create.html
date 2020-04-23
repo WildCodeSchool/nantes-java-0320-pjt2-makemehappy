@@ -1,28 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/68562b10c3.js" crossorigin="anonymous"></script>
     <title>Make Me Happy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <header>
-        <h1>Make Me Happy</h1>
+    <header th:replace="fragments/mobile-logo-avatar.html :: mobile-logo-avatar">test
     </header>
-    <h2>Nouvelle liste</h2>
-    <form action="/nouvelle liste" method="post">
-        <div>
-            <input type="text" placeholder="Titre" name="Titre">
-        </div>
-        <div>
-            <input type="text" placeholder="Date de fin" name="Date de fin">
-        </div>
-        <div>
-            <textarea  placeholder="Description" name="user_message"></textarea>
-        </div>
-        <div>
-            <button type="button">Créer</button>
-        </div>
-    </form>
+    <h2 class="title">Nouvelle liste</h2>
+    <div class="list-create-form">
+        <form action="/list-create" method="post">
+            <div class="list-create-name">
+                <input class="input" type="text" name="intitulé" id="intitulé" placeholder="Nom de la liste" size="50" />
+            </div>
+            <div class="list-create-date">
+                <input class="input" type="date" placeholder="Date de fin" name="Date de fin" size="50">
+            </div>
+            <div class="list-create-description">
+                <textarea  class="input" placeholder="Description" name="user_message" rows="10" cols="30" size=""></textarea>
+            </div>
+            <div class="list-create-button">
+                <input class="input-button" type="submit" value="Créer">
+            </div>
+        </form>
+    </div>
 </body>
 </html>

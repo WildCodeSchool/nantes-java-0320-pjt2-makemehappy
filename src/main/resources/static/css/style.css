@@ -1,4 +1,6 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START VARIABLE DECLARATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START MOBILE VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START VARIABLE DECLARATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 :root {
 
     /*
@@ -139,6 +141,22 @@
     color: black;
     font-style: italic;
 }
+
+.input {
+    width: 15rem;
+    border-radius: 10px;
+    border: transparent;
+    box-shadow: 2px 4px 2px gainsboro;
+    height: 3rem;
+}
+
+.bloc-p {
+    border-radius: 10px;
+    border: beige;
+    box-shadow: 2px 4px 2px gainsboro;
+    padding: 1rem;
+    text-align: center;
+}
 /* ----------   END OF GENERALITY  ------------------ */
 /* ----------   START OF HOME PAGE  ------------------ */
 .home-page-main {
@@ -158,7 +176,34 @@
     font-style: italic;
     font-size: calc(var(--generality-text-font_size) - 0.2rem);
 }
+
 /* ----------   END OF HOME PAGE  ------------------ */
+/* ----------   START OF DASHBOARD  ------------------ */
+/*START SECTION 1*/
+.flex1 {
+    margin-bottom: 3em;
+}
+    
+.cardbodyclass {
+    text-align: center;
+}
+    
+.btn-group+.btn-group {
+    margin-left: 15px;
+}
+/*END SECTION 1*/
+/*START SECTION 2*/
+
+/*END SECTION 2*/
+/* ----------   END OF DASHBOARD  ------------------ */
+/* ----------   START OF DASHBOARD-EMPTY  ------------------ */
+/*START SECTION 1*/
+
+/*END SECTION 1*/
+/*START SECTION 2*/
+
+/*END SECTION 2*/
+/* ----------   END OF DASHBOARD-EMPTY  ------------------ */
 /* ----------   START OF CONNECTION  ------------------ */
 .connection-main {
     display: flex;
@@ -263,106 +308,177 @@
     margin-bottom: 3rem;
     text-align: center;
 }
+
 .gift-list-h2 {
     margin-top: 2rem;
     margin-bottom: 2rem;
     text-align: center;
 }
+
 .gift-create-image img {
-    max-width: 26.5em;
+    max-width: 15rem;
     border-radius: 10px;
     border: none;
     box-shadow: 3px 5px 3px black;
 }
+
 .gift-create-form form {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     padding-top: 4em;
+    height: 90vh;
 }
-.gift-create-form form div {
-    padding-top: 2em;
-}
-.gift-create-form form div input {
-    height: 3em;
-}
+
 .gift-create-block {
     display: flex;
     justify-content: space-around;
-    width: 20em;
-    padding-top: 0;
+    width: 15rem;
 }
+
 .gift-create-checkbox {
     display: flex;
     justify-content: space-evenly;
-    width: 20em;
-}
-.gift-create-block-bouton {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 26.5em;
-    padding-top: 0;
-}
-.gift-create-bouton {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 10em;
     align-items: center;
-}
-.gift-create-bouton input {
-    width: 8em;
-    height: 3em;
-    background-color: var(--generality-color-first);
-    color: var(--generality-color-font_second);
-    border: var(--generality-button-border);
-    padding: var(--generality-padding-button);
-    border-radius: var(--generality-button-border_radius);
-    box-shadow: var(--generality-button-box_shadow);
-}
-.gift-create-nameCadeau input{
-    border-radius: 10px;
-    border: none;
-    box-shadow: 3px 5px 3px gainsboro;
-}
-.gift-create-price input {
-    border-radius: 10px;
-    border: none;
-    box-shadow: 3px 5px 3px gainsboro;
-}
-.gift-create-urlDealer input {
-    border-radius: 10px;
-    border: none;
-    box-shadow: 3px 5px 3px gainsboro;
-}
-.gift-create-urlPicture input {
-    border-radius: 10px;
-    border: none;
-    box-shadow: 3px 5px 3px gainsboro;
+    width: 7rem;
+
 }
 .gift-create-message textarea {
-    border-radius: 10px;
-    border: none;
-    box-shadow: 3px 5px 3px gainsboro;
+    height: auto;
 }
+
+.gift-create-price input {
+    width: 7rem;
+}
+
 .gift-create-message textarea:hover {
-    background-color: aliceblue;
+    border-top: 2px solid gainsboro;
 }
 .gift-create-nameCadeau input:hover {
-    background-color: aliceblue;
+    border-top: 2px solid gainsboro;
 }
 .gift-create-price input:hover {
-    background-color: aliceblue;
+    border-top: 2px solid gainsboro;
 }
 .gift-create-urlDealer input:hover {
-    background-color: aliceblue;
+    border-top: 2px solid gainsboro;
 }
 .gift-create-urlPicture input:hover {
-    background-color: aliceblue;
+    border-top: 2px solid gainsboro;
 }
 /* ----------   END OF GIFT CREATE  ------------------ */
+
+/* ----------   START OF LIST CREATE  ------------------ */
+
+.list-create-form form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 50vh;
+}
+
+.list-create-description textarea {
+    height: auto;
+}
+
+.list-create-name input:hover {
+    border: 2px solid gainsboro;
+}
+
+.list-create-date input:hover {
+    border-top: 2px solid gainsboro;
+}
+
+.list-create-description textarea:hover {
+    border-top: 2px solid gainsboro;
+}
+/* ----------   END LIST CREATE  ------------------ */
+/* ----------   START OF GIFT  ------------------ */
+
+.gift-text {
+    text-align: center;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 3rem;
+}
+
+.gift-user-block p:nth-child(4) {
+    padding-top: 2rem;
+}
+
+.gift-user-ajout form input {
+    border: solid;
+    border-color: cadetblue;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+    font-size: 3rem;
+    background-color: cadetblue;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.gift-user-ajout form {
+    border: solid;
+    border-color: beige;
+    padding: 4rem;
+    margin-top: 2rem;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.gift-user-ajout {
+    display: flex;
+    justify-content: center;
+}
+
+.gift-user-ajout form:hover {
+    border-color: gainsboro;
+}
+
+.gift-user-ajout form input:hover {
+    color: beige;
+}
+
+/* ----------   END GIFT  ------------------ */
+/* ----------   START OF GIFT USER RESERVED  ------------------ */
+
+.gift-user-reserved-bloc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 60vh;
+}
+
+.gift-user-reserved-image img {
+    width: 15rem;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 3px 5px 3px black;
+}
+
+.gift-user-reserved {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 15rem;
+
+}
+.gift-user-reserved-message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 10rem;
+    width: 15rem;
+}
+
+.gift-user-reserved-message p {
+    padding: 2rem;
+}
+
+/* ----------   END GIFT USER RESERVED  ------------------ */
 /* ----------   START OF FRAGMENT MOBILE LOGO AVATAR  ------------------ */
 .fragment-mobile-logo-avatar-header {
     display: flex;
@@ -406,52 +522,7 @@
     color: var(--generality-color-first);
 }
 /* ----------   END OF FRAGMENT MOBILE LOGO ET TITRE XL  ------------------ */
+
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END MOBILE VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START DESKTOP VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-@media only screen and (min-width: 768px) {
-
-    /* ----------   START OF GENERALITY  ------------------ */
-
-    /* ----------   END OF GENERALITY  ------------------ */
-    /* ----------   START OF INDEX  ------------------ */
-    /*START SECTION 1*/
-
-    /*END SECTION 1*/
-    /*START SECTION 2*/
-
-    /*END SECTION 2*/
-    /* ----------   END OF INDEX  ------------------ */
-    /* ----------   START OF DASHBOARD  ------------------ */
-    /*START SECTION 1*/
-
-    /*END SECTION 1*/
-    /*START SECTION 2*/
-
-    /*END SECTION 2*/
-    /* ----------   END OF DASHBOARD  ------------------ */
-    /* ----------   START OF DASHBOARD-EMPTY  ------------------ */
-    /*START SECTION 1*/
-
-    /*END SECTION 1*/
-    /*START SECTION 2*/
-
-    /*END SECTION 2*/
-    /* ----------   END OF DASHBOARD-EMPTY  ------------------ */
-    /* ----------   START OF PAGE  ------------------ */
-    /*START SECTION 1*/
-
-    /*END SECTION 1*/
-    /*START SECTION 2*/
-
-    /*END SECTION 2*/
-    /* ----------   END OF PAGE  ------------------ */
-    /* ----------   START OF PAGE  ------------------ */
-    /*START SECTION 1*/
-
-    /*END SECTION 1*/
-    /*START SECTION 2*/
-
-    /*END SECTION 2*/
-    /* ----------   END OF PAGE  ------------------ */
-}
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END DESKTOP VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+@media only screen and (min-width: 768px) {}
