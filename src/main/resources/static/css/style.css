@@ -175,7 +175,6 @@ ul, li {
     font-style: italic;
     font-size: calc(var(--generality-text-font_size) - 0.2rem);
 }
-
 /* ----------   END OF HOME PAGE  ------------------ */
 /* ----------   START OF DASHBOARD  ------------------ */
 /*START SECTION 1*/
@@ -190,10 +189,6 @@ ul, li {
 .btn-group+.btn-group {
     margin-left: 15px;
 }
-/*END SECTION 1*/
-/*START SECTION 2*/
-
-/*END SECTION 2*/
 /* ----------   END OF DASHBOARD  ------------------ */
 /* ----------   START OF DASHBOARD-EMPTY  ------------------ */
 /*START SECTION 1*/
@@ -255,26 +250,6 @@ ul, li {
     margin: auto 0;
 }
 /* ----------   END OF USER PROFILE  ------------------ */
-/* ----------   START OF DASHBOARD  ------------------ */
-/*START SECTION 1*/
-.flex1 {
-    margin-bottom: 3em;
-}
-.cardbodyclass {
-    text-align: center;
-} 
-.btn-group+.btn-group {
-    margin-left: 15px;
-}
-/* ----------   END OF DASHBOARD  ------------------ */
-/* ----------   START OF DASHBOARD-EMPTY  ------------------ */
-/*START SECTION 1*/
-
-/*END SECTION 1*/
-/*START SECTION 2*/
-
-/*END SECTION 2*/
-/* ----------   END OF DASHBOARD-EMPTY  ------------------ */
 /* ----------   START OF GIFT-LIST  ------------------ */
 .giftlist-h2 {
     margin-top: 6rem;
@@ -294,7 +269,7 @@ ul, li {
     height: 200px;
     width: 200px;
 }
-/*-----------------END SECTION OF GIFT-LIST-----------------*/
+/*-----------------END OF GIFT-LIST-----------------*/
 /* ----------   START OF GIFT CREATE  ------------------ */
 .gift-list-logo-avatar-img-logo {
     background-image: url("/image/logo-genie-130*130.png");
@@ -308,20 +283,17 @@ ul, li {
     margin-bottom: 3rem;
     text-align: center;
 }
-
 .gift-list-h2 {
     margin-top: 2rem;
     margin-bottom: 2rem;
     text-align: center;
 }
-
 .gift-create-image img {
     max-width: 15rem;
     border-radius: 10px;
     border: none;
     box-shadow: 3px 5px 3px black;
 }
-
 .gift-create-form form {
     display: flex;
     flex-direction: column;
@@ -330,28 +302,23 @@ ul, li {
     padding-top: 4em;
     height: 90vh;
 }
-
 .gift-create-block {
     display: flex;
     justify-content: space-around;
     width: 15rem;
 }
-
 .gift-create-checkbox {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     width: 7rem;
-
 }
 .gift-create-message textarea {
     height: auto;
 }
-
 .gift-create-price input {
     width: 7rem;
 }
-
 .gift-create-message textarea:hover {
     border-top: 2px solid gainsboro;
 }
@@ -368,9 +335,7 @@ ul, li {
     border-top: 2px solid gainsboro;
 }
 /* ----------   END OF GIFT CREATE  ------------------ */
-
 /* ----------   START OF LIST CREATE  ------------------ */
-
 .list-create-form form{
     display: flex;
     flex-direction: column;
@@ -378,25 +343,20 @@ ul, li {
     align-items: center;
     height: 50vh;
 }
-
 .list-create-description textarea {
     height: auto;
 }
-
 .list-create-name input:hover {
     border: 2px solid gainsboro;
 }
-
 .list-create-date input:hover {
     border-top: 2px solid gainsboro;
 }
-
 .list-create-description textarea:hover {
     border-top: 2px solid gainsboro;
 }
 /* ----------   END LIST CREATE  ------------------ */
 /* ----------   START OF GIFT  ------------------ */
-
 .gift-text {
     text-align: center;
     height: 30vh;
@@ -405,11 +365,9 @@ ul, li {
     justify-content: space-around;
     margin-top: 3rem;
 }
-
 .gift-user-block p:nth-child(4) {
     padding-top: 2rem;
 }
-
 .gift-user-ajout form input {
     border: solid;
     border-color: cadetblue;
@@ -419,7 +377,6 @@ ul, li {
     background-color: cadetblue;
     border-radius: 5px 5px 5px 5px;
 }
-
 .gift-user-ajout form {
     border: solid;
     border-color: beige;
@@ -427,22 +384,40 @@ ul, li {
     margin-top: 2rem;
     border-radius: 10px 10px 10px 10px;
 }
-
 .gift-user-ajout {
     display: flex;
     justify-content: center;
 }
-
 .gift-user-ajout form:hover {
     border-color: gainsboro;
 }
-
 .gift-user-ajout form input:hover {
     color: beige;
 }
-/* ----------   END OF GIFT CREATE  ------------------ */
-/* ----------   START OF LIST CREATE  ------------------ */
 /* ----------   END GIFT  ------------------ */
+/* ----------   START ABOUT US  ------------------ */
+.team-donkey {
+    display: flex;
+    height: 70vh;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.dev-left, .dev-right {
+    display: flex;
+    width: 100vw;
+    justify-content: space-evenly;
+    align-items: center;
+}.dev-right {
+     flex-direction: row-reverse;
+ }
+.dev-image {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+}
+/* ----------   END ABOUT US  ------------------ */
 /* ----------   START OF GIFT USER RESERVED  ------------------ */
 .gift-user-reserved-bloc {
     display: flex;
@@ -500,20 +475,17 @@ ul, li {
     color: beige;
     height: 60vh;
 }
-
 .gift-user-reserved-image img {
     width: 15rem;
     border-radius: 10px 10px 10px 10px;
     box-shadow: 3px 5px 3px black;
 }
-
 .gift-user-reserved {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 3rem;
     width: 15rem;
-
 }
 .gift-user-reserved-message {
     display: flex;
@@ -522,11 +494,9 @@ ul, li {
     min-height: 10rem;
     width: 15rem;
 }
-
 .gift-user-reserved-message p {
     padding: 2rem;
 }
-
 /* ----------   END GIFT USER RESERVED  ------------------ */
 /* ----------   START OF FRAGMENT MOBILE LOGO AVATAR  ------------------ */
 .fragment-mobile-logo-avatar-header {
