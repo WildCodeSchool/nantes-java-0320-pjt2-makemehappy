@@ -554,7 +554,7 @@ ul, li {
 .fragment-mobile-logo-title-xl {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     height: 30vh;
     padding: var(--mobile-padding-logo_title_xl);
@@ -573,9 +573,14 @@ ul, li {
 /* ----------   END OF FRAGMENT MOBILE LOGO ET TITRE XL  ------------------ */
 /* ----------   START OF FRAGMENT NAV BAR MOBILE  ------------------ */
 .footer-nav-bar {
-    display: flex;
     width: 100vw;
+    display: flex;
+    position: fixed;
+    top: 90vh;
     justify-content: space-evenly;
+    background-color: var(--generality-color-background);
+    border-top: 1px solid lightgray;
+    border-radius: 10px 10px 0 0;
 }
 .footer-nav-bar div {
     height: 10vh;
@@ -585,7 +590,7 @@ ul, li {
     align-items: center;
 }
 .footer-nav-bar a {
-    color: #000000;
+    color: var(--generality-color-font_primary);
     text-decoration: none;
     font-weight: bold;
 }
