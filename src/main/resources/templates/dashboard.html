@@ -1,18 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/68562b10c3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
     <meta charset="UTF-8">
     <title>Dashboard</title>
-</head>
 <body>
-    <header>
-        <h1>Mes Listes</h1>
-    </header>
-     <div>
-         <a href=""></a>
-         <a href=""></a>
-         <a href=""></a>
-         <a href=""></a>
-     </div>
+    <header th:replace="fragments/mobile-logo-avatar.html :: mobile-logo-avatar"></header>
+    <h1 class="mylists-dashboardmobile">Mes Listes</h1>
+    <div class="d-flex justify-content-around flex-wrap flex1">
+        <div class="card mb-4">
+            <img class="card-img-top" src="https://via.placeholder.com/150">
+            <div class="card-body cardbodyclass">
+
+                <h5 class="card-title text-center">Fête chez Ganout</h5>
+                <br>
+                <input id="start" max="2021-12-31" min="2018-01-01" name="trip-start" type="date" value="2020-07-22">
+                <div class="md-form">
+                    <textarea id="form7" class="md-textarea form-control" rows="3"></textarea>
+                    <label for="form7"></label>
+                </div>
+                <div class="btn-toolbar justify-content-end">
+                    <div class="btn-group">
+                        <a href="#" class="btn btn-inverse"><i class="icon-white icon-share-alt"></i></a>
+                    </div>
+                    <div class="btn-group">
+                        <a href="#" class="btn btn-inverse"><i class="icon-white icon-trash"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer th:replace="/fragments/navigation-mobile.html :: nav-bar-mobile"></footer>
 </body>
+
 </html>

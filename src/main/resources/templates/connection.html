@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>connexion</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/68562b10c3.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -22,7 +24,7 @@
                 <input class="generality-input" type="password" name="password" id="password" required placeholder="Password">
             </div>
             <div>
-                <input class="button" type="submit" value="Connexion">
+                <input class="input-button" type="submit" value="Connexion">
             </div>
             <div class="forgot-password">
                 <a href="#">mot de passe oublié</a>
@@ -30,8 +32,9 @@
         </form>
         <div class="path-error">
             <p>Pas de compte ?</p>
-            <a href="/new-profile">Inscription</a>
+            <a href="/create-profile">S'inscrire</a>
         </div>
     </div>
+    <footer th:replace="/fragments/navigation-mobile-simple.html :: nav-bar-mobile-about-us"></footer>
 </body>
 </html>
