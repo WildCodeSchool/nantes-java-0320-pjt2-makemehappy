@@ -10,4 +10,15 @@ public class ListController {
     public String showListCreate() {
         return "list-create";
     }
+
+    @GetMapping("/dashboard-empty")
+    public String showDashboardEmpty() {
+        return "dashboard-empty";
+    }
+
+    @GetMapping("/dashboard")
+    public String showDashboard() {
+        return "dashboard";
+    }
+
 }
