@@ -3,21 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Mes Listes</title>
+    <script src="https://kit.fontawesome.com/68562b10c3.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Mes Listes</h1>
+    <header th:replace="/fragments/mobile-title.html :: mobile-logo-title-xl">
     </header>
-    <div>
+    <div class="dashboard-empty-text">
         <p>Bonjour "Votre Pseudo".</p>
         <p>Bienvenue dans votre tableau de bord.</p>
         <p>Pour créer une liste, cliquez sur l'onglet "Ajouter".</p>
-        <p>Ajouter une liste</p>
     </div>
-    <div>
-        <a href=""></a>
+        <a class="container-dashboard-empty-link" href="#">
+        <div class="container-dashboard-empty">
+                <p>Ajouter votre liste</p>
+                <i class="fas fa-plus-square"></i>
+            </div>
+        </div>
     </div>
+    </a>
     <footer th:replace="/fragments/navigation-mobile.html :: nav-bar-mobile"></footer>
 </body>
 </html>
