@@ -125,6 +125,7 @@
     border-radius: 10px;
     border: transparent;
     box-shadow: 2px 4px 2px gainsboro;
+    height: 3rem;
 }
 /* ----------   END OF GENERALITY  ------------------ */
 /* ----------   START OF HOME PAGE  ------------------ */
@@ -226,104 +227,64 @@
     margin-bottom: 3rem;
     text-align: center;
 }
+
 .gift-list-h2 {
     margin-top: 2rem;
     margin-bottom: 2rem;
     text-align: center;
 }
+
 .gift-create-image img {
-    max-width: 26.5em;
+    max-width: 15rem;
     border-radius: 10px;
     border: none;
     box-shadow: 3px 5px 3px black;
 }
+
 .gift-create-form form {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     padding-top: 4em;
+    height: 90vh;
 }
-.gift-create-form form div {
-    padding-top: 2em;
-}
-.gift-create-form form div input {
-    height: 3em;
-}
+
 .gift-create-block {
     display: flex;
     justify-content: space-around;
-    width: 20em;
-    padding-top: 0;
+    width: 15rem;
 }
+
 .gift-create-checkbox {
     display: flex;
     justify-content: space-evenly;
-    width: 20em;
-}
-.gift-create-block-bouton {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 26.5em;
-    padding-top: 0;
-}
-.gift-create-bouton {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 10em;
     align-items: center;
-}
-.gift-create-bouton input {
-    width: 8em;
-    height: 3em;
-    background-color: var(--generality-color-first);
-    color: var(--generality-color-font_second);
-    border: var(--generality-button-border);
-    padding: var(--generality-padding-button);
-    border-radius: var(--generality-button-border_radius);
-    box-shadow: var(--generality-button-box_shadow);
-}
-.gift-create-nameCadeau input{
-    border-radius: 10px;
-    border: none;
-    box-shadow: 3px 5px 3px gainsboro;
-}
-.gift-create-price input {
-    border-radius: 10px;
-    border: none;
-    box-shadow: 3px 5px 3px gainsboro;
-}
-.gift-create-urlDealer input {
-    border-radius: 10px;
-    border: none;
-    box-shadow: 3px 5px 3px gainsboro;
-}
-.gift-create-urlPicture input {
-    border-radius: 10px;
-    border: none;
-    box-shadow: 3px 5px 3px gainsboro;
+    width: 7rem;
+
 }
 .gift-create-message textarea {
-    border-radius: 10px;
-    border: none;
-    box-shadow: 3px 5px 3px gainsboro;
+    height: auto;
 }
+
+.gift-create-price input {
+    width: 7rem;
+}
+
 .gift-create-message textarea:hover {
-    background-color: aliceblue;
+    border-top: 2px solid gainsboro;
 }
 .gift-create-nameCadeau input:hover {
-    background-color: aliceblue;
+    border-top: 2px solid gainsboro;
 }
 .gift-create-price input:hover {
-    background-color: aliceblue;
+    border-top: 2px solid gainsboro;
 }
 .gift-create-urlDealer input:hover {
-    background-color: aliceblue;
+    border-top: 2px solid gainsboro;
 }
 .gift-create-urlPicture input:hover {
-    background-color: aliceblue;
+    border-top: 2px solid gainsboro;
 }
 /* ----------   END OF GIFT CREATE  ------------------ */
 
@@ -335,6 +296,10 @@
     justify-content: space-around;
     align-items: center;
     height: 50vh;
+}
+
+.list-create-description textarea {
+    height: auto;
 }
 
 .list-create-name input:hover {
