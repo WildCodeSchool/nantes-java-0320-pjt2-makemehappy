@@ -177,21 +177,81 @@
     margin-bottom: 3rem;
     color: #002962;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+.card{
+    border: 2px solid gray;
+    width: 180px;
+    height: 50vh;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
-.container1, .container2 {
+.card-link{
+    text-decoration: none;
+}
+
+/*.rating {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 150px;
+    height: 30px;
+    padding: 5px 10px;
+    margin: auto;
+    display: block;
+    overflow: hidden;
+}
+.rating:not(:checked) > input {
+    display: none;
+}
+/* - - - - - LIKE */
+/*#like {
+    bottom: -65px;
+}
+#like:not(:checked) > label {
+    cursor:pointer;
+    float: right;
+    width: 30px;
+    height: 30px;
+    display: block;
+
+    color: rgba(233, 54, 40, .4);
+    line-height: 33px;
+    text-align: center;
+}
+#like:not(:checked) > label:hover,
+#like:not(:checked) > label:hover ~ label {
+    color: rgba(233, 54, 40, .6);
+}
+#like > input:checked + label:hover,
+#like > input:checked + label:hover ~ label,
+#like > input:checked ~ label:hover,
+#like > input:checked ~ label:hover ~ label,
+#like > label:hover ~ input:checked ~ label {
+    color: rgba(233, 54, 40, .8);
+}
+#like > input:checked ~ label {
+    color: rgb(233, 54, 40);
+}
+.container-fluid {
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+}
+.card-title {
+    font-size: 1.5rem;
     text-align: center;
 }
+.share:hover {
+    text-decoration: none;
+    opacity: 0.7;
+}*/
 
-.giftlist-img {
-    text-align: center;
-    border-radius: 2rem;
-    height: 200px;
-    width: 200px;
-}
 /*-----------------END SECTION OF GIFT-LIST-----------------*/
 /* ----------   START OF GIFT CREATE  ------------------ */
 .gift-list-logo-avatar-img-logo {

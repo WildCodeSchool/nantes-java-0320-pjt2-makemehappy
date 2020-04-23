@@ -3,45 +3,49 @@
 
 <head>
     <meta charset="UTF-8">
-    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/68562b10c3.js"></script>
     <link href="../static/css/style.css" rel="stylesheet">
     <title>Gift List</title>
 </head>
-
 <body>
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card">
-                <img class="card-img-top" src="//placeimg.com/280/180/tech" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title border-bottom pb-3">Card title <a href="#" class="float-right d-inline-flex share"><i class="fas fa-share-alt text-primary"></i></a></h5>
-                    <div class="form-group align-items-end" id="rating-ability-wrapper">
-
-                        <button type="button" class="btnrating btn btn-default btn-sm" data-attr="1" id="rating-heart-1">
-                            <i class="fa fa-heart" aria-hidden="true"></i>
-                        </button>
-                        <button type="button" class="btnrating btn btn-default btn-sm" data-attr="2" id="rating-heart-2">
-                            <i class="fa fa-heart" aria-hidden="true"></i>
-                        </button>
-                        <button type="button-md" class="btnrating btn btn-default btn-sm" data-attr="3" id="rating-heart-3">
-                            <i class="fa fa-heart" aria-hidden="true"></i>
-                        </button>
-                        <button type="button" class="btnrating btn btn-default btn-sm" data-attr="4" id="rating-heart-4">
-                            <i class="fa fa-heart" aria-hidden="true"></i>
-                        </button>
-                        <button type="button" class="btnrating btn btn-default btn-sm" data-attr="5" id="rating-heart-5">
-                            <i class="fa fa-heart" aria-hidden="true"></i>
-                        </button>
-                    </div>
+<header th:replace="fragments/mobile-logo-avatar.html :: mobile-logo-avatar"></header>
+    <h2 class="giftlist-h2">Mes Cadeaux</h2>
+<div class="card">
+    <a class="card-link" href="#">
+        <div class="gift-card-image"><img src="https://via.placeholder.com/180" alt="cadeau" /></div>
+        <div class="gift-card-body">
+            <div class="gift-card-title">
+                <h3>Cadeau Ganout</h3>
+            </div>
+            <div class="card-excerpt">
+                <div class="rating">
+                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
                 </div>
             </div>
         </div>
-
-
+    </a>
+</div>
+<div class="card">
+    <a class="card-link" href="#">
+        <div class="gift-card-image"><img src="https://via.placeholder.com/180" alt="cadeau" /></div>
+        <div class="gift-card-body">
+            <div class="gift-card-title">
+                <h3>Cadeau Ganout</h3>
+            </div>
+            <div class="card-excerpt">
+                <div class="rating">
+                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
+<footer th:replace="/fragments/navigation-mobile.html :: nav-bar-mobile"></footer>
 </body>
-
 </html>
+
+
+
+
+
