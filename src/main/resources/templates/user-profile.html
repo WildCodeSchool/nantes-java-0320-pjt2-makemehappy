@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>home page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/68562b10c3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header th:replace="/fragments/mobile-title.html :: mobile-logo-title-xl">
+        to replace
+    </header>
+    <h2 class="title">Mon profile</h2>
+    <div>
+        <form action="/modification-user" method="post" class="user-modification">
+            <div>
+                <input class="generality-input" type="text" name="pseudo" placeholder="Nouveau Pseudo">
+            </div>
+            <div>
+                <input class="generality-input" type="password" name="password" placeholder="Nouveau Password">
+            </div>
+            <div>
+                <input class="generality-input" type="date" name="birthday" value="2020-04-23" min="1900-01-01" max="2100-12-31">
+            </div>
+            <div>
+                <div class="profile-area-avatar">
+                    <div>
+                        <a class="button" href="/selection-avatar">Avatar</a>
+                    </div>
+                    <div class="profile-avatar">
+
+                    </div>
+                </div>
+                <div class="profile-button">
+                    <input class="input-button" type="submit" value="Modifier">
+                    <a href="#"><i id="user-delete" class="fas fa-user-times 2x"></i></a>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

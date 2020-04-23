@@ -13,14 +13,20 @@ public class ConnectionController {
     }
 
     @GetMapping("/connection")
-    public String showConnectionPage() {
+    public String showConnection() {
 
         return "connection";
     }
 
     @GetMapping("/new-profile")
-    public String showNewProfilPage() {
+    public String showNewProfile() {
 
         return "new-profile";
+    }
+
+    @GetMapping("/user-profile")
+    public String showUserProfile() {
+
+        return "user-profile";
     }
 }

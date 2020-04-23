@@ -16,15 +16,16 @@
     */
 
     /****** the size ******/
-    --generality-size-icon: 1rem;
+    --generality-size-icon: 2rem;
     --mobile-logo_xs-width: 65px;
     --mobile-logo_xs-height: 65px;
-    --mobile-logo_xl-width: 250px;
-    --mobile-logo_xl-height: 250px;
+    --mobile-logo_xl-width: 130px;
+    --mobile-logo_xl-height: 130px;
     --mobile-avatar-width: 65px;
     --mobile-avatar-height: 65px;
     --generality-button-width: 30vw;
     --generality-button-height: 3vh;
+    --generality-width-form: 13rem;
 
     /****** the colors ******/
     --generality-color-font_primary: #002962;
@@ -46,6 +47,7 @@
 
     /****** the text ******/
     --generality-text-font_size: 0.9rem;
+    --generality-title-font_size: 1.5rem;
     --generality-title_xl-font_size: 1.8rem;
 
     /****** the box ******/
@@ -54,7 +56,7 @@
     /****** Padding/Margin ******/
     --generality-padding-button: 0.2rem 0.5rem;
     --mobile-padding-logo_avatar: 1rem;
-    --mobile-padding-logo_title_xl: 5rem;
+    --mobile-padding-logo_title_xl: 2rem;
     --generality-paddind_left-input: 1rem;
     --generality-margin_top-input: 2vh;
 }
@@ -65,15 +67,32 @@
     margin: 0;
     padding: 0;
     color: var(--generality-color-font_primary);
-    font-size: var(--generality-text-font_size);
     font-family: 'Roboto', sans-serif;
+}
+.title {
+    text-align: center;
+    font-size: var(--generality-title-font_size);
 }
 .button {
     display: block;
     background-color: var(--generality-color-first);
     color: var(--generality-color-font_second);
     border: var(--generality-button-border);
-    padding: var(--generality-padding-button);
+    border-radius: var(--generality-button-border_radius);
+    box-shadow: var(--generality-button-box_shadow);
+    width: var(--generality-button-width);
+    height: var(--generality-button-height);
+    text-align: center;
+    line-height: var(--generality-button-height);
+    text-decoration: none;
+    margin-top: 5vh;
+    font-weight: bold;
+}
+.input-button {
+    display: block;
+    background-color: var(--generality-color-first);
+    color: var(--generality-color-font_second);
+    border: var(--generality-button-border);
     border-radius: var(--generality-button-border_radius);
     box-shadow: var(--generality-button-box_shadow);
     width: var(--generality-button-width);
@@ -89,6 +108,9 @@
     border : var(--generality-input-border);
     padding-left: var(--generality-paddind_left-input);
     margin-top: var(--generality-margin_top-input);
+    width: var(--generality-width-form);
+    height: 1.2rem;
+    background-color: var(--generality-color-background);
 }
 .fas, .far {
     font-size: var(--generality-size-icon);
@@ -111,11 +133,11 @@
     margin-top: 3vh;
 }
 .path-error p {
-    font-size: calc(var(--generality-text-font_size) - 0.5rem);
+    font-size: calc(var(--generality-text-font_size) - 0.2rem);
     color: gray;
 }
 .path-error a {
-    font-size: calc(var(--generality-text-font_size) - 0.5rem);
+    font-size: calc(var(--generality-text-font_size) - 0.2rem);
     color: black;
     font-style: italic;
 }
@@ -141,7 +163,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 50vh;
+    height: 40vh;
     justify-content: center;
 }
 .home-page-main > div > p {
@@ -152,7 +174,7 @@
 }
 .forgot-password a {
     font-style: italic;
-    font-size: calc(var(--generality-text-font_size) - 0.5rem);
+    font-size: calc(var(--generality-text-font_size) - 0.2rem);
 }
 
 /* ----------   END OF HOME PAGE  ------------------ */
@@ -187,8 +209,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 50vh;
-    margin-top: 10vh;
+    height: 40vh;
     justify-content: center;
 }
 .connection-main p {
@@ -200,6 +221,58 @@
     align-items: center;
 }
 /* ----------   END OF CONNECTION  ------------------ */
+/* ----------   START OF USER PROFILE  ------------------ */
+.user-modification {
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    justify-content: space-around;
+    align-items: center;
+}
+.profile-area-avatar {
+    display: flex;
+    width: calc(var(--generality-width-form) + 1rem);
+    height: 6rem;
+    justify-content: space-between;
+    align-items: center;
+}
+.profile-area-avatar > div > a {
+    margin: auto 0;
+    background-color: var(--generality-color-background);
+    color: var(--generality-color-first);
+}
+.profile-avatar {
+    width: 64px;
+    height: 64px;
+    border: 2px solid gray;
+    border-radius: var(--mobile-logo-border_radius);
+}
+.profile-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.profile-button > input {
+    margin: auto 0;
+}
+/* ----------   END OF USER PROFILE  ------------------ */
+
+/* ----------   START OF DASHBOARD  ------------------ */
+/*START SECTION 1*/
+
+/*END SECTION 1*/
+/*START SECTION 2*/
+
+/*END SECTION 2*/
+/* ----------   END OF DASHBOARD  ------------------ */
+/* ----------   START OF DASHBOARD-EMPTY  ------------------ */
+/*START SECTION 1*/
+
+/*END SECTION 1*/
+/*START SECTION 2*/
+
+/*END SECTION 2*/
+/* ----------   END OF DASHBOARD-EMPTY  ------------------ */
 /* ----------   START OF GIFT-LIST  ------------------ */
 .giftlist-h2 {
     margin-top: 6rem;
@@ -434,10 +507,13 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    height: 30vh;
     padding: var(--mobile-padding-logo_title_xl);
 }
 .fragment-mobile-logo-xl {
-    background-image: url("/image/logo-genie-250*250.png");
+    background-image: url("/image/logo-genie-130*130.png");
+    background-position: center;
+    background-repeat: no-repeat;
     width: var(--mobile-logo_xl-width);
     height: var(--mobile-logo_xl-height);
 }
