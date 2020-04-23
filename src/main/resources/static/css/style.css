@@ -23,7 +23,7 @@
     --mobile-logo_xl-height: 130px;
     --mobile-avatar-width: 65px;
     --mobile-avatar-height: 65px;
-    --generality-button-width: 30vw;
+    --generality-button-width: 35vw;
     --generality-button-height: 3vh;
     --generality-width-form: 13rem;
 
@@ -185,7 +185,7 @@ ul, li {
 }
 /* ----------   END OF CONNECTION  ------------------ */
 /* ----------   START OF USER PROFILE  ------------------ */
-.user-modification {
+.user {
     display: flex;
     flex-direction: column;
     height: 40vh;
@@ -219,6 +219,24 @@ ul, li {
     margin: auto 0;
 }
 /* ----------   END OF USER PROFILE  ------------------ */
+/* ----------   START OF CREATE PROFILE  ------------------ */
+.new-profile-avatar {
+    width: 64px;
+    height: 64px;
+    border: 2px solid gray;
+    border-radius: var(--mobile-logo-border_radius);
+    overflow: hidden;
+}
+.new-profile-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.new-profile-button input {
+    margin-top: auto;
+}
+/* ----------   END OF CREATE PROFILE  ------------------ */
 /* ----------   START OF DASHBOARD  ------------------ */
 /*START SECTION 1*/
 .flex1 {

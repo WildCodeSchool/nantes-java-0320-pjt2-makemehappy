@@ -18,10 +18,10 @@ public class ConnectionController {
         return "connection";
     }
 
-    @GetMapping("/new-profile")
+    @GetMapping("/create-profile")
     public String showNewProfile() {
 
-        return "new-profile";
+        return "create-profile";
     }
 
     @GetMapping("/user-profile")
