@@ -1,23 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../static/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/68562b10c3.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <title>Header</title>
 </head>
 <body>
-<header>
-    <nav class="header-nav">
-        <ul>
-            <li><a href="#add" title="add"><i class="far fa-plus-square"></i>Ajouter</a></li>
-            <li><a href="#profil" title="profil"><i class="fas fa-list-ul"></i>Profil</a></li>
-            <li><a href="#list" title="list"><i class="fas fa-user"></i>Listes</a></li>
-            <li><a href="#aboutus" title="aboutus"><i class="fas fa-info-circle"></i>A propos</a></li>
-        </ul>
-    </nav>
-</header>
+    <footer th:fragment="nav-bar-mobile">
+        <nav>
+            <ul class="footer-nav-bar">
+                <li>
+                    <a href="#add" title="add">
+                        <div>
+                            <i class="far fa-plus-square"></i>
+                            <p>Ajouter</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="/user-profile" title="profil">
+                        <div>
+                            <i class="fas fa-list-ul"></i>
+                            <p>Profil</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#list" title="list">
+                        <div>
+                            <i class="fas fa-user"></i>
+                            <p>Liste</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#aboutus" title="aboutus">
+                        <div>
+                            <i class="fas fa-info-circle"></i>
+                            <p>À propos</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
 </body>
 </html>
 

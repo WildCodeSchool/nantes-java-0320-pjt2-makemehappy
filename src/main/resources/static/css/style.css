@@ -69,6 +69,9 @@
     color: var(--generality-color-font_primary);
     font-family: 'Roboto', sans-serif;
 }
+ul, li {
+    list-style-type: none;
+}
 .title {
     text-align: center;
     font-size: var(--generality-title-font_size);
@@ -114,7 +117,7 @@
 }
 .fas, .far {
     font-size: var(--generality-size-icon);
-    color: var(--generality-color-first);
+    color: var(--generality-color-second);
 }
 #user-delete {
     font-size: var(--generality-size-icon);
@@ -122,9 +125,6 @@
 }
 .color-title {
     color: var(--generality-color-first);
-}
-.color-icon-primary {
-    color: var(--generality-color-second);
 }
 .path-error {
     display: flex;
@@ -141,7 +141,6 @@
     color: black;
     font-style: italic;
 }
-
 .input {
     width: 15rem;
     border-radius: 10px;
@@ -256,14 +255,17 @@
     margin: auto 0;
 }
 /* ----------   END OF USER PROFILE  ------------------ */
-
 /* ----------   START OF DASHBOARD  ------------------ */
 /*START SECTION 1*/
-
-/*END SECTION 1*/
-/*START SECTION 2*/
-
-/*END SECTION 2*/
+.flex1 {
+    margin-bottom: 3em;
+}
+.cardbodyclass {
+    text-align: center;
+} 
+.btn-group+.btn-group {
+    margin-left: 15px;
+}
 /* ----------   END OF DASHBOARD  ------------------ */
 /* ----------   START OF DASHBOARD-EMPTY  ------------------ */
 /*START SECTION 1*/
@@ -280,14 +282,12 @@
     color: #002962;
     text-align: center;
 }
-
 .container1, .container2 {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     text-align: center;
 }
-
 .giftlist-img {
     text-align: center;
     border-radius: 2rem;
@@ -440,15 +440,64 @@
 .gift-user-ajout form input:hover {
     color: beige;
 }
-
+/* ----------   END OF GIFT CREATE  ------------------ */
+/* ----------   START OF LIST CREATE  ------------------ */
 /* ----------   END GIFT  ------------------ */
 /* ----------   START OF GIFT USER RESERVED  ------------------ */
-
 .gift-user-reserved-bloc {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    height: 50vh;
+}
+.list-create-name input:hover {
+    border: 2px solid gainsboro;
+}
+.list-create-date input:hover {
+    border-top: 2px solid gainsboro;
+}
+.list-create-description textarea:hover {
+    border-top: 2px solid gainsboro;
+}
+/* ----------   END LIST CREATE  ------------------ */
+/* ----------   START OF GIFT  ------------------ */
+.gift-text {
+    text-align: center;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 3rem;
+}
+.gift-user-block p:nth-child(4) {
+    padding-top: 2rem;
+}
+.gift-user-ajout form input {
+    border: solid;
+    border-color: cadetblue;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+    font-size: 3rem;
+    background-color: cadetblue;
+    border-radius: 5px 5px 5px 5px;
+}
+.gift-user-ajout form {
+    border: solid;
+    border-color: beige;
+    padding: 4rem;
+    margin-top: 2rem;
+    border-radius: 10px 10px 10px 10px;
+}
+.gift-user-ajout {
+    display: flex;
+    justify-content: center;
+}
+.gift-user-ajout form:hover {
+    border-color: gainsboro;
+}
+.gift-user-ajout form input:hover {
+    color: beige;
     height: 60vh;
 }
 
@@ -522,7 +571,25 @@
     color: var(--generality-color-first);
 }
 /* ----------   END OF FRAGMENT MOBILE LOGO ET TITRE XL  ------------------ */
-
+/* ----------   START OF FRAGMENT NAV BAR MOBILE  ------------------ */
+.footer-nav-bar {
+    display: flex;
+    width: 100vw;
+    justify-content: space-evenly;
+}
+.footer-nav-bar div {
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.footer-nav-bar a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+/* ----------   END OF FRAGMENT NAV BAR MOBILE  ------------------ */
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END MOBILE VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START DESKTOP VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 @media only screen and (min-width: 768px) {}

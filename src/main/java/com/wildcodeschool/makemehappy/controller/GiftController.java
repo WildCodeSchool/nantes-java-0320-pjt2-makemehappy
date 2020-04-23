@@ -23,5 +23,4 @@ public class GiftController {
         return "gift-user-reserved";
     }
 
-
 }
