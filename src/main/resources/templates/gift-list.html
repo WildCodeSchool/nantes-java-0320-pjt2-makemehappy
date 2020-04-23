@@ -1,66 +1,47 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/68562b10c3.js"></script>
-    <link rel="stylesheet" href="../static/css/style.css">
+    <link href="../static/css/style.css" rel="stylesheet">
     <title>Gift List</title>
 </head>
 <body>
+<header th:replace="fragments/mobile-logo-avatar.html :: mobile-logo-avatar"></header>
     <h2 class="giftlist-h2">Mes Cadeaux</h2>
-    <section class="container1">
-        <div>
-            <a href="gift.html"></a><img class="giftlist-img" alt="cadeau1" src="https://via.placeholder.com/200x400.png" title="Cliquez-ici">
+<div class="card">
+    <a class="card-link" href="#">
+        <div class="gift-card-image"><img src="https://via.placeholder.com/180" alt="cadeau" /></div>
+        <div class="gift-card-body">
+            <div class="gift-card-title">
+                <h3>Cadeau Ganout</h3>
+            </div>
+            <div class="card-excerpt">
+                <div class="rating">
+                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                </div>
+            </div>
         </div>
-        <div>
-            <input id="coeur1" name="coeur1" type="checkbox"/>
-            <input id="coeur2" name="coeur2" type="checkbox"/>
-            <input id="coeur3" name="coeur3" type="checkbox"/>
+    </a>
+</div>
+<div class="card">
+    <a class="card-link" href="#">
+        <div class="gift-card-image"><img src="https://via.placeholder.com/180" alt="cadeau" /></div>
+        <div class="gift-card-body">
+            <div class="gift-card-title">
+                <h3>Cadeau Ganout</h3>
+            </div>
+            <div class="card-excerpt">
+                <div class="rating">
+                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                </div>
+            </div>
         </div>
-        <div>
-            <a href="gift.html"></a><img class="giftlist-img" alt="cadeau2" src="https://via.placeholder.com/200x400.png" title="Cliquez-ici">
-         </div>
-        <div>
-            <input id="coeur4" name="coeur4" type="checkbox"/>
-            <input id="coeur5" name="coeur5" type="checkbox"/>
-            <input id="coeur6" name="coeur6" type="checkbox"/>
-        </div>
-        <div>
-            <a href="gift.html"></a><img class="giftlist-img" alt="cadeau3" src="https://via.placeholder.com/200x400.png" title="Cliquez-ici">
-        </div>
-        <div>
-            <input id="coeur7" name="coeur7" type="checkbox"/>
-            <input id="coeur8" name="coeur8" type="checkbox"/>
-            <input id="coeur9" name="coeur9" type="checkbox"/>
-        </div>
-    </section>
-    <section class="container2">
-        <div>
-            <a href="gift.html"></a><img class="giftlist-img" alt="cadeau4" src="https://via.placeholder.com/200x400.png" title="Cliquez-ici">
-        </div>
-        <div>
-            <input id="coeur10" name="coeur10" type="checkbox"/>
-            <input id="coeur11" name="coeur11" type="checkbox"/>
-            <input id="coeur12" name="coeur12" type="checkbox"/>
-        </div>
-        <div>
-            <a href="gift.html"></a><img class="giftlist-img" alt="cadeau4" src="https://via.placeholder.com/200x400.png" title="Cliquez-ici">
-        </div>
-        <div>
-            <input id="coeur13" name="coeur7" type="checkbox"/>
-            <input id="coeur14" name="coeur8" type="checkbox"/>
-            <input id="coeur15" name="coeur9" type="checkbox"/>
-        </div>
-        <div>
-            <a href="gift.html"></a><img class="giftlist-img" alt="cadeau4" src="https://via.placeholder.com/200x400.png" title="Cliquez-ici">
-        </div>
-        <div>
-            <input id="coeur16" name="coeur10" type="checkbox"/>
-            <input id="coeur17" name="coeur11" type="checkbox"/>
-            <input id="coeur18" name="coeur12" type="checkbox"/>
-        </div>
-    </section>
-    <footer th:replace="/fragments/navigation-mobile.html :: nav-bar-mobile"></footer>
+    </a>
+</div>
+
+<footer th:replace="/fragments/navigation-mobile.html :: nav-bar-mobile"></footer>
 </body>
 </html>

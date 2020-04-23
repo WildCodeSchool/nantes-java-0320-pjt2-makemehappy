@@ -177,10 +177,10 @@ ul, li {
 /*START SECTION 1*/
 .flex1 {
     margin-bottom: 3em;
-} 
+}
 .cardbodyclass {
     text-align: center;
-}  
+}
 .btn-group+.btn-group {
     margin-left: 15px;
 }
@@ -192,7 +192,7 @@ ul, li {
 }
 .dashboard-empty-text p{
     margin-bottom: 3rem;
-    color: var(--generality-text-font_size: 0.9rem);
+    color: var(--generality-text-font_size);
 }
 .container-dashboard-empty{
     display: flex;
@@ -293,9 +293,18 @@ ul, li {
     margin-bottom: 3rem;
     color: #002962;
     text-align: center;
-} 
-.btn-group+.btn-group {
-    margin-left: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+.card{
+    border: 2px solid gray;
+    width: 180px;
+    height: 50vh;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.card-link{
+    text-decoration: none;
 }
 .container1, .container2 {
     display: flex;
@@ -315,16 +324,6 @@ ul, li {
     height: var(--mobile-logo_xl-height);
     border-radius: var(--mobile-logo-border_radius);
     margin: 1rem auto;
-}
-.gift-list-h1 {
-    margin-top: 1rem;
-    margin-bottom: 3rem;
-    text-align: center;
-}
-.gift-list-h2 {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
 }
 /*-----------------END OF GIFT-LIST-----------------*/
 /* ----------   START OF GIFT CREATE  ------------------ */
