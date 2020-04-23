@@ -215,7 +215,6 @@ ul, li {
 }
 /*END SECTION 1*/
 /*START SECTION 2*/
-
 /*END SECTION 2*/
 /* ----------   END OF DASHBOARD-EMPTY  ------------------ */
 /* ----------   START OF CONNECTION  ------------------ */
@@ -288,32 +287,15 @@ ul, li {
     margin-top: auto;
 }
 /* ----------   END OF CREATE PROFILE  ------------------ */
-/* ----------   START OF DASHBOARD  ------------------ */
-/*START SECTION 1*/
-.flex1 {
-    margin-bottom: 3em;
-}
-.cardbodyclass {
-    text-align: center;
-} 
-.btn-group+.btn-group {
-    margin-left: 15px;
-}
-/* ----------   END OF DASHBOARD  ------------------ */
-/* ----------   START OF DASHBOARD-EMPTY  ------------------ */
-/*START SECTION 1*/
-
-/*END SECTION 1*/
-/*START SECTION 2*/
-
-/*END SECTION 2*/
-/* ----------   END OF DASHBOARD-EMPTY  ------------------ */
 /* ----------   START OF GIFT-LIST  ------------------ */
 .giftlist-h2 {
     margin-top: 6rem;
     margin-bottom: 3rem;
     color: #002962;
     text-align: center;
+} 
+.btn-group+.btn-group {
+    margin-left: 15px;
 }
 .container1, .container2 {
     display: flex;
@@ -327,8 +309,6 @@ ul, li {
     height: 200px;
     width: 200px;
 }
-/*-----------------END OF GIFT-LIST-----------------*/
-/* ----------   START OF GIFT CREATE  ------------------ */
 .gift-list-logo-avatar-img-logo {
     background-image: url("/image/logo-genie-130*130.png");
     width: var(--mobile-logo_xl-width);
@@ -346,19 +326,25 @@ ul, li {
     margin-bottom: 2rem;
     text-align: center;
 }
+/*-----------------END OF GIFT-LIST-----------------*/
+/* ----------   START OF GIFT CREATE  ------------------ */
+
 .gift-create-image img {
     max-width: 15rem;
     border-radius: 10px;
     border: none;
     box-shadow: 3px 5px 3px black;
 }
+.gift-create-form {
+    height: 120vh;
+}
 .gift-create-form form {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding-top: 4em;
-    height: 90vh;
+    padding-top: 1.5rem;
+    height: 100vh;
 }
 .gift-create-block {
     display: flex;
@@ -415,6 +401,9 @@ ul, li {
 }
 /* ----------   END LIST CREATE  ------------------ */
 /* ----------   START OF GIFT  ------------------ */
+.gift-user-block {
+    height: 80vh;
+}
 .gift-text {
     text-align: center;
     height: 30vh;
@@ -451,6 +440,10 @@ ul, li {
 }
 .gift-user-ajout form input:hover {
     color: beige;
+}
+.gift-user-ajout form input:hover {
+    color: beige;
+    height: 60vh;
 }
 /* ----------   END GIFT  ------------------ */
 /* ----------   START ABOUT US  ------------------ */
