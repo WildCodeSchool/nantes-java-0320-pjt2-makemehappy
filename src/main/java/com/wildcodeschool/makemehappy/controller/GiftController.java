@@ -10,8 +10,14 @@ public class GiftController {
 
     @GetMapping("/gift-create")
     public String showgiftCreate() {
+
         return "gift-create";
     }
 
+    @GetMapping("/gift-list")
+    public String showgiftList() {
+
+        return "gift-list";
+    }
 
 }
