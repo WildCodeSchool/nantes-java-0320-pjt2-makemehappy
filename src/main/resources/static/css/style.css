@@ -1,4 +1,6 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START VARIABLE DECLARATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START MOBILE VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START VARIABLE DECLARATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 :root {
 
     /*
@@ -67,6 +69,9 @@
     color: var(--generality-color-font_primary);
     font-family: 'Roboto', sans-serif;
 }
+ul, li {
+    list-style-type: none;
+}
 .title {
     text-align: center;
     font-size: var(--generality-title-font_size);
@@ -112,7 +117,7 @@
 }
 .fas, .far {
     font-size: var(--generality-size-icon);
-    color: var(--generality-color-first);
+    color: var(--generality-color-second);
 }
 #user-delete {
     font-size: var(--generality-size-icon);
@@ -120,9 +125,6 @@
 }
 .color-title {
     color: var(--generality-color-first);
-}
-.color-icon-primary {
-    color: var(--generality-color-second);
 }
 .path-error {
     display: flex;
@@ -138,6 +140,13 @@
     font-size: calc(var(--generality-text-font_size) - 0.2rem);
     color: black;
     font-style: italic;
+}
+
+.input {
+    width: 15rem;
+    border-radius: 10px;
+    border: transparent;
+    box-shadow: 2px 4px 2px gainsboro;
 }
 /* ----------   END OF GENERALITY  ------------------ */
 /* ----------   START OF HOME PAGE  ------------------ */
@@ -158,6 +167,7 @@
     font-style: italic;
     font-size: calc(var(--generality-text-font_size) - 0.2rem);
 }
+
 /* ----------   END OF HOME PAGE  ------------------ */
 /* ----------   START OF CONNECTION  ------------------ */
 .connection-main {
@@ -176,6 +186,28 @@
     align-items: center;
 }
 /* ----------   END OF CONNECTION  ------------------ */
+/* ----------   START OF DASHBOARD  ------------------ */
+/*START SECTION 1*/
+.flex1 {
+    margin-bottom: 3em;
+}
+    
+.cardbodyclass {
+    text-align: center;
+}
+    
+.btn-group+.btn-group {
+    margin-left: 15px;
+}
+/* ----------   END OF DASHBOARD  ------------------ */
+/* ----------   START OF DASHBOARD-EMPTY  ------------------ */
+/*START SECTION 1*/
+
+/*END SECTION 1*/
+/*START SECTION 2*/
+
+/*END SECTION 2*/
+/* ----------   END OF DASHBOARD-EMPTY  ------------------ */
 /* ----------   START OF USER PROFILE  ------------------ */
 .user-modification {
     display: flex;
@@ -363,6 +395,75 @@
     background-color: aliceblue;
 }
 /* ----------   END OF GIFT CREATE  ------------------ */
+
+/* ----------   START OF LIST CREATE  ------------------ */
+
+.list-create-form form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 50vh;
+}
+
+.list-create-name input:hover {
+    border: 2px solid gainsboro;
+}
+
+.list-create-date input:hover {
+    border-top: 2px solid gainsboro;
+}
+
+.list-create-description textarea:hover {
+    border-top: 2px solid gainsboro;
+}
+/* ----------   END LIST CREATE  ------------------ */
+/* ----------   START OF GIFT  ------------------ */
+
+.gift-text {
+    text-align: center;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 3rem;
+}
+
+.gift-user-block p:nth-child(4) {
+    padding-top: 2rem;
+}
+
+.gift-user-ajout form input {
+    border: solid;
+    border-color: cadetblue;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+    font-size: 3rem;
+    background-color: cadetblue;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.gift-user-ajout form {
+    border: solid;
+    border-color: beige;
+    padding: 4rem;
+    margin-top: 2rem;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.gift-user-ajout {
+    display: flex;
+    justify-content: center;
+}
+
+.gift-user-ajout form:hover {
+    border-color: gainsboro;
+}
+
+.gift-user-ajout form input:hover {
+    color: beige;
+}
+/* ----------   END GIFT  ------------------ */
 /* ----------   START OF FRAGMENT MOBILE LOGO AVATAR  ------------------ */
 .fragment-mobile-logo-avatar-header {
     display: flex;
@@ -406,52 +507,26 @@
     color: var(--generality-color-first);
 }
 /* ----------   END OF FRAGMENT MOBILE LOGO ET TITRE XL  ------------------ */
+/* ----------   START OF FRAGMENT NAV BAR MOBILE  ------------------ */
+.footer-nav-bar {
+    display: flex;
+    width: 100vw;
+    justify-content: space-evenly;
+}
+.footer-nav-bar div {
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.footer-nav-bar a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+/* ----------   END OF FRAGMENT NAV BAR MOBILE  ------------------ */
+
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END MOBILE VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START DESKTOP VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-@media only screen and (min-width: 768px) {
-
-    /* ----------   START OF GENERALITY  ------------------ */
-
-    /* ----------   END OF GENERALITY  ------------------ */
-    /* ----------   START OF INDEX  ------------------ */
-    /*START SECTION 1*/
-
-    /*END SECTION 1*/
-    /*START SECTION 2*/
-
-    /*END SECTION 2*/
-    /* ----------   END OF INDEX  ------------------ */
-    /* ----------   START OF DASHBOARD  ------------------ */
-    /*START SECTION 1*/
-
-    /*END SECTION 1*/
-    /*START SECTION 2*/
-
-    /*END SECTION 2*/
-    /* ----------   END OF DASHBOARD  ------------------ */
-    /* ----------   START OF DASHBOARD-EMPTY  ------------------ */
-    /*START SECTION 1*/
-
-    /*END SECTION 1*/
-    /*START SECTION 2*/
-
-    /*END SECTION 2*/
-    /* ----------   END OF DASHBOARD-EMPTY  ------------------ */
-    /* ----------   START OF PAGE  ------------------ */
-    /*START SECTION 1*/
-
-    /*END SECTION 1*/
-    /*START SECTION 2*/
-
-    /*END SECTION 2*/
-    /* ----------   END OF PAGE  ------------------ */
-    /* ----------   START OF PAGE  ------------------ */
-    /*START SECTION 1*/
-
-    /*END SECTION 1*/
-    /*START SECTION 2*/
-
-    /*END SECTION 2*/
-    /* ----------   END OF PAGE  ------------------ */
-}
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END DESKTOP VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+@media only screen and (min-width: 768px) {}
