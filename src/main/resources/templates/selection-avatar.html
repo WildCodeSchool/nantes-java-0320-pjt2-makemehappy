@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste d'avatar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/68562b10c3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header th:replace="fragments/mobile-logo-avatar.html :: mobile-logo-avatar"></header>
+    <h2 class="title">Selectionnez votre avatar</h2>
+    <div>
+        <form method="get" action="/user-profile">
+            <ul class="main-avatar grid-container">
+                <li th:each="avatar : ${avatarList}" th:object="${avatarList}" class="avatar-container">
+                    <input type="image" class="img-avatar" th:src="${avatar.image}" src="image/avatar-vide.svg" alt="img-avatar">
+                </li>
+            </ul>
+        </form>
+    </div>
+<footer th:replace="/fragments/navigation-mobile.html :: nav-bar-mobile"></footer>
+</body>
+</html>

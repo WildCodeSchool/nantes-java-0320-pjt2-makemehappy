@@ -549,7 +549,7 @@ ul, li {
 .footer-nav-bar-about-us {
     width: 100vw;
     position: fixed;
-    top: 90vh;
+    top: 90.5vh;
     margin: auto;
     background-color: var(--generality-color-background);
     border-top: 1px solid lightgray;
@@ -568,6 +568,24 @@ ul, li {
     font-weight: bold;
 }
 /* ----------   END OF FRAGMENT NAV BAR MOBILE ABOUT US ------------------ */
+/* ----------   START PAGE OF AVATAR ------------------------------------- */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1px 1px;
+    grid-template-areas: ". ." ". ." ". .";
+    margin-bottom: 10vh;
+}
+.avatar-container {
+    height: 8rem;
+    width: 8rem;
+    border: 2px solid gray;
+    border-radius: 50%;
+    margin: 0.5rem auto;
+    overflow: hidden;
+}
+/* ----------   END PAGE OF AVATAR   ------------------------------------- */
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END MOBILE VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START DESKTOP VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 @media only screen and (min-width: 768px) {}
