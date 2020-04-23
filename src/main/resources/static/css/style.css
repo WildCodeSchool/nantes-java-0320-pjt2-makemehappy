@@ -429,6 +429,29 @@ ul, li {
     color: beige;
 }
 /* ----------   END GIFT  ------------------ */
+/* ----------   START ABOUT US  ------------------ */
+.team-donkey {
+    display: flex;
+    height: 70vh;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.dev-left, .dev-right {
+    display: flex;
+    width: 100vw;
+    justify-content: space-evenly;
+    align-items: center;
+}.dev-right {
+     flex-direction: row-reverse;
+ }
+.dev-image {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+}
+/* ----------   END ABOUT US  ------------------ */
 /* ----------   START OF FRAGMENT MOBILE LOGO AVATAR  ------------------ */
 .fragment-mobile-logo-avatar-header {
     display: flex;
