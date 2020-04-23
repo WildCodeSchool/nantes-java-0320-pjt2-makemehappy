@@ -1,6 +1,4 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START VARIABLE DECLARATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START MOBILE VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START VARIABLE DECLARATION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 :root {
 
     /*
@@ -23,7 +21,7 @@
     --mobile-logo_xl-height: 130px;
     --mobile-avatar-width: 65px;
     --mobile-avatar-height: 65px;
-    --generality-button-width: 30vw;
+    --generality-button-width: 35vw;
     --generality-button-height: 3vh;
     --generality-width-form: 13rem;
 
@@ -148,7 +146,6 @@ ul, li {
     box-shadow: 2px 4px 2px gainsboro;
     height: 3rem;
 }
-
 .bloc-p {
     border-radius: 10px;
     border: beige;
@@ -180,12 +177,10 @@ ul, li {
 /*START SECTION 1*/
 .flex1 {
     margin-bottom: 3em;
-}
-    
+} 
 .cardbodyclass {
     text-align: center;
-}
-    
+}  
 .btn-group+.btn-group {
     margin-left: 15px;
 }
@@ -216,7 +211,7 @@ ul, li {
 }
 /* ----------   END OF CONNECTION  ------------------ */
 /* ----------   START OF USER PROFILE  ------------------ */
-.user-modification {
+.user {
     display: flex;
     flex-direction: column;
     height: 40vh;
@@ -250,6 +245,44 @@ ul, li {
     margin: auto 0;
 }
 /* ----------   END OF USER PROFILE  ------------------ */
+/* ----------   START OF CREATE PROFILE  ------------------ */
+.new-profile-avatar {
+    width: 64px;
+    height: 64px;
+    border: 2px solid gray;
+    border-radius: var(--mobile-logo-border_radius);
+    overflow: hidden;
+}
+.new-profile-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.new-profile-button input {
+    margin-top: auto;
+}
+/* ----------   END OF CREATE PROFILE  ------------------ */
+/* ----------   START OF DASHBOARD  ------------------ */
+/*START SECTION 1*/
+.flex1 {
+    margin-bottom: 3em;
+}
+.cardbodyclass {
+    text-align: center;
+} 
+.btn-group+.btn-group {
+    margin-left: 15px;
+}
+/* ----------   END OF DASHBOARD  ------------------ */
+/* ----------   START OF DASHBOARD-EMPTY  ------------------ */
+/*START SECTION 1*/
+
+/*END SECTION 1*/
+/*START SECTION 2*/
+
+/*END SECTION 2*/
+/* ----------   END OF DASHBOARD-EMPTY  ------------------ */
 /* ----------   START OF GIFT-LIST  ------------------ */
 .giftlist-h2 {
     margin-top: 6rem;
