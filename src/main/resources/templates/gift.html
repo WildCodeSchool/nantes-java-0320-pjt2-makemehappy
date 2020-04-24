@@ -14,15 +14,15 @@
     <h2 class="title">Mes Cadeaux</h2>
     <div class="gift-user-block">
         <div class="gift-text">
-            <p>Bonjour "Votre Pseudo".</p>
+            <p th:text="|Bonjour ${pseudo}|">Bonjour "Votre Pseudo".</p>
             <p>Bienvenue dans votre tableau de bord.</p>
             <p>Pour ajouter un cadeau, cliquez sur l'onglet "Ajouter".</p>
             <p>Ajouter un cadeau</p>
         </div>
         <div class="gift-user-ajout">
-            <form action="/gift" method="post">
-                <input type="submit" value="+"/>
-            </form>
+            <div class="gift-user-ajout-bloc">
+                <a th:href="@{/gift-create}">+</a>
+            </div>
         </div>
     </div>
     <footer th:replace="/fragments/navigation-mobile.html :: nav-bar-mobile"></footer>

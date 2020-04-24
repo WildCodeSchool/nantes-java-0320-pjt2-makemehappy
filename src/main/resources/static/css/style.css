@@ -445,7 +445,7 @@ ul, li {
 .gift-user-block p:nth-child(4) {
     padding-top: 2rem;
 }
-.gift-user-ajout form input {
+.gift-user-ajout a {
     border: solid;
     border-color: cadetblue;
     padding-left: 0.6rem;
@@ -453,8 +453,9 @@ ul, li {
     font-size: 3rem;
     background-color: cadetblue;
     border-radius: 5px 5px 5px 5px;
+    text-decoration: none;
 }
-.gift-user-ajout form {
+.gift-user-ajout div {
     border: solid;
     border-color: beige;
     padding: 4rem;
@@ -465,16 +466,13 @@ ul, li {
     display: flex;
     justify-content: center;
 }
-.gift-user-ajout form:hover {
+.gift-user-ajout div:hover {
     border-color: gainsboro;
 }
-.gift-user-ajout form input:hover {
+.gift-user-ajout a:hover {
     color: beige;
 }
-.gift-user-ajout form input:hover {
-    color: beige;
-    height: 60vh;
-}
+
 /* ----------   END GIFT  ------------------ */
 /* ----------   START ABOUT US  ------------------ */
 .team-donkey {

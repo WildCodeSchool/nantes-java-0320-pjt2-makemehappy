@@ -2,6 +2,7 @@ package com.wildcodeschool.makemehappy.controller;
 
 import com.wildcodeschool.makemehappy.model.Gift;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -19,7 +20,10 @@ public class GiftController {
         return "gift-list";
     }
     @GetMapping("/gift")
-    public String showGift() {
+    public String showGift(Model out) {
+        String pseudo = "Gertrude";
+        out.addAttribute("pseudo", pseudo);
+
         return "gift";
     }
 
