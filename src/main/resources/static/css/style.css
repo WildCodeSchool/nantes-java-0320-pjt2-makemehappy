@@ -73,6 +73,7 @@ ul, li {
 .title {
     text-align: center;
     font-size: var(--generality-title-font_size);
+    padding: 2rem;
 }
 .button {
     display: block;
@@ -494,6 +495,9 @@ ul, li {
     align-items: center;
     height: 90vh;
 }
+.list-create-button {
+    height: 8rem;
+}
 .list-create-description textarea {
     height: auto;
 }
@@ -580,7 +584,7 @@ ul, li {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 50vh;
+    height: 70vh;
 }
 .list-create-name input:hover {
     border: 2px solid gainsboro;
@@ -667,7 +671,6 @@ ul, li {
     justify-content: space-around;
     align-items: center;
     height: 130vh;
-    margin-top: 2rem;
 }
 
 .gift-visitor-resa-connected-bloc-price {
