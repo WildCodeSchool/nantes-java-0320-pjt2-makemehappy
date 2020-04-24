@@ -73,7 +73,6 @@ ul, li {
 .title {
     text-align: center;
     font-size: var(--generality-title-font_size);
-    padding: 2rem;
 }
 .button {
     display: block;
