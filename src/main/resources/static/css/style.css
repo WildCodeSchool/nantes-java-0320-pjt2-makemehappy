@@ -67,12 +67,16 @@
     color: var(--generality-color-font_primary);
     font-family: 'Roboto', sans-serif;
 }
+body {
+    padding-bottom: 10vh;
+}
 ul, li {
     list-style-type: none;
 }
 .title {
     text-align: center;
     font-size: var(--generality-title-font_size);
+    padding-bottom: 2rem;
 }
 .button {
     display: block;
