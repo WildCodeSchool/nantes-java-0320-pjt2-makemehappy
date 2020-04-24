@@ -22,7 +22,7 @@ public class GiftController {
     @GetMapping("/gift")
 
     public String showGift(Model out) {
-        String pseudo = "Gertrude";
+        String pseudo = "Bastien";
         out.addAttribute("pseudo", pseudo);
 
 
