@@ -3,13 +3,13 @@ package com.wildcodeschool.makemehappy.model;
 public class Gift {
 
     private String nameGift;
-    private int price;
+    private double price;
     private int note;
     private String urlDealer;
     private String urlGiftPicture;
     private String description;
 
-    public Gift(String nameGift, int price, int note, String urlDealer, String urlGiftPicture, String description) {
+    public Gift(String nameGift, double price, int note, String urlDealer, String urlGiftPicture, String description) {
 
         this.nameGift = nameGift;
         this.price = price;
@@ -31,12 +31,12 @@ public class Gift {
         this.nameGift = nameGift;
     }
 
-    public int getPrice() {
+    public double getPrice() {
 
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(double price) {
 
         this.price = price;
     }

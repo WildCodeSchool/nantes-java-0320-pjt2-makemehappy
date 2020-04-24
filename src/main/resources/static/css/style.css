@@ -152,6 +152,7 @@ ul, li {
     box-shadow: 2px 4px 2px gainsboro;
     padding: 1rem;
     text-align: center;
+    width: 15rem;
 }
 /* ----------   END OF GENERALITY  ------------------ */
 /* ----------   START OF HOME PAGE  ------------------ */
@@ -577,6 +578,53 @@ ul, li {
     padding: 2rem;
 }
 /* ----------   END GIFT USER RESERVED  ------------------ */
+/* ----------   START OF GIFT VISITOR RESA CONNECTED  ------------------ */
+
+.gift-visitor-resa-connected-img img {
+    width: 17rem;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.gift-visitor-resa-connected-bloc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 130vh;
+    margin-top: 2rem;
+}
+
+.gift-visitor-resa-connected-bloc-price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.gift-visitor-resa-connected-price p {
+    width: 7rem;
+}
+
+.gift-visitor-resa-connected-note p {
+    width: 6rem;
+}
+
+.gift-visitor-resa-connected-description p {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+}
+
+.gift-visitor-resa-connected-message form textarea{
+    min-height: 6rem;
+    padding: 1rem;
+}
+.gift-visitor-resa-connected-resa {
+    height: 9rem;
+}
+.gift-visitor-resa-connected-message form textarea:hover {
+    border-top: 2px solid gainsboro;
+}
+
+/* ----------   END GIFT VISITOR RESA CONNECTED  ------------------ */
 /* ----------   START OF FRAGMENT MOBILE LOGO AVATAR  ------------------ */
 .fragment-mobile-logo-avatar-header {
     display: flex;
