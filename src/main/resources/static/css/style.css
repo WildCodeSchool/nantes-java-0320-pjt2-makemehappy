@@ -176,15 +176,46 @@ ul, li {
 /* ----------   END OF HOME PAGE  ------------------ */
 /* ----------   START OF DASHBOARD  ------------------ */
 /*START SECTION 1*/
-.flex1 {
-    margin-bottom: 3em;
-}
-.cardbodyclass {
-    text-align: center;
-}
-.btn-group+.btn-group {
-    margin-left: 15px;
-}
+.dashboard-card{
+    border: 2px solid gray;
+    border-radius: .5rem;
+    width: 200px;
+    height: 68vh;
+    margin: auto;
+    margin-bottom: 2rem;
+    text-align: center;}
+  
+  .dashboard-card-link{
+    text-decoration: none;
+  }
+  
+  .dashboard-img-placeholder{
+    border-radius: .5rem .5rem 0 0;
+  }
+  
+  .dashboard-card-date{
+    margin-top: 1rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .dashboard-button-message{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1rem;
+  }
+  
+  .dashboard-card-icons-trash{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 1rem;
+  }
+  
+  .dashboard-cards-icons{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 2.9rem;
+  }
 /* ----------   END OF DASHBOARD  ------------------ */
 /* ----------   START OF DASHBOARD-EMPTY  ------------------ */
 /*START SECTION 1*/
@@ -385,7 +416,7 @@ ul, li {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 50vh;
+    height: 90vh;
 }
 .list-create-description textarea {
     height: auto;
@@ -415,7 +446,7 @@ ul, li {
 .gift-user-block p:nth-child(4) {
     padding-top: 2rem;
 }
-.gift-user-ajout form input {
+.gift-user-ajout a {
     border: solid;
     border-color: cadetblue;
     padding-left: 0.6rem;
@@ -423,8 +454,9 @@ ul, li {
     font-size: 3rem;
     background-color: cadetblue;
     border-radius: 5px 5px 5px 5px;
+    text-decoration: none;
 }
-.gift-user-ajout form {
+.gift-user-ajout div {
     border: solid;
     border-color: beige;
     padding: 4rem;
@@ -435,16 +467,13 @@ ul, li {
     display: flex;
     justify-content: center;
 }
-.gift-user-ajout form:hover {
+.gift-user-ajout div:hover {
     border-color: gainsboro;
 }
-.gift-user-ajout form input:hover {
+.gift-user-ajout a:hover {
     color: beige;
 }
-.gift-user-ajout form input:hover {
-    color: beige;
-    height: 60vh;
-}
+
 /* ----------   END GIFT  ------------------ */
 /* ----------   START ABOUT US  ------------------ */
 .team-donkey {
