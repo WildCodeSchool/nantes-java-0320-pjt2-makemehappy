@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device=width" />
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/68562b10c3.js" crossorigin="anonymous"></script>
+    <title>Gift</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header th:replace="fragments/mobile-logo-avatar.html :: mobile-logo-avatar">test
+    </header>
+    <h2 class="title">Mes Cadeaux</h2>
+    <div class="gift-user-block">
+        <div class="gift-text">
+            <p th:text="|Bonjour ${pseudo}|">Bonjour "Votre Pseudo".</p>
+            <p>Bienvenue dans votre tableau de bord.</p>
+            <p>Pour ajouter un cadeau, cliquez sur l'onglet "Ajouter".</p>
+            <p>Ajouter un cadeau</p>
+        </div>
+        <div class="gift-user-ajout">
+            <div class="gift-user-ajout-bloc">
+                <a th:href="@{/gift-create}">+</a>
+            </div>
+        </div>
+    </div>
+    <footer th:replace="/fragments/navigation-mobile.html :: nav-bar-mobile"></footer>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/68562b10c3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+</head>
+<header th:replace="fragments/mobile-logo-avatar.html :: mobile-logo-avatar"></header>
+<body>
+    <div class="dashboard-card">
+        <a class="dashboard-card-link" href="/gift-list">
+
+            <div class="dashboard-gift-card-image"><img class="dashboard-img-placeholder" src="https://via.placeholder.com/200" alt="cadeau" />
+            </div>
+        </a>
+        <div class="dashboard-gift-card-body">
+            <div class="dashboard-gift-card-title">
+                <h3>Liste d'anniversaire de Ganout</h3>
+            </div>
+            <div class="dashboard-card-excerpt">
+                <input class="dashboard-card-date" type="date" name="anniversaire">
+                <textarea class="dashboard-card-textarea" placeholder="ecris ton message" rows="9" cols="20">
+                </textarea>
+                <div class="dashboard-button-message">
+                    <a href="#"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></a>
+                </div>
+                <div class="dashboard-cards-icons">
+                    <a href="#">
+                        <div class="dashboard-card-icons-trash"><i class="fa fa-trash-o" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="dashboard-card-icons-trash"><i class="fa fa-share" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <footer th:replace="/fragments/navigation-mobile.html :: nav-bar-mobile"></footer>
+</body>
+</html>

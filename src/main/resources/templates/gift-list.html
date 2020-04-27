@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/68562b10c3.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+    <title>Gift List</title>
+</head>
+<body>
+<header th:replace="fragments/mobile-logo-avatar.html :: mobile-logo-avatar"></header>
+    <h2 class="giftlist-h2">Mes Cadeaux</h2>
+<div class="card">
+    <a href="/gift-create">
+        <div class="gift-card-image">
+        </div>
+    </a>
+    <div class="gift-card-body">
+        <div class="gift-card-title">
+            <h3 class="title-gift">Cadeau Alan<br>
+                <a href="#" class="btn btn-inverse"><i id="trash" class="fa fa-trash-o" aria-hidden="true"></i></a>
+                <a class="share" href="#"><i
+                    class="fas fa-share-alt text-primary"></i></a></h3>
+        </div>
+        <div class="rating" id="like">
+            <input id="heart_5" name="like" type="radio" value="5"/>
+            <label for="heart_5" title="Five">&#10084;</label>
+            <input id="heart_4" name="like" type="radio" value="4"/>
+            <label for="heart_4" title="Four">&#10084;</label>
+            <input id="heart_3" name="like" type="radio" value="3"/>
+            <label for="heart_3" title="Three">&#10084;</label>
+            <input id="heart_2" name="like" type="radio" value="2"/>
+            <label for="heart_2" title="Two">&#10084;</label>
+            <input id="heart_1" name="like" type="radio" value="1"/>
+            <label for="heart_1" title="One">&#10084;</label>
+        </div>
+    </div>
+</div>
+<footer th:replace="/fragments/navigation-mobile.html :: nav-bar-mobile"></footer>
+</body>
+</html>
