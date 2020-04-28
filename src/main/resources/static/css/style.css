@@ -798,7 +798,6 @@ ul, li {
     grid-template-rows: 1fr 1fr 1fr;
     gap: 1px 1px;
     grid-template-areas: ". ." ". ." ". .";
-    margin-bottom: 10vh;
 }
 .avatar-container {
     height: 8rem;
