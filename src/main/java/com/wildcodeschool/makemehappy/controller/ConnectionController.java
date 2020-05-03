@@ -12,12 +12,6 @@ public class ConnectionController {
         return "home-page";
     }
 
-    @GetMapping("/connection")
-    public String showConnection() {
-
-        return "connection";
-    }
-
     @GetMapping("/create-profile")
     public String showNewProfile() {
 

@@ -1,4 +1,4 @@
-package com.wildcodeschool.makemehappy.model;
+package com.wildcodeschool.makemehappy.entity;
 
 import java.util.Date;
 
