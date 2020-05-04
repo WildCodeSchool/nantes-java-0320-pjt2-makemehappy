@@ -1,8 +1,6 @@
 package com.wildcodeschool.makemehappy.repository;
 
 import com.wildcodeschool.makemehappy.entity.User;
-import org.springframework.web.bind.annotation.RequestParam;
-
 import java.sql.*;
 
 public class UserRepository {
@@ -11,8 +9,7 @@ public class UserRepository {
     private static final String SQL_USER = "donkey";
     private static final String SQL_PASSWORD = "projet2$";
 
-    public boolean hasAccount(@RequestParam String pseudo,
-                              @RequestParam String password) {
+    public boolean hasAccount(String pseudo, String password) {
 
         try {
             Connection connection = DriverManager.getConnection(URL_DATABASE, SQL_USER, SQL_PASSWORD);
@@ -31,8 +28,7 @@ public class UserRepository {
         return true;
     }
 
-    public User getUser(@RequestParam String pseudo,
-                        @RequestParam String password) {
+    public User getUser(String pseudo, String password) {
 
         User user = new User();
 
@@ -63,5 +59,32 @@ public class UserRepository {
             e.printStackTrace();
         }
         return user;
+    }
+
+    public User createUser(String pseudo, String password) {
+
+        try {
+            Connection connection = DriverManager.getConnection(URL_DATABASE, SQL_USER, SQL_PASSWORD);
+            String request = "INSERT INTO user (pseudo, password) VALUES (?, ?);";
+            PreparedStatement statement = connection.prepareStatement(request, Statement.RETURN_GENERATED_KEYS);
+            statement.setString(1, pseudo);
+            statement.setString(2, password);
+
+            if (statement.executeUpdate() != 1) {
+                throw new SQLException("failed to insert data");
+            }
+
+            ResultSet generatedKeys = statement.getGeneratedKeys();
+
+            if (generatedKeys.next()) {
+                int id = generatedKeys.getInt(1);
+                return new User(id, pseudo, password, null, null, 0);
+            } else {
+                throw new SQLException("failed to get inserted id");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }
