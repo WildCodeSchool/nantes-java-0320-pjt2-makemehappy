@@ -1,5 +1,6 @@
 package com.wildcodeschool.makemehappy.controller;
 
+import com.google.common.hash.Hashing;
 import com.wildcodeschool.makemehappy.entity.User;
 import com.wildcodeschool.makemehappy.model.Avatar;
 import com.wildcodeschool.makemehappy.repository.AvatarRepository;
@@ -9,6 +10,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 @Controller
@@ -33,10 +36,11 @@ public class UserController {
                                  @RequestParam String pseudo,
                                  @RequestParam String password) {
 
-        boolean hasAccount = userRepository.hasAccount(pseudo, password);
+        String sha256hex = Hashing.sha256().hashString(password, StandardCharsets.UTF_8).toString();
+        boolean hasAccount = userRepository.hasAccount(pseudo, sha256hex);
 
         if (hasAccount) {
-            User user = userRepository.getUser(pseudo, password);
+            User user = userRepository.getUser(pseudo, sha256hex);
             model.addAttribute("user" , user);
         } else {
             return "/connection";
@@ -56,7 +60,8 @@ public class UserController {
                              @RequestParam (required = true) String pseudo,
                              @RequestParam (required = true) String password) {
 
-        model.addAttribute("user", userRepository.createUser(pseudo, password));
+        String sha256hex = Hashing.sha256().hashString(password, StandardCharsets.UTF_8).toString();
+        model.addAttribute("user", userRepository.createUser(pseudo, sha256hex));
 
         return "dashboard-empty";
     }
