@@ -9,13 +9,18 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-
 import java.util.List;
 
 @Controller
 public class UserController {
 
     UserRepository userRepository = new UserRepository();
+
+    @GetMapping("/")
+    public String showHomePage() {
+
+        return "home-page";
+    }
 
     @GetMapping("/connection")
     public String showConnection() {
@@ -40,6 +45,22 @@ public class UserController {
         return "dashboard";
     }
 
+    @GetMapping("/create-profile")
+    public String showNewProfile() {
+
+        return "create-profile";
+    }
+
+    @PostMapping("/create-profile")
+    public String createUser(Model model,
+                             @RequestParam (required = true) String pseudo,
+                             @RequestParam (required = true) String password) {
+
+        model.addAttribute("user", userRepository.createUser(pseudo, password));
+
+        return "dashboard-empty";
+    }
+
     @GetMapping("/selection-avatar")
     public String chooseYourAvatar(Model model) {
 
@@ -50,5 +71,11 @@ public class UserController {
         model.addAttribute("avatarList", avatarList);
 
         return "selection-avatar";
+    }
+
+    @GetMapping("/user-profile")
+    public String showUserProfile() {
+
+        return "user-profile";
     }
 }
