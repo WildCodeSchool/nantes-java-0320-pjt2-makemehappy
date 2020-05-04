@@ -30,7 +30,7 @@ public class UserController {
 
         boolean hasAccount = userRepository.hasAccount(pseudo, password);
 
-        if(hasAccount) {
+        if (hasAccount) {
             User user = userRepository.getUser(pseudo, password);
             model.addAttribute("user" , user);
         } else {

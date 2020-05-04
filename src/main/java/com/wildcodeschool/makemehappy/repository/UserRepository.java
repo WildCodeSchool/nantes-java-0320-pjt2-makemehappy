@@ -22,7 +22,7 @@ public class UserRepository {
             statement.setString(2, password);
             ResultSet resultSet = statement.executeQuery();
 
-            if (!(resultSet.next())) {
+            if (!resultSet.next()) {
                 return false;
             }
         } catch (SQLException e) {
