@@ -83,4 +83,17 @@ public class UserController {
 
         return "user-profile";
     }
+
+    @PostMapping("/user-profile")
+    public User updateUser(Model model,
+                           @RequestParam (required = true) int id,
+                           @RequestParam (required = true) String pseudo,
+                           @RequestParam (required = true) String password) {
+
+        String sha256hex = Hashing.sha256().hashString(password, StandardCharsets.UTF_8).toString();
+        model.addAttribute("user", userRepository.updateProfile(id, pseudo, sha256hex));
+
+        User user = new User();
+        return user;
+    }
 }

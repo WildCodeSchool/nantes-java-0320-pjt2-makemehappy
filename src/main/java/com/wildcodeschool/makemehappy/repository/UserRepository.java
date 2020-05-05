@@ -87,4 +87,36 @@ public class UserRepository {
         }
         return null;
     }
+
+    public User updateProfile(int id_user, String pseudo, String password) {
+
+        if (hasAccount(pseudo, password)) {
+
+            try {
+                Connection connection = DriverManager.getConnection(URL_DATABASE, SQL_USER, SQL_PASSWORD);
+                String request = "UPDATE user SET pseudo=?, password=? WHERE id=?";
+                PreparedStatement statement = connection.prepareStatement(request);
+                statement.setString(1, pseudo);
+                statement.setString(2, password);
+                statement.setInt(3, id_user);
+
+                if (statement.executeUpdate() != 1) {
+                    throw new SQLException("failed to insert data");
+                }
+
+                ResultSet generatedKeys = statement.getGeneratedKeys();
+
+                if (generatedKeys.next()) {
+                    int id = generatedKeys.getInt(1);
+                    return new User(id, pseudo, password, null, null, 0);
+                } else {
+                    throw new SQLException("failed to get inserted id");
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return null;
+    }
 }
