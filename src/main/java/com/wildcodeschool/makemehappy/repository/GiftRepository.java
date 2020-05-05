@@ -27,7 +27,7 @@ public class GiftRepository {
                 String urlGiftPicture = resultSet.getString("image");
                 String urlDealer = resultSet.getString("url_dealer");
                 float price = resultSet.getFloat("price");
-                int nameListe = resultSet.getInt("id_gift_list");
+                int idGiftList = resultSet.getInt("id_gift_list");
 
                 Gift gift = new Gift();
                 gift.setId(id);
@@ -37,7 +37,7 @@ public class GiftRepository {
                 gift.setUrlGiftPicture(urlGiftPicture);
                 gift.setUrlDealer(urlDealer);
                 gift.setPrice(price);
-                gift.setNameList(nameListe);
+                gift.setIdGiftList(idGiftList);
 
                 return gift;
             }

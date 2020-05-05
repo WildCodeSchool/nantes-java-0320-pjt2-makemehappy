@@ -9,9 +9,9 @@ public class Gift {
     private String urlDealer;
     private String urlGiftPicture;
     private String description;
-    private int id_gift_list;
+    private int idGiftList;
 
-    public Gift(int id, String nameGift, float price, int note, String urlDealer, String urlGiftPicture, String description, int id_gift_list) {
+    public Gift(int id, String nameGift, float price, int note, String urlDealer, String urlGiftPicture, String description, int idGiftList) {
 
         this.id = id;
         this.nameGift = nameGift;
@@ -20,7 +20,7 @@ public class Gift {
         this.urlDealer = urlDealer;
         this.urlGiftPicture = urlGiftPicture;
         this.description = description;
-        this.id_gift_list = id_gift_list;
+        this.idGiftList= idGiftList;
     }
 
     public Gift() {}
@@ -101,11 +101,11 @@ public class Gift {
         return id;
     }
 
-    public void setNameList(int id_gift_list) {
-        this.id_gift_list = id_gift_list;
+    public void setIdGiftList(int id_gift_list) {
+        this.idGiftList = idGiftList;
     }
 
     public int getId_gift_list() {
-        return id_gift_list;
+        return idGiftList;
     }
 }
