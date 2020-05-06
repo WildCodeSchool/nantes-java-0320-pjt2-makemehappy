@@ -8,11 +8,13 @@ public class ListController {
 
     @GetMapping("/list-create")
     public String showListCreate() {
+
         return "list-create";
     }
 
     @GetMapping("/dashboard-empty")
     public String showDashboardEmpty() {
+
         return "dashboard-empty";
     }
 
