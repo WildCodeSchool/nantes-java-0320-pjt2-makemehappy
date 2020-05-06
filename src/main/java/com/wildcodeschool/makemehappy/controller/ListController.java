@@ -12,14 +12,4 @@ public class ListController {
         return "list-create";
     }
 
-<<<<<<< HEAD
-=======
-    @GetMapping("/dashboard-empty")
-    public String showDashboardEmpty() {
-
-        return "dashboard-empty";
-    }
->>>>>>> 469762f289705aa51bd1e16736a5b5e0da48fd00
-
-
 }

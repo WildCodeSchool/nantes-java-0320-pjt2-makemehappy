@@ -1,32 +1,34 @@
 package com.wildcodeschool.makemehappy.controller;
 
+import com.wildcodeschool.makemehappy.model.GiftList;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
 @Controller
 public class DashboardController {
 
-
     @GetMapping("/dashboard")
     public String showDashboard (Model model) {
-        String pseudo =  "Donkey";
-        model.addAttribute("pseudo", pseudo);
 
-        List<List> lists = new ArrayList<>();
+        GiftList list1= new GiftList();
+        GiftList list2= new GiftList();
+        GiftList list3= new GiftList();
 
-        List list1 = new List();
+        list1.setTitle("Anniversaire");
+        list2.setTitle("Noel");
+        list3.setTitle("Boom chez Ganout");
 
-        lists.add(list1);
-        lists.add(list2);
-        lists.add(list3);
-        lists.add(list4);
-        model.addAttribute("names", names);
+        List<GiftList> dashboardLift = new ArrayList<>();
+
+        dashboardLift.add(list1);
+        dashboardLift.add(list2);
+        dashboardLift.add(list3);
+
+        model.addAttribute("list", dashboardLift);
         return "dashboard";
     }
 

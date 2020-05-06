@@ -13,7 +13,7 @@
 <header th:replace="fragments/mobile-logo-avatar.html :: mobile-logo-avatar"></header>
 <body>
     <ul>
-        <li th:each="list : ${lists}">
+        <li th:each="i : ${list}">
             <div class="dashboard-card">
                 <a class="dashboard-card-link" href="/gift-list">
 
@@ -22,7 +22,7 @@
                 </a>
                 <div class="dashboard-gift-card-body">
                     <div class="dashboard-gift-card-title">
-                        <h3 th:text="|Liste de ${pseudo}!|"> Mon titre</h3>
+                        <h3 th:text="*{i.getTitle()}"> Mon titre</h3>
                     </div>
                     <div class="dashboard-card-excerpt">
                         <input class="dashboard-card-date" type="date" name="anniversaire">
