@@ -7,10 +7,9 @@ import com.wildcodeschool.makemehappy.repository.AvatarRepository;
 import com.wildcodeschool.makemehappy.repository.UserRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-
+import org.springframework.web.bind.annotation.*;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletResponse;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 
@@ -34,7 +33,8 @@ public class UserController {
     @PostMapping("/connection")
     public String userConnection(Model model,
                                  @RequestParam String pseudo,
-                                 @RequestParam String password) {
+                                 @RequestParam String password,
+                                 HttpServletResponse response) {
 
         String sha256hex = Hashing.sha256().hashString(password, StandardCharsets.UTF_8).toString();
         boolean hasAccount = userRepository.hasAccount(pseudo, sha256hex);
@@ -42,6 +42,13 @@ public class UserController {
         if (hasAccount) {
             User user = userRepository.getUser(pseudo, sha256hex);
             model.addAttribute("user" , user);
+
+            Cookie cookie = new Cookie("currentId" , Integer.toString(user.getId()));
+            /*cookie.setSecure(true);*/
+            cookie.setHttpOnly(true);
+            cookie.setMaxAge(-1);
+            cookie.setPath("/");
+            response.addCookie(cookie);
         } else {
             return "/connection";
         }
@@ -79,8 +86,20 @@ public class UserController {
     }
 
     @GetMapping("/user-profile")
-    public String showUserProfile() {
+    public String showUserProfile(@CookieValue(value = "currentId", defaultValue = "tacos") String currentId) {
 
         return "user-profile";
+    }
+
+    @PostMapping("/user-profile")
+    public String updateUser(Model model,
+                           @RequestParam (required = true) String pseudo,
+                           @RequestParam (required = true) String password,
+                           @CookieValue(value = "currentId", defaultValue = "tacos") String currentId) {
+
+        String sha256hex = Hashing.sha256().hashString(password, StandardCharsets.UTF_8).toString();
+        model.addAttribute("user", userRepository.updateProfile(Integer.parseInt(currentId), pseudo, sha256hex));
+
+        return "dashboard";
     }
 }

@@ -87,4 +87,25 @@ public class UserRepository {
         }
         return null;
     }
+
+    public User updateProfile(int id_user, String pseudo, String password) {
+
+        try {
+            Connection connection = DriverManager.getConnection(URL_DATABASE, SQL_USER, SQL_PASSWORD);
+            String request = "UPDATE user SET pseudo=?, password=? WHERE id_user=?;";
+            PreparedStatement statement = connection.prepareStatement(request);
+            statement.setString(1, pseudo);
+            statement.setString(2, password);
+            statement.setInt(3, id_user);
+
+            if (statement.executeUpdate() != 1) {
+                throw new SQLException("failed to update data");
+            }
+            return new User(id_user, pseudo, password, null, null, 0);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }
