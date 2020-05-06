@@ -12,36 +12,33 @@
     </header>
     <h2 class="title">Mon Cadeau</h2>
     <div class="gift-create-form">
-        <form method="Post" action="/gift-list">
+        <form method="Post" action="/gift-create">
             <div class="gift-create-nameCadeau">
-                <input class="input" type="text" name="intitulé" id="intitulé" placeholder="Nom du cadeau" size="50" />
+                <input class="input" type="text" name="nameGift" id="gift-title" placeholder="Nom du cadeau" size="50" />
             </div>
             <div class="gift-create-block">
                 <div class="gift-create-price">
-                    <input class="input" type="text" name="price" id="price" placeholder="Prix" size="25" />
+                    <input class="input" type="text" name="price" id="gift-price" placeholder="Prix" size="25" />
                 </div>
                 <div class="gift-create-checkbox">
-                    <input type="checkbox" name="coeur1" id="coeur1" size="5"  />
-                    <input type="checkbox" name="coeur2" id="coeur2" size="5" />
-                    <input type="checkbox" name="coeur3" id="coeur3" size="5" />
+                    <input type="radio" name="coeur" id="coeur1" value="1" size="5"  />
+                    <input type="radio" name="coeur" id="coeur2" value="2" size="5" />
+                    <input type="radio" name="coeur" id="coeur3" value="3" size="5" />
+                    <input type="radio" name="coeur" id="coeur4" value="3" size="5" />
+                    <input type="radio" name="coeur" id="coeur5" value="3" size="5" />
                 </div>
             </div>
             <div class="gift-create-urlDealer">
-                <input class="input" type="url" name="urlDealer" id="urlDealer" placeholder="lien du site marchand" size="50"/>
+                <input class="input" type="url" name="urlDealer" id="gift-url-dealer" placeholder="lien du site marchand" size="50"/>
             </div>
             <div class="gift-create-urlPicture">
-                <input class="input" type="url" name="urlPicture" id="urlPicture" placeholder="lien de l'image du cadeau" size="50" />
+                <input class="input" type="url" name="urlGiftPicture" id="gift-image" placeholder="lien de l'image du cadeau" size="50" />
             </div>
-            <div class="gift-create-image">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Headphones_1.jpg/1200px-Headphones_1.jpg" alt="image casque"/>
-            </div>
+
             <div class="gift-create-message">
-                <textarea class="input" name="description" id="description" placeholder="Commentaire" rows="10" cols="30"></textarea>
+                <textarea class="input" name="description" id="gift-description" placeholder="Commentaire" rows="10" cols="30"></textarea>
             </div>
-            <div class="gift-create-bouton" th:if="${gift != null}">
-                <input class="input-button" type="submit" value="Modifier"/>
-            </div>
-            <div class="gift-create-bouton" th:if="${gift == null}">
+            <div class="gift-create-bouton" >
                 <input class="input-button" type="submit" value="Ajouter"/>
             </div>
         </form>
