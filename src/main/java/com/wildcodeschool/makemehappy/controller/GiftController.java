@@ -25,8 +25,8 @@ public class GiftController {
 
         List<Gift> gifts = new ArrayList<>();
         Gift gift1 = new Gift(1, "castor", 30, 3, "https://www.mynoors.com/peluche-castor-30-cm.html","https://ressources.mynoors.com/files/pages/original/2018/10/21/ryngot-castoro-l-30-cm-2396.jpg", "en peluche", 1);
-        Gift gift2 = new Gift(2, "poussin", 30, 5, "https://www.mynoors.com/peluche-castor-30-cm.html","https://ressources.mynoors.com/files/pages/original/2018/10/21/ryngot-castoro-l-30-cm-2396.jpg", "en peluche", 1);
-        Gift gift3 = new Gift(3, "lapin", 30, 1, "https://www.mynoors.com/peluche-castor-30-cm.html","https://ressources.mynoors.com/files/pages/original/2018/10/21/ryngot-castoro-l-30-cm-2396.jpg", "en peluche", 1);
+        Gift gift2 = new Gift(2, "ecran", 9499, 5, "https://www.boulanger.com/ref/1123090","https://boulanger.scene7.com/is/image/Boulanger/4718017169349_h_f_l_0?wid=400&hei=270", "écran gamer incurvé", 1);
+        Gift gift3 = new Gift(5, "xbox", 499, 1, "https://www.xbox.com/fr-FR/consoles/xbox-one-x/star-wars-jedi-fallen-order-1tb","https://compass-ssl.xbox.com/assets/c6/6b/c66b3c27-0c9c-4ee6-9243-869675526a74.jpg?n=X1X-993554_Content-Placement-0_Console-hub_740x417_02.jpg", "pack console plus jeu", 1);
 
         gifts.add(gift1);
         gifts.add(gift2);
