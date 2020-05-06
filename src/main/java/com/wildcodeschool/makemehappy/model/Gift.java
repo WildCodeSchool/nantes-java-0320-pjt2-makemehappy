@@ -2,24 +2,29 @@ package com.wildcodeschool.makemehappy.model;
 
 public class Gift {
 
+    private int id;
     private String nameGift;
-    private double price;
+    private float price;
     private int note;
     private String urlDealer;
     private String urlGiftPicture;
     private String description;
+    private int idGiftList;
 
-    public Gift(String nameGift, double price, int note, String urlDealer, String urlGiftPicture, String description) {
+    public Gift(int id, String nameGift, float price, int note, String urlDealer, String urlGiftPicture, String description, int idGiftList) {
 
+        this.id = id;
         this.nameGift = nameGift;
         this.price = price;
         this.note = note;
         this.urlDealer = urlDealer;
         this.urlGiftPicture = urlGiftPicture;
         this.description = description;
+        this.idGiftList= idGiftList;
     }
 
     public Gift() {}
+
 
     public String getNameGift() {
 
@@ -36,7 +41,7 @@ public class Gift {
         return price;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(float price) {
 
         this.price = price;
     }
@@ -79,5 +84,21 @@ public class Gift {
     public void setDescription(String description) {
 
         this.description = description;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setIdGiftList(int id_gift_list) {
+        this.idGiftList = idGiftList;
+    }
+
+    public int getIdGiftList() {
+        return idGiftList;
     }
 }

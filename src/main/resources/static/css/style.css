@@ -440,9 +440,7 @@ ul, li {
     border: none;
     box-shadow: 3px 5px 3px black;
 }
-.gift-create-form {
-    height: 120vh;
-}
+
 .gift-create-form form {
     display: flex;
     flex-direction: column;
@@ -467,6 +465,9 @@ ul, li {
 }
 .gift-create-price input {
     width: 7rem;
+}
+.gift-create-bouton input {
+    margin-top: 0rem;
 }
 .gift-create-message textarea:hover {
     border-top: 2px solid gainsboro;
@@ -682,16 +683,24 @@ ul, li {
 
 .gift-visitor-resa-connected-note p {
     width: 6rem;
+
 }
 
 .gift-visitor-resa-connected-description p {
     padding-bottom: 3rem;
     padding-top: 3rem;
 }
+.gift-visitor-resa-connected-message  {
+    text-align: center;
+}
 
 .gift-visitor-resa-connected-message form textarea{
     min-height: 6rem;
     padding: 1rem;
+}
+.gift-visitor-resa-connected-message form input {
+    margin: auto;
+    margin-top: 3rem;
 }
 .gift-visitor-resa-connected-resa {
     height: 9rem;
