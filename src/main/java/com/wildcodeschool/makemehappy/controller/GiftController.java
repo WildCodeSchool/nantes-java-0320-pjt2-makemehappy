@@ -5,8 +5,6 @@ import com.wildcodeschool.makemehappy.repository.GiftRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,13 +35,11 @@ public class GiftController {
         return "gift-list";
     }
 
-
     @GetMapping("/gift")
 
     public String showGift(Model out) {
         String pseudo = "Bastien";
         out.addAttribute("pseudo", pseudo);
-
 
         return "gift";
     }
@@ -63,5 +59,4 @@ public class GiftController {
 
         return "gift-visitor-resa-connected";
     }
-
 }

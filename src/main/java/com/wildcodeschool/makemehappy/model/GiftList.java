@@ -1,7 +1,6 @@
 package com.wildcodeschool.makemehappy.model;
 
 import java.util.Date;
-import java.util.List;
 
 public class GiftList {
 
@@ -13,7 +12,6 @@ public class GiftList {
     private boolean notifyGift;
     private int idUser;
     private int idTheme;
-
 
     public GiftList() {
     }

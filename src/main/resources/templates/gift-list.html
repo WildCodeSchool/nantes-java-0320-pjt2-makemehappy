@@ -13,7 +13,6 @@
 <div  th:each="gift : ${listGift}" class="card">
     <a href="/gift-create">
         <img th:src="${gift.getUrlGiftPicture()}" class="gift-card-image">
-
     </a>
     <div class="gift-card-body">
         <div class="gift-card-title">
