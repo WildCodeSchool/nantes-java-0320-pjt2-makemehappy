@@ -9,34 +9,36 @@
 </head>
     <header th:replace="fragments/mobile-logo-avatar.html :: mobile-logo-avatar">test
     </header>
-<body>
-    <h2 class="title">Mes Cadeaux</h2>
-    <div class="gift-visitor-resa-connected-bloc">
-        <div class="gift-visitor-resa-connected-img">
-            <img alt="title" th:alt="${giftDetails.getNameGift()}" th:src="${giftDetails.getUrlGiftPicture()}">
-        </div>
-        <div class="gift-visitor-resa-connected-nameGift">
-            <p th:text="${giftDetails.getNameGift()}" class="bloc-p"></p>
-        </div>
-        <div class="gift-visitor-resa-connected-bloc-price">
-            <div class="gift-visitor-resa-connected-price">
-                <p th:text="|${giftDetails.getPrice()}€|" class="bloc-p"></p>
+<body class="gift-visitor-resa-connected-body">
+    <div class="gift-visitor-resa-connected-encadrement">
+        <h2 class="title">Mes Cadeaux</h2>
+        <div class="gift-visitor-resa-connected-bloc">
+            <div class="gift-visitor-resa-connected-img">
+                <img alt="title" th:alt="${giftDetails.getNameGift()}" th:src="${giftDetails.getUrlGiftPicture()}">
             </div>
-            <div class="gift-visitor-resa-connected-note">
-                <p th:text="${giftDetails.getNote()}" class="bloc-p"></p>
+            <div class="gift-visitor-resa-connected-nameGift">
+                <p th:text="${giftDetails.getNameGift()}" class="bloc-p"></p>
             </div>
-        </div>
-        <div class="gift-visitor-resa-connected-url">
-            <p th:text="${giftDetails.getUrlDealer()}" class="bloc-p"></p>
-        </div>
-        <div class="gift-visitor-resa-connected-description">
-            <p th:text="${giftDetails.getDescription()}" class="bloc-p"></p>
-        </div>
-        <div class="gift-visitor-resa-connected-message">
-            <form method="post" action="/gift-list">
-                <textarea class="input" name="description" id="description" placeholder="Message" rows="10" ></textarea>
-                <input th:href="@{/list-visitor}" type="submit" class="input-button" value="Réserver"/>
-            </form>
+            <div class="gift-visitor-resa-connected-bloc-price">
+                <div class="gift-visitor-resa-connected-price">
+                    <p th:text="|${giftDetails.getPrice()}€|" class="bloc-p"></p>
+                </div>
+                <div class="gift-visitor-resa-connected-note">
+                    <p th:text="${giftDetails.getNote()}" class="bloc-p"></p>
+                </div>
+            </div>
+            <div class="gift-visitor-resa-connected-url">
+                <p th:text="${giftDetails.getUrlDealer()}" class="bloc-p"></p>
+            </div>
+            <div class="gift-visitor-resa-connected-description">
+                <p th:text="${giftDetails.getDescription()}" class="bloc-p"></p>
+            </div>
+            <div class="gift-visitor-resa-connected-message">
+                <form method="post" action="/gift-list">
+                    <textarea class="input" name="description" id="description" placeholder="Message" rows="10" ></textarea>
+                    <input th:href="@{/list-visitor}" type="submit" class="input-button" value="Réserver"/>
+                </form>
+            </div>
         </div>
     </div>
     <footer th:replace="/fragments/navigation-mobile.html :: nav-bar-mobile"></footer>
