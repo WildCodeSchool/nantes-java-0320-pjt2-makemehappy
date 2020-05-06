@@ -20,7 +20,7 @@
         </div>
         <div class="gift-visitor-resa-connected-bloc-price">
             <div class="gift-visitor-resa-connected-price">
-                <p th:text="${giftDetails.getPrice()}" class="bloc-p"></p>
+                <p th:text="|${giftDetails.getPrice()} €|" class="bloc-p"></p>
             </div>
             <div class="gift-visitor-resa-connected-note">
                 <p th:text="${giftDetails.getNote()}" class="bloc-p"></p>
@@ -32,15 +32,16 @@
         <div class="gift-visitor-resa-connected-description">
             <p th:text="${giftDetails.getDescription()}" class="bloc-p"></p>
         </div>
-        <div class="gift-visitor-resa-connected-message">
+        <div class="gift-visitor-resa-connected-message" th:if="${isLogged}">
             <form method="post" action="/gift-list">
-
-                    <textarea class="input" name="description" id="description" placeholder="Message" rows="10" ></textarea>
-
+                <textarea class="input" name="description" id="description" placeholder="Message" rows="10" ></textarea>
+                <input th:href="@{/list-visitor}" type="submit" class="input-button" value="Réserver"/>
             </form>
         </div>
-        <div class="gift-visitor-resa-connected-resa">
-            <a th:hreaf="@{/gift-list}" class="input-button">Réserver</a>
+        <div class="gift-visitor-resa-connected-message" th:if="${not isLogged}">
+            <form method="post" action="/gift-list">
+                <input th:href="@{/}" type="submit" class="input-button" value="Se Connecter"/>
+            </form>
         </div>
     </div>
     <footer th:replace="/fragments/navigation-mobile.html :: nav-bar-mobile"></footer>

@@ -682,16 +682,24 @@ ul, li {
 
 .gift-visitor-resa-connected-note p {
     width: 6rem;
+
 }
 
 .gift-visitor-resa-connected-description p {
     padding-bottom: 3rem;
     padding-top: 3rem;
 }
+.gift-visitor-resa-connected-message  {
+    text-align: center;
+}
 
 .gift-visitor-resa-connected-message form textarea{
     min-height: 6rem;
     padding: 1rem;
+}
+.gift-visitor-resa-connected-message form input {
+    margin: auto;
+    margin-top: 3rem;
 }
 .gift-visitor-resa-connected-resa {
     height: 9rem;
