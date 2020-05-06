@@ -26,13 +26,6 @@ public class Gift {
     public Gift() {}
 
 
-
-    public Gift(String id, String nameGift, float price, int note, String urlDealer, String urlGiftPicture, String description, String id_gift_list) {
-    }
-
-    public Gift(String casque, double v, int note, String urlDealer, String urlGiftPicture, String description, String id_gift_list) {
-    }
-
     public String getNameGift() {
 
         return nameGift;
@@ -105,7 +98,7 @@ public class Gift {
         this.idGiftList = idGiftList;
     }
 
-    public int getId_gift_list() {
+    public int getIdGiftList() {
         return idGiftList;
     }
 }

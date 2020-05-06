@@ -13,14 +13,14 @@
     <h2 class="title">Mes Cadeaux</h2>
     <div class="gift-visitor-resa-connected-bloc">
         <div class="gift-visitor-resa-connected-img">
-            <img th:src="${giftDetails.getUrlGiftPicture()}" alt="title" th:alt="${giftDetails.getNameGift()}">
+            <img alt="title" th:alt="${giftDetails.getNameGift()}" th:src="${giftDetails.getUrlGiftPicture()}">
         </div>
         <div class="gift-visitor-resa-connected-nameGift">
             <p th:text="${giftDetails.getNameGift()}" class="bloc-p"></p>
         </div>
         <div class="gift-visitor-resa-connected-bloc-price">
             <div class="gift-visitor-resa-connected-price">
-                <p th:text="|${giftDetails.getPrice()} €|" class="bloc-p"></p>
+                <p th:text="|${giftDetails.getPrice()}|" class="bloc-p"></p>
             </div>
             <div class="gift-visitor-resa-connected-note">
                 <p th:text="${giftDetails.getNote()}" class="bloc-p"></p>
@@ -32,15 +32,10 @@
         <div class="gift-visitor-resa-connected-description">
             <p th:text="${giftDetails.getDescription()}" class="bloc-p"></p>
         </div>
-        <div class="gift-visitor-resa-connected-message" th:if="${isLogged}">
+        <div class="gift-visitor-resa-connected-message">
             <form method="post" action="/gift-list">
                 <textarea class="input" name="description" id="description" placeholder="Message" rows="10" ></textarea>
                 <input th:href="@{/list-visitor}" type="submit" class="input-button" value="Réserver"/>
-            </form>
-        </div>
-        <div class="gift-visitor-resa-connected-message" th:if="${not isLogged}">
-            <form method="post" action="/gift-list">
-                <input th:href="@{/}" type="submit" class="input-button" value="Se Connecter"/>
             </form>
         </div>
     </div>
