@@ -16,10 +16,14 @@ public class GiftController {
     }
 
     @GetMapping("/gift-list")
-    public String showGiftList() {
+    public String showGiftList(Model out) {
+        String pseudo = "Anne";
+        out.addAttribute("pseudo", pseudo);
 
         return "gift-list";
     }
+
+
     @GetMapping("/gift")
 
     public String showGift(Model out) {
