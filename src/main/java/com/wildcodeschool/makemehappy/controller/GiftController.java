@@ -7,6 +7,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Controller
 public class GiftController {
 
@@ -17,8 +20,19 @@ public class GiftController {
 
     @GetMapping("/gift-list")
     public String showGiftList(Model out) {
-        String pseudo = "Anne";
+        String pseudo = "Alan";
         out.addAttribute("pseudo", pseudo);
+
+        List<Gift> gifts = new ArrayList<>();
+        Gift gift1 = new Gift(1, "castor", 30, 3, "https://www.mynoors.com/peluche-castor-30-cm.html","https://ressources.mynoors.com/files/pages/original/2018/10/21/ryngot-castoro-l-30-cm-2396.jpg", "en peluche", 1);
+        Gift gift2 = new Gift(2, "poussin", 30, 5, "https://www.mynoors.com/peluche-castor-30-cm.html","https://ressources.mynoors.com/files/pages/original/2018/10/21/ryngot-castoro-l-30-cm-2396.jpg", "en peluche", 1);
+        Gift gift3 = new Gift(3, "lapin", 30, 1, "https://www.mynoors.com/peluche-castor-30-cm.html","https://ressources.mynoors.com/files/pages/original/2018/10/21/ryngot-castoro-l-30-cm-2396.jpg", "en peluche", 1);
+
+        gifts.add(gift1);
+        gifts.add(gift2);
+        gifts.add(gift3);
+
+        out.addAttribute("listGift", gifts);
 
         return "gift-list";
     }

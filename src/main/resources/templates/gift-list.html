@@ -10,28 +10,28 @@
 <body>
 <header th:replace="fragments/mobile-logo-avatar.html :: mobile-logo-avatar"></header>
     <h2 class="giftlist-h2">Mes Cadeaux</h2>
-<div class="card">
+<div  th:each="gift : ${listGift}" class="card">
     <a href="/gift-create">
-        <div class="gift-card-image">
-        </div>
+        <img th:src="${gift.getUrlGiftPicture()}" class="gift-card-image">
+
     </a>
     <div class="gift-card-body">
         <div class="gift-card-title">
-            <h3 th:text="|Cadeau ${pseudo}|"class="title-gift">Cadeau pseudo<br>
+            <h3 th:text="${gift.getNameGift()}" class="title-gift">Cadeau pseudo<br>
                 <a href="#" class="btn btn-inverse"><i id="trash" class="fa fa-trash-o" aria-hidden="true"></i></a>
                 <a class="share" href="#"><i
                     class="fas fa-share-alt text-primary"></i></a></h3>
         </div>
         <div class="rating" id="like">
-            <input id="heart_5" name="like" type="radio" value="5"/>
+            <input th:checked="${gift.getNote() == 5}" id="heart_5" th:name="|like-${gift.getId()}|" disabled type="radio" value="5"/>
             <label for="heart_5" title="Five">&#10084;</label>
-            <input id="heart_4" name="like" type="radio" value="4"/>
+            <input th:checked="${gift.getNote() == 4}" id="heart_4" th:name="|like-${gift.getId()}|" disabled type="radio" value="4"/>
             <label for="heart_4" title="Four">&#10084;</label>
-            <input id="heart_3" name="like" type="radio" value="3"/>
+            <input th:checked="${gift.getNote() == 3}" id="heart_3" th:name="|like-${gift.getId()}|" disabled type="radio" value="3"/>
             <label for="heart_3" title="Three">&#10084;</label>
-            <input id="heart_2" name="like" type="radio" value="2"/>
+            <input th:checked="${gift.getNote() == 2}" id="heart_2" th:name="|like-${gift.getId()}|" disabled type="radio" value="2"/>
             <label for="heart_2" title="Two">&#10084;</label>
-            <input id="heart_1" name="like" type="radio" value="1"/>
+            <input th:checked="${gift.getNote() == 1}" id="heart_1" th:name="|like-${gift.getId()}|" disabled type="radio" value="1"/>
             <label for="heart_1" title="One">&#10084;</label>
         </div>
     </div>
