@@ -47,4 +47,34 @@ public class GiftRepository {
         }
         return null;
     }
+
+    public Gift save(String nameGift, String description, String urlGiftPicture, String urlDealer, float price) {
+        try {
+            Connection connection = DriverManager.getConnection(URL_DATABASE, SQL_USER, SQL_PASSWORD);
+            PreparedStatement statement = connection.prepareStatement("INSERT INTO gift(title, description, image, url_dealer, price, preference) VALUES (?, ?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
+            statement.setString(1, nameGift);
+            statement.setString(2, description);;
+            statement.setString(3, urlGiftPicture);
+            statement.setString(4, urlDealer);
+            statement.setFloat(5, price);
+            statement.setInt(6, 1);
+
+            if (statement.executeUpdate() != 1) {
+                throw new SQLException("failed to insert data");
+            }
+
+            ResultSet generatedKeys = statement.getGeneratedKeys();
+
+            if (generatedKeys.next()) {
+                int id = generatedKeys.getInt(1);
+                return new Gift( id, nameGift, price, 0, urlGiftPicture, urlDealer, description, 0);
+            }
+            else {
+                throw new SQLException("failed to get inserted id");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }
