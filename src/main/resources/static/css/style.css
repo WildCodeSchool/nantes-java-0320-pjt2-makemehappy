@@ -76,7 +76,6 @@ ul, li {
 .title {
     text-align: center;
     font-size: var(--generality-title-font_size);
-    padding-bottom: 2rem;
 }
 .button {
     display: block;
@@ -819,4 +818,61 @@ ul, li {
 /* ----------   END PAGE OF AVATAR   ------------------------------------- */
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END MOBILE VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START DESKTOP VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START GIFT CREATE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    .gift-create-body {
+        background-image: url("/image/cadeau17.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    footer {
+        display: none;
+    }
+    .gift-create-encadrement {
+        margin: 2rem 15rem 2rem 50rem;
+        background-color: white;
+        padding-top: 3rem;
+        border-radius: 30px;
+        border: 1px solid gainsboro;
+        padding-bottom: 3rem;
+    }
+    .input-button {
+        width: 10rem;
+        height: 3rem;
+    }
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END GIFT CREATE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START GIFT VISITOR RESA CONNECTED ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    .gift-visitor-resa-connected-body {
+        background-image: url("/image/cadeau20.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .gift-visitor-resa-connected-encadrement {
+        margin: 2rem 33rem 2rem 33rem;
+        padding-top: 3rem;
+        border-radius: 30px;
+        background-color: white;
+        padding-bottom: 3rem;
+    }
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END GIFT VISITOR RESA CONNECTED ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START GIFT USER RESERVED ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    .gift-user-reserved-body {
+        background-image: url("/image/cadeau22.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .gift-user-reserved-encadrement {
+        margin: 2rem 15rem 2rem 50rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+    .gift-user-reserved-encadrement h2 {
+        padding-bottom: 2rem;
+    }
+    .gift-user-reserved-image img {
+        box-shadow: 1px 3px 2px black;
+    }
+    .bloc-p {
+        box-shadow: 1px 3px 2px black;
+    }
+}

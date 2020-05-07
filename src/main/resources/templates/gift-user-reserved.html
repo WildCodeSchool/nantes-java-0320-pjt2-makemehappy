@@ -7,22 +7,24 @@
     <title>Make Me Happy</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
+<body class="gift-user-reserved-body">
     <header th:replace="fragments/mobile-logo-avatar.html :: mobile-logo-avatar">test
     </header>
-    <h2 class="title">Mon Cadeau</h2>
-    <div class="gift-user-reserved-bloc">
-        <div class="gift-user-reserved-image">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Headphones_1.jpg/1200px-Headphones_1.jpg" alt="image casque"/>
-        </div>
-        <div class="gift-user-reserved-gift-name">
-            <p>Casque</p>
-        </div>
-        <div class="gift-user-reserved">
-            <p class="bloc-p">Cadeau réservé par Diablotin44</p>
-        </div>
-        <div class="gift-user-reserved-message">
-            <p class="bloc-p">Je te souhaite beaucoup d'amour et de tacos, ton petit diablotin</p>
+    <div class="gift-user-reserved-encadrement">
+        <h2 class="title">Mon Cadeau</h2>
+        <div class="gift-user-reserved-bloc">
+            <div class="gift-user-reserved-image">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Headphones_1.jpg/1200px-Headphones_1.jpg" alt="image casque"/>
+            </div>
+            <div class="gift-user-reserved-gift-name">
+                <p>Casque</p>
+            </div>
+            <div class="gift-user-reserved">
+                <p class="bloc-p">Cadeau réservé par Diablotin44</p>
+            </div>
+            <div class="gift-user-reserved-message">
+                <p class="bloc-p">Je te souhaite beaucoup d'amour et de tacos, ton petit diablotin</p>
+            </div>
         </div>
     </div>
     <footer th:replace="/fragments/navigation-mobile.html :: nav-bar-mobile"></footer>
