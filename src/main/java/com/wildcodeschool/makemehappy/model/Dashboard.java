@@ -3,19 +3,18 @@ package com.wildcodeschool.makemehappy.model;
 import java.util.List;
 
 public class Dashboard {
-    private List GiftList;
 
-    public Dashboard (){}
+    private List<GiftList> dashboard;
 
-    public Dashboard (List list){
-        this.GiftList= list;
+    public Dashboard(List<GiftList> dashboard) {
+        this.dashboard = dashboard;
     }
 
-    public List getList() {
-        return GiftList;
+    public List<GiftList> getDashboard() {
+        return dashboard;
     }
 
-    public void setList(List list) {
-        this.GiftList = list;
+    public void setDashboard(List<GiftList> dashboard) {
+        this.dashboard = dashboard;
     }
 }

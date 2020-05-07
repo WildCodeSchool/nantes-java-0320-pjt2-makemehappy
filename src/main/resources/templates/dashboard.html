@@ -13,7 +13,7 @@
 <header th:replace="fragments/mobile-logo-avatar.html :: mobile-logo-avatar"></header>
 <body>
     <ul>
-        <li th:each="i : ${list}">
+        <li th:each="giftList : ${dashboard}">
             <div class="dashboard-card">
                 <a class="dashboard-card-link" href="/gift-list">
 
@@ -22,7 +22,7 @@
                 </a>
                 <div class="dashboard-gift-card-body">
                     <div class="dashboard-gift-card-title">
-                        <h3 th:text="*{i.getTitle()}"> Mon titre</h3>
+                        <h3 th:text="*{giftList.getTitle()}"> Mon titre</h3>
                     </div>
                     <div class="dashboard-card-excerpt">
                         <input class="dashboard-card-date" type="date" name="anniversaire">
@@ -43,8 +43,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            </div>
          </li>
     </ul>
     <footer th:replace="/fragments/navigation-mobile.html :: nav-bar-mobile"></footer>

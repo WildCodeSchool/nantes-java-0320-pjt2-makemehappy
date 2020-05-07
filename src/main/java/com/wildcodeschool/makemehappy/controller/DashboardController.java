@@ -14,21 +14,21 @@ public class DashboardController {
     @GetMapping("/dashboard")
     public String showDashboard (Model model) {
 
-        GiftList list1= new GiftList();
-        GiftList list2= new GiftList();
-        GiftList list3= new GiftList();
+        GiftList giftList1 = new GiftList();
+        GiftList giftList2 = new GiftList();
+        GiftList giftList3 = new GiftList();
 
-        list1.setTitle("Anniversaire");
-        list2.setTitle("Noel");
-        list3.setTitle("Boom chez Ganout");
+        giftList1.setTitle("Anniversaire");
+        giftList2.setTitle("Noel");
+        giftList3.setTitle("Boom chez Ganout");
 
-        List<GiftList> dashboardLift = new ArrayList<>();
+        List<GiftList> dashboardList = new ArrayList<>();
 
-        dashboardLift.add(list1);
-        dashboardLift.add(list2);
-        dashboardLift.add(list3);
+        dashboardList.add(giftList1);
+        dashboardList.add(giftList2);
+        dashboardList.add(giftList3);
 
-        model.addAttribute("list", dashboardLift);
+        model.addAttribute("dashboard", dashboardList);
         return "dashboard";
     }
 
