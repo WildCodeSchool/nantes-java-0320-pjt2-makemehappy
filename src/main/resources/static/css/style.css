@@ -455,6 +455,14 @@ form {
 .profile-button > input {
     margin: auto 0;
 }
+.log-out{
+    display: flex;
+    justify-content: center;
+}
+.fa-power-off{
+    color: var(--generality-color-third);
+    margin-left: 2rem;
+}
 /* ----------   END OF USER PROFILE  ------------------ */
 /* ----------   START OF CREATE PROFILE  ------------------ */
 .new-profile-avatar {
@@ -480,7 +488,6 @@ form {
     margin-bottom: 3rem;
     color: #002962;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
 }
 .card{
     display: flex;
@@ -489,7 +496,7 @@ form {
     align-items: center;
     border: 2px solid gray;
     width: 12rem;
-    height: 40vh;
+    height: 45vh;
     margin: 0 auto 3rem auto;
     text-align: center;
 }
@@ -505,10 +512,23 @@ form {
 .gift-card-image {
     width: 12rem;
     height: 12rem;
-    background-image: url("../image/girl-1.svg");
 }
 .fa-share-alt {
     font-size: 1rem;
+}
+.container-newGift {
+    text-align: center;
+    border: 2px solid gray;
+    width: 12rem;
+    height: 40vh;
+    margin: 0 auto 3rem auto;
+}
+.ajout-gift {
+    margin-top: 3rem;
+}
+.plusOne {
+    text-align: center;
+    margin-top: 3rem;
 }
 /* - - - - - RATINGS */
 .rating {

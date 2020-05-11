@@ -21,7 +21,6 @@ public class GiftController {
     public String showGiftCreate() {
         return "gift-create";
     }
-
     @PostMapping("/gift-create")
     public String postGift(Model out,
                            @RequestParam (required = true) String nameGift,
@@ -33,7 +32,7 @@ public class GiftController {
 
         out.addAttribute("gift", giftRepository.save(nameGift, description, urlGiftPicture, urlDealer, price));
 
-        return "gift-list";
+        return "gift-list"
     }
 
     @GetMapping("/modification-gift")
@@ -62,30 +61,25 @@ public class GiftController {
     }
 
 
+
     @GetMapping("/gift-list")
     public String showGiftList(Model out) {
         String pseudo = "Alan";
         out.addAttribute("pseudo", pseudo);
 
         List<Gift> gifts = new ArrayList<>();
-        Gift gift1 = new Gift(1, "castor", 30, 3, "https://www.mynoors.com/peluche-castor-30-cm.html","https://ressources.mynoors.com/files/pages/original/2018/10/21/ryngot-castoro-l-30-cm-2396.jpg", "en peluche", 1);
-        Gift gift2 = new Gift(2, "ecran", 9499, 5, "https://www.boulanger.com/ref/1123090","https://boulanger.scene7.com/is/image/Boulanger/4718017169349_h_f_l_0?wid=400&hei=270", "écran gamer incurvé", 1);
-        Gift gift3 = new Gift(5, "xbox", 499, 1, "https://www.xbox.com/fr-FR/consoles/xbox-one-x/star-wars-jedi-fallen-order-1tb","https://compass-ssl.xbox.com/assets/c6/6b/c66b3c27-0c9c-4ee6-9243-869675526a74.jpg?n=X1X-993554_Content-Placement-0_Console-hub_740x417_02.jpg", "pack console plus jeu", 1);
+        Gift gift3 = new Gift(3, "casque", 60, 3, "https://www.cdiscount.com/high-tech/casques-baladeur-hifi/casque-filaire-beats-by-dr-dre-beats-solo-hd-ver/f-1065420-bea0709885231454.html","https://www.cdiscount.com/pdt2/4/5/4/1/700x700/bea0709885231454/rw/casque-filaire-beats-by-dr-dre-beats-solo-hd-ver.jpg", "filaire", 3);
+        Gift gift4 = new Gift(4, "ecran", 9499, 5, "https://www.boulanger.com/ref/1123090","https://boulanger.scene7.com/is/image/Boulanger/4718017169349_h_f_l_0?wid=400&hei=270", "écran gamer incurvé", 4);
+        Gift gift5 = new Gift(5, "xbox", 499, 1, "https://www.xbox.com/fr-FR/consoles/xbox-one-x/star-wars-jedi-fallen-order-1tb","https://compass-ssl.xbox.com/assets/c6/6b/c66b3c27-0c9c-4ee6-9243-869675526a74.jpg?n=X1X-993554_Content-Placement-0_Console-hub_740x417_02.jpg", "pack console plus jeu", 5);
 
-        gifts.add(gift1);
-        gifts.add(gift2);
         gifts.add(gift3);
+        gifts.add(gift4);
+        gifts.add(gift5);
 
         out.addAttribute("listGift", gifts);
 
         return "gift-list";
     }
-
-
-
-  
-
-
     @GetMapping("/gift")
     public String showGift(Model out) {
         String pseudo = "Bastien";
@@ -93,13 +87,11 @@ public class GiftController {
 
         return "gift";
     }
-
     @GetMapping("/gift-user-reserved")
     public String showGiftUserReserved() {
 
         return "gift-user-reserved";
     }
-
     @GetMapping("/gift-visitor-resa-connected")
     public String showGiftVisitorResaConnected(Model out) {
 
