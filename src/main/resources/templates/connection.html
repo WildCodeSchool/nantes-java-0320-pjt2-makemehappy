@@ -10,29 +10,61 @@
 </head>
 <body>
     <header th:replace="fragments/mobile-title.html :: mobile-logo-title-xl"></header>
-    <div class="connection-main">
-        <div>
-            <p>
-                Veuillez saisir <br> votre identifiant et votre mot de passe
-            </p>
+    <div class="connection-bloc">
+        <div class="connection-main">
+            <div>
+                <p>
+                    Veuillez saisir <br> votre identifiant et votre mot de passe
+                </p>
+            </div>
+            <form action="/connection" method="post" class="user-connection">
+                <div>
+                    <input class="generality-input" type="text" name="pseudo" id="pseudo" required autofocus placeholder="Pseudo">
+                </div>
+                <div>
+                    <input class="generality-input" type="password" name="password" id="password" required placeholder="Password">
+                </div>
+                <div>
+                    <input class="input-button-connection" type="submit" value="Connexion">
+                </div>
+                <div class="forgot-password">
+                    <a href="#">mot de passe oublié</a>
+                </div>
+            </form>
+            <div class="error">
+                <p>Pas de compte ?</p>
+                <a href="/create-profile">S'inscrire</a>
+            </div>
         </div>
-        <form action="/connection" method="post" class="user-connection">
-            <div>
-                <input class="generality-input" type="text" name="pseudo" id="pseudo" required autofocus placeholder="Pseudo">
+    </div>
+    <div class="connection-container">
+        <div class="connection-one">
+            <img src="/image/anniversaire5.jpg" alt="photo anniversaire"/>
+            <div class="one-text">
+                <h3>Cadeaux d'Anniversaire</h3>
+                <p>Toutes vos envies de cadeaux sur votre liste d'anniversaire !</p>
             </div>
-            <div>
-                <input class="generality-input" type="password" name="password" id="password" required placeholder="Password">
+        </div>
+        <div class="connection-two">
+            <img src="/image/bebe1.jpg" alt="photo bébé"/>
+            <div class="two-text">
+                <h3>Liste de Naissance</h3>
+                <p>Préparez l'arrivée de votre bébé avec des cadeaux de naissance !</p>
             </div>
-            <div>
-                <input class="input-button" type="submit" value="Connexion">
+        </div>
+        <div class="connection-three">
+            <img src="/image/maiage4.jpg" alt="photo e mariage"/>
+            <div class="three-text">
+                <h3>Liste de Mariage</h3>
+                <p>Des cadeaux de mariage sur mesure pour le plus beau jour de votre vie !</p>
             </div>
-            <div class="forgot-password">
-                <a href="#">mot de passe oublié</a>
+        </div>
+        <div class="connection-four">
+            <img src="/image/noel1.jpg" alt="photo père noel"/>
+            <div class="four-text">
+                <h3>Cadeaux de Noël</h3>
+                <p>Faites une liste de Noël et recevez vos cadeaux sous le sapin !</p>
             </div>
-        </form>
-        <div class="path-error">
-            <p>Pas de compte ?</p>
-            <a href="/create-profile">S'inscrire</a>
         </div>
     </div>
     <footer th:replace="/fragments/navigation-mobile-simple.html :: nav-bar-mobile-about-us"></footer>

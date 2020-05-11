@@ -159,22 +159,69 @@ ul, li {
 }
 /* ----------   END OF GENERALITY  ------------------ */
 /* ----------   START OF HOME PAGE  ------------------ */
+.home-page-main input {
+    border-radius: 10px;
+    height: 2.5rem;
+    border-color: transparent;
+}
+.home-page-main a {
+    color: white;
+    width: 5rem;
+}
+.home-page-main .button {
+    padding: 2rem;
+}
+.home-connection {
+    background-color: midnightblue;
+    border-radius: 10px;
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    margin-top: 2rem;
+}
+.home-connection a {
+    text-decoration: none;
+}
+.home-page-main p {
+    text-align: center;
+    color: black;
+    font-size: 1.2rem;
+}
+.home-create {
+    background-color: midnightblue;
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+.home-create a {
+    text-decoration: none;
+}
+.forgot-password {
+    padding: 1.5rem;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 35vh;
+}
 .home-page-main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 40vh;
+    width: 20rem;
+    height: 30rem;
+    border-radius: 30px;
+    margin-bottom: 3rem;
     justify-content: center;
+    background-color: cadetblue;
 }
-.home-page-main > div > p {
-    text-align: center;
-}
-.forgot-password {
-    margin-top: 1vh;
-}
-.forgot-password a {
-    font-style: italic;
-    font-size: calc(var(--generality-text-font_size) - 0.2rem);
+.home-bloc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 /* ----------   END OF HOME PAGE  ------------------ */
 /* ----------   START OF DASHBOARD  ------------------ */
@@ -253,21 +300,126 @@ ul, li {
 /*END SECTION 2*/
 /* ----------   END OF DASHBOARD-EMPTY  ------------------ */
 /* ----------   START OF CONNECTION  ------------------ */
+
+.connection-main input {
+    border-radius: 10px;
+    height: 2.5rem;
+    border-color: transparent;
+}
+
+.connection-main .input-button-connection {
+    background-color: midnightblue;
+    border-color: midnightblue;
+    color: white;
+    width: 5rem;
+    margin-top: 1rem;
+}
+
+.connection-main p {
+    text-align: center;
+    color: black;
+}
+.connection-main a {
+    color: white;
+}
+.error {
+    text-align: center;
+}
+.error p {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 35vh;
+}
 .connection-main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 40vh;
+    width: 20rem;
+    height: 30rem;
+    border-radius: 30px;
+    margin-bottom: 3rem;
     justify-content: center;
+    background-color: cadetblue;
 }
-.connection-main p {
-    text-align: center;
-}
-.user-connection {
+.connection-bloc {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
+.connection-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: black;
+    min-height: 80vh;
+    padding: 5rem;
+}
+.connection-container img {
+    width: 20rem;
+    height: 15rem;
+    border-radius: 10px 10px 0px 0px;
+}
+.one-text{
+    width: 20rem;
+    background-color: white;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+.connection-one {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.connection-two {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.two-text {
+    width: 20rem;
+    background-color: white;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+.connection-three {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.three-text {
+    width: 20rem;
+    background-color: white;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+.connection-four {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.four-text {
+    width: 20rem;
+    background-color: white;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+.connection-container h3, p {
+    text-align: center;
+}
+
 /* ----------   END OF CONNECTION  ------------------ */
 /* ----------   START OF USER PROFILE  ------------------ */
 .user {
@@ -835,6 +987,7 @@ ul, li {
         border-radius: 30px;
         border: 1px solid gainsboro;
         padding-bottom: 3rem;
+        width: 30rem;
     }
     .input-button {
         width: 10rem;
@@ -848,7 +1001,8 @@ ul, li {
         background-size: cover;
     }
     .gift-visitor-resa-connected-encadrement {
-        margin: 2rem 33rem 2rem 33rem;
+        margin: auto;
+        width: 30rem;
         padding-top: 3rem;
         border-radius: 30px;
         background-color: white;
@@ -865,6 +1019,7 @@ ul, li {
         margin: 2rem 15rem 2rem 50rem;
         padding-top: 3rem;
         padding-bottom: 3rem;
+        width: 30rem;
     }
     .gift-user-reserved-encadrement h2 {
         padding-bottom: 2rem;
@@ -874,5 +1029,51 @@ ul, li {
     }
     .bloc-p {
         box-shadow: 1px 3px 2px black;
+    }
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END GIFT USER RESERVED ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START CONNECTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    .connection-bloc {
+        background-image: url("/image/imageCdadeau3.jpg");
+        background-size: cover;
+        height: 65vh;
+        display:flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .connection-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 28rem;
+        background-color: cadetblue;
+        border-radius: 10px;
+        padding: 1.5rem;
+        margin-right: 18rem;
+        margin-left: 14rem;
+    }
+
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  END CONNECTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START HOME PAGE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    .home-bloc {
+        background-image: url("/image/imageCdadeau3.jpg");
+        background-size: cover;
+        height: 65vh;
+        display:flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .home-page-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 28rem;
+        background-color: cadetblue;
+        min-height: 45vh;
+        border-radius: 10px;
+        padding: 1.5rem;
+        margin-right: 18rem;
+        margin-left: 14rem;
     }
 }
