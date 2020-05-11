@@ -11,9 +11,7 @@
 <header th:replace="fragments/mobile-logo-avatar.html :: mobile-logo-avatar"></header>
     <h2 class="giftlist-h2">Mes Cadeaux</h2>
 <div  th:each="gift : ${listGift}" class="card">
-    <a href="/gift-create">
-        <img th:src="${gift.getUrlGiftPicture()}" class="gift-card-image">
-    </a>
+    <img th:src="${gift.getUrlGiftPicture()}" class="gift-card-image">
     <div class="gift-card-body">
         <div class="gift-card-title">
             <h3 th:text="${gift.getNameGift()}" class="title-gift">Cadeau pseudo<br>
@@ -33,6 +31,14 @@
             <input th:checked="${gift.getNote() == 1}" id="heart_1" th:name="|like-${gift.getId()}|" disabled type="radio" value="1"/>
             <label for="heart_1" title="One">&#10084;</label>
         </div>
+    </div>
+</div>
+<div class="container-newGift">
+    <div class="ajout-gift">
+        <p>Ajouter un cadeau</p>
+    </div>
+    <div class="plusOne">
+        <a href="/gift-create"><i class="fas fa-plus-square"></i></a>
     </div>
 </div>
 <footer th:replace="/fragments/navigation-mobile.html :: nav-bar-mobile"></footer>
