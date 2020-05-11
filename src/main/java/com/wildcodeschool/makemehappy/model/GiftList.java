@@ -16,6 +16,17 @@ public class GiftList {
     public GiftList() {
     }
 
+    public GiftList(int idGiftList, String title, Date deadLine, String shareLink, String description, boolean notifyGift, int idUser, int idTheme) {
+        this.idGiftList = idGiftList;
+        this.title = title;
+        this.deadLine = deadLine;
+        this.shareLink = shareLink;
+        this.description = description;
+        this.notifyGift = notifyGift;
+        this.idUser = idUser;
+        this.idTheme = idTheme;
+    }
+
     public int getIdGiftList() {
         return idGiftList;
     }
