@@ -32,8 +32,36 @@ public class GiftController {
 
         out.addAttribute("gift", giftRepository.save(nameGift, description, urlGiftPicture, urlDealer, price));
 
-        return "gift-list";
+        return "gift-list"
     }
+
+    @GetMapping("/modification-gift")
+    public String getGiftUpdate(Model out,
+                                @RequestParam int id) {
+
+        out.addAttribute("giftModif", giftRepository.findById(id));
+
+
+        return "modification-gift";
+    }
+
+    @PostMapping("/modification-gift")
+    public String postGiftUpdate(Model out,
+                           @RequestParam (required = false) int id,
+                           @RequestParam (required = true) String nameGift,
+                           @RequestParam (required = false) String description,
+                           @RequestParam (required = false) String urlGiftPicture,
+                           @RequestParam (required = false) String urlDealer,
+                           @RequestParam (required = true) float price) {
+
+
+        out.addAttribute("giftModif", giftRepository.update(id, nameGift, description, urlGiftPicture, urlDealer, price));
+
+        return "modification-gift";
+    }
+
+
+
     @GetMapping("/gift-list")
     public String showGiftList(Model out) {
         String pseudo = "Alan";

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/68562b10c3.js" crossorigin="anonymous"></script>
+    <title>modification Gift</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="gift-create-body">
+<header th:replace="fragments/mobile-logo-avatar.html :: mobile-logo-avatar">test
+</header>
+<div class="gift-create-encadrement">
+    <h2 class="title">Mon Cadeau</h2>
+    <div class="gift-create-form">
+        <form method="Post" action="/modification-gift" th:object="${giftModif}">
+            <input th:value="${giftModif.id}" name="id" type="hidden">
+            <div class="gift-create-nameCadeau">
+                <input th:value="*{nameGift}" class="input" type="text" name="nameGift" id="gift-title" placeholder="Nom du cadeau" size="50" />
+            </div>
+            <div class="gift-create-block">
+                <div class="gift-create-price">
+                    <input th:value="*{price}" class="input" type="text" name="price" id="gift-price" placeholder="Prix" size="25" />
+                </div>
+                <div class="gift-create-checkbox">
+                    <input type="radio" name="coeur" id="coeur1" value="1" size="5"  />
+                    <input type="radio" name="coeur" id="coeur2" value="2" size="5" />
+                    <input type="radio" name="coeur" id="coeur3" value="3" size="5" />
+                    <input type="radio" name="coeur" id="coeur4" value="3" size="5" />
+                    <input type="radio" name="coeur" id="coeur5" value="3" size="5" />
+                </div>
+            </div>
+            <div class="gift-create-urlDealer">
+                <input th:value="*{urlDealer}" class="input" type="url" name="urlDealer" id="gift-url-dealer" placeholder="lien du site marchand" size="50"/>
+            </div>
+            <div class="gift-create-urlPicture">
+                <input th:value="*{urlGiftPicture}" class="input" type="url" name="urlGiftPicture" id="gift-image" placeholder="lien de l'image du cadeau" size="50" />
+            </div>
+            <div class="gift-create-message">
+                <textarea th:text="*{description}" class="input" name="description" id="gift-description" placeholder="Commentaire" rows="10" cols="30"></textarea>
+            </div>
+            <div class="gift-create-bouton" >
+                <input class="input-button" type="submit" value="Modifier"/>
+            </div>
+        </form>
+    </div>
+</div>
+<footer th:replace="/fragments/navigation-mobile.html :: nav-bar-mobile"></footer>
+</body>
+</html>
