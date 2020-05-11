@@ -58,38 +58,4 @@ public class GiftListRepository {
 
         return dashboard;
     }
-
-
-    /*
-    public List save(String title, Date deadLine, String description, int idTheme) {
-        try {
-            Connection connection = DriverManager.getConnection(URL_DATABASE, SQL_USER, SQL_PASSWORD);
-            PreparedStatement statement = connection.prepareStatement("INSERT INTO giftList(title, dead_line, description, id_theme) VALUES (?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
-            statement.setString(1, title);
-            statement.setDate(2, deadLine);
-            statement.setString(3, description);
-            statement.setInt(4, idTheme);
-            statement.setInt(5, 1);
-
-            if (statement.executeUpdate() != 1) {
-                throw new SQLException("failed to insert data");
-            }
-
-            ResultSet generatedKeys = statement.getGeneratedKeys();
-
-            if (generatedKeys.next()) {
-                int id = generatedKeys.getInt(1);
-                return new GiftList(id, title, deadLine, description);
-            }
-            else {
-                throw new SQLException("failed to get inserted id");
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-}
-
-     */
 }
