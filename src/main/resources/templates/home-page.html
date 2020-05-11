@@ -12,18 +12,50 @@
     <header th:replace="/fragments/mobile-title.html :: mobile-logo-title-xl">
         to replace
     </header>
-    <div class="home-page-main">
-        <div>
-            <p>Veuillez vous enregistrer <br> ou <br> créer votre compte</p>
+    <div class="home-bloc">
+        <div class="home-page-main">
+            <div>
+                <p>Veuillez vous enregistrer <br> ou <br> créer votre compte</p>
+            </div>
+            <div class="home-connection">
+                <a href="/connection">connexion</a>
+            </div>
+            <div class="forgot-password">
+                <a href="#">mot de passe oublié</a>
+            </div>
+            <div class="home-create">
+                <a href="/create-profile">créer un compte</a>
+            </div>
         </div>
-        <div>
-            <a class="button" href="/connection">connexion</a>
+    </div>
+    <div class="connection-container">
+        <div class="connection-one">
+            <img src="/image/anniversaire5.jpg" alt="photo anniversaire"/>
+            <div class="one-text">
+                <h3>Cadeaux d'Anniversaire</h3>
+                <p>Toutes vos envies de cadeaux sur votre liste d'anniversaire !</p>
+            </div>
         </div>
-        <div class="forgot-password">
-            <a href="#">mot de passe oublié</a>
+        <div class="connection-two">
+            <img src="/image/bebe1.jpg" alt="photo bébé"/>
+            <div class="two-text">
+                <h3>Liste de Naissance</h3>
+                <p>Préparez l'arrivée de votre bébé avec des cadeaux de naissance !</p>
+            </div>
         </div>
-        <div>
-            <a class="button" href="/create-profile">créer un compte</a>
+        <div class="connection-three">
+            <img src="/image/maiage4.jpg" alt="photo e mariage"/>
+            <div class="three-text">
+                <h3>Liste de Mariage</h3>
+                <p>Des cadeaux de mariage sur mesure pour le plus beau jour de votre vie !</p>
+            </div>
+        </div>
+        <div class="connection-four">
+            <img src="/image/noel1.jpg" alt="photo père noel"/>
+            <div class="four-text">
+                <h3>Cadeaux de Noël</h3>
+                <p>Faites une liste de Noël et recevez vos cadeaux sous le sapin !</p>
+            </div>
         </div>
     </div>
     <footer th:replace="/fragments/navigation-mobile-simple.html :: nav-bar-mobile-about-us"></footer>
