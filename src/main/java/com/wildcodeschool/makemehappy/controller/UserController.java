@@ -46,7 +46,7 @@ public class UserController {
             Cookie cookie = new Cookie("currentId" , Integer.toString(user.getId()));
             /*cookie.setSecure(true);*/
             cookie.setHttpOnly(true);
-            cookie.setMaxAge(-1);
+            cookie.setMaxAge(60 * 60);
             cookie.setPath("/");
             response.addCookie(cookie);
         } else {
@@ -101,5 +101,18 @@ public class UserController {
         model.addAttribute("user", userRepository.updateProfile(Integer.parseInt(currentId), pseudo, sha256hex));
 
         return "dashboard";
+    }
+
+    @GetMapping("/disconnected")
+    public String logOut(@CookieValue(value = "currentId", defaultValue = "tacos") Cookie cookie,
+                         HttpServletResponse response) {
+
+        Cookie newCookie = cookie;
+        newCookie.setMaxAge(0);
+        newCookie.setHttpOnly(true);
+        newCookie.setPath("/");
+
+        response.addCookie(newCookie);
+        return "home-page";
     }
 }

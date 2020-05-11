@@ -455,6 +455,14 @@ form {
 .profile-button > input {
     margin: auto 0;
 }
+.log-out{
+    display: flex;
+    justify-content: center;
+}
+.fa-power-off{
+    color: var(--generality-color-third);
+    margin-left: 2rem;
+}
 /* ----------   END OF USER PROFILE  ------------------ */
 /* ----------   START OF CREATE PROFILE  ------------------ */
 .new-profile-avatar {
