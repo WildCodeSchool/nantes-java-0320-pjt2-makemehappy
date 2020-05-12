@@ -9,16 +9,18 @@
     <script src="https://kit.fontawesome.com/68562b10c3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header th:replace="fragments/mobile-logo-avatar.html :: mobile-logo-avatar"></header>
+    <header th:replace="fragments/mobile-logo-avatar.html :: mobile-logo-avatar(${avatarUrl})"></header>
     <h2 class="title">Selectionnez votre avatar</h2>
     <div>
-        <form method="get" action="/user-profile">
-            <ul class="main-avatar grid-container">
-                <li th:each="avatar : ${avatarList}" th:object="${avatarList}" class="avatar-container">
-                    <input type="image" class="img-avatar" th:src="${avatar.image}" src="image/avatar-vide.svg" alt="img-avatar">
-                </li>
-            </ul>
-        </form>
+        <ul class="main-avatar grid-container">
+            <li th:each="avatar : ${avatarList}" class="avatar-container">
+                <form method="post" action="/selection-avatar">
+                    <input type="image" class="img-avatar" th:src="${avatar.name}" src="image/avatar-vide.svg" alt="img-avatar">
+                    <input type="hidden" th:value="${avatar.id}" name="idAvatar">
+                    <input type="hidden" th:value="${avatar.name}" name="nameAvatar">
+                </form>
+            </li>
+        </ul>
     </div>
 <footer th:replace="/fragments/navigation-mobile.html :: nav-bar-mobile"></footer>
 </body>
