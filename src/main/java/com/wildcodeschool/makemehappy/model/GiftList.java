@@ -12,14 +12,11 @@ public class GiftList {
     private boolean notifyGift;
     private int idUser;
     private int idTheme;
-    private String nameGift;
-    private int note;
-    private String urlGiftPicture;
 
     public GiftList() {
     }
 
-    public GiftList(int idGiftList, String title, Date deadLine, String shareLink, String description, boolean notifyGift, int idUser, int idTheme, String nameGift, int note, String urlGiftPicture) {
+    public GiftList(int idGiftList, String title, Date deadLine, String shareLink, String description, boolean notifyGift, int idUser, int idTheme) {
         this.idGiftList = idGiftList;
         this.title = title;
         this.deadLine = deadLine;
@@ -28,9 +25,7 @@ public class GiftList {
         this.notifyGift = notifyGift;
         this.idUser = idUser;
         this.idTheme = idTheme;
-        this.nameGift = nameGift;
-        this.note = note;
-        this.urlGiftPicture = urlGiftPicture;
+
     }
 
 
@@ -98,29 +93,4 @@ public class GiftList {
         this.idTheme = idTheme;
     }
 
-    public String getNameGift() {
-        return nameGift;
-    }
-
-    public void setNameGift(String nameGift) {
-        this.nameGift = nameGift;
-    }
-
-    public int getNote() {
-        return note;
-    }
-
- 
-
-    public void setNote(int note) {
-        this.note = note;
-    }
-
-    public String getUrlGiftPicture() {
-        return urlGiftPicture;
-    }
-
-    public void setUrlGiftPicture(String urlGiftPicture) {
-        this.urlGiftPicture = urlGiftPicture;
-    }
 }
