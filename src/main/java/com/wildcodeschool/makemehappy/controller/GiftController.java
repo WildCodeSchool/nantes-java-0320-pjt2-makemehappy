@@ -27,12 +27,13 @@ public class GiftController {
                            @RequestParam (required = false) String description,
                            @RequestParam (required = false) String urlGiftPicture,
                            @RequestParam (required = false) String urlDealer,
-                           @RequestParam (required = true) float price) {
+                           @RequestParam (required = true) float price,
+                           @RequestParam (required = false, defaultValue = "1") Integer note) {
 
 
-        out.addAttribute("gift", giftRepository.save(nameGift, description, urlGiftPicture, urlDealer, price));
+        out.addAttribute("gift", giftRepository.save(nameGift, description, urlGiftPicture, urlDealer, price, note));
 
-        return "gift-list"
+        return "gift-list";
     }
 
     @GetMapping("/modification-gift")
@@ -52,10 +53,11 @@ public class GiftController {
                            @RequestParam (required = false) String description,
                            @RequestParam (required = false) String urlGiftPicture,
                            @RequestParam (required = false) String urlDealer,
-                           @RequestParam (required = true) float price) {
+                           @RequestParam (required = true) float price,
+                                 @RequestParam (required = false, defaultValue = "1") Integer note) {
 
 
-        out.addAttribute("giftModif", giftRepository.update(id, nameGift, description, urlGiftPicture, urlDealer, price));
+        out.addAttribute("giftModif", giftRepository.update(id, nameGift, description, urlGiftPicture, urlDealer, price, note));
 
         return "modification-gift";
     }

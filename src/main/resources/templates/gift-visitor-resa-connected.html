@@ -24,7 +24,18 @@
                     <p th:text="|${giftDetails.getPrice()}€|" class="bloc-p"></p>
                 </div>
                 <div class="gift-visitor-resa-connected-note">
-                    <p th:text="${giftDetails.getNote()}" class="bloc-p"></p>
+                    <div class="rating" id="like">
+                        <input th:checked="${giftDetails.getNote() == 1}" type="radio" name="note" id="heart_1" value="1" size="5" />
+                        <label for="heart_1" title="One">&#10084;</label>
+                        <input th:checked="${giftDetails.getNote() == 2}" type="radio" name="note" id="heart_2" value="2" size="5" />
+                        <label for="heart_2" title="Two">&#10084;</label>
+                        <input th:checked="${giftDetails.getNote() == 3}" type="radio" name="note" id="heart_3" value="3" size="5" />
+                        <label for="heart_3" title="Three">&#10084;</label>
+                        <input th:checked="${giftDetails.getNote() == 4}" type="radio" name="note" id="heart_4" value="4" size="5" />
+                        <label for="heart_4" title="Four">&#10084;</label>
+                        <input th:checked="${giftDetails.getNote() == 5}" type="radio" name="note" id="heart_5" value="5" size="5" />
+                        <label for="heart_5" title="Five">&#10084;</label>
+                    </div>
                 </div>
             </div>
             <div class="gift-visitor-resa-connected-url">
