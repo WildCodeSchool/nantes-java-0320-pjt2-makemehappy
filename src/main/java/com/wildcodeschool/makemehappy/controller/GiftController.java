@@ -29,13 +29,43 @@ public class GiftController {
                            @RequestParam (required = false) String description,
                            @RequestParam (required = false) String urlGiftPicture,
                            @RequestParam (required = false) String urlDealer,
-                           @RequestParam (required = true) float price) {
+                           @RequestParam (required = true) float price,
+                           @RequestParam (required = false, defaultValue = "1") Integer note) {
 
 
-        out.addAttribute("gift", giftRepository.save(nameGift, description, urlGiftPicture, urlDealer, price));
+        out.addAttribute("gift", giftRepository.save(nameGift, description, urlGiftPicture, urlDealer, price, note));
 
         return "gift-list";
     }
+
+    @GetMapping("/modification-gift")
+    public String getGiftUpdate(Model out,
+                                @RequestParam int id) {
+
+        out.addAttribute("giftModif", giftRepository.findById(id));
+
+
+        return "modification-gift";
+    }
+
+    @PostMapping("/modification-gift")
+    public String postGiftUpdate(Model out,
+                           @RequestParam (required = false) int id,
+                           @RequestParam (required = true) String nameGift,
+                           @RequestParam (required = false) String description,
+                           @RequestParam (required = false) String urlGiftPicture,
+                           @RequestParam (required = false) String urlDealer,
+                           @RequestParam (required = true) float price,
+                                 @RequestParam (required = false, defaultValue = "1") Integer note) {
+
+
+        out.addAttribute("giftModif", giftRepository.update(id, nameGift, description, urlGiftPicture, urlDealer, price, note));
+
+        return "modification-gift";
+    }
+
+
+
     @GetMapping("/gift-list")
     public String showGiftList(Model out, @RequestParam int id) {
         String pseudo = "Alan";

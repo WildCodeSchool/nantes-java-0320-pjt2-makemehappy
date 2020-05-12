@@ -455,6 +455,14 @@ form {
 .profile-button > input {
     margin: auto 0;
 }
+.log-out{
+    display: flex;
+    justify-content: center;
+}
+.fa-power-off{
+    color: var(--generality-color-third);
+    margin-left: 2rem;
+}
 /* ----------   END OF USER PROFILE  ------------------ */
 /* ----------   START OF CREATE PROFILE  ------------------ */
 .new-profile-avatar {
@@ -615,13 +623,14 @@ form {
 .gift-create-block {
     display: flex;
     justify-content: space-around;
-    width: 15rem;
+}
+.gift-create-price .input{
+    width: 5rem;
 }
 .gift-create-checkbox {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 7rem;
 }
 .gift-create-message textarea {
     height: auto;
@@ -831,7 +840,8 @@ form {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 130vh;
+    height: 150vh;
+    margin-top: 2rem;
 }
 
 .gift-visitor-resa-connected-bloc-price {
@@ -841,12 +851,14 @@ form {
 }
 
 .gift-visitor-resa-connected-price p {
-    width: 7rem;
+    width: 5rem;
 }
 
 .gift-visitor-resa-connected-note p {
     width: 6rem;
-
+}
+.gift-visitor-resa-connected-note {
+    display: flex;
 }
 
 .gift-visitor-resa-connected-description p {
