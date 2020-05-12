@@ -1,8 +1,11 @@
 package com.wildcodeschool.makemehappy.repository;
 
 import com.wildcodeschool.makemehappy.model.Gift;
+import com.wildcodeschool.makemehappy.model.GiftList;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class GiftRepository {
 
@@ -77,4 +80,47 @@ public class GiftRepository {
         }
         return null;
     }
+
+
+    public List<Gift> findAllGift() {
+
+        List<Gift> gifts = new ArrayList<>();
+
+        try {
+            Connection connection = DriverManager.getConnection(URL_DATABASE, SQL_USER, SQL_PASSWORD);
+            String request = "SELECT * FROM gift;";
+            PreparedStatement statement = connection.prepareStatement(request);
+            ResultSet resultSet = statement.executeQuery();
+
+            while (resultSet.next()) {
+
+                int id = resultSet.getInt("id_gift");
+                String nameGift = resultSet.getString("title");
+                String description = resultSet.getString("description");
+                int note = resultSet.getInt("preference");
+                String urlGiftPicture = resultSet.getString("image");
+                String urlDealer = resultSet.getString("url_dealer");
+                float price = resultSet.getFloat("price");
+                int idGiftList = resultSet.getInt("id_gift_list");
+
+                Gift gift = new Gift();
+                gift.setId(id);
+                gift.setNameGift(nameGift);
+                gift.setDescription(description);
+                gift.setNote(note);
+                gift.setUrlGiftPicture(urlGiftPicture);
+                gift.setUrlDealer(urlDealer);
+                gift.setPrice(price);
+                gift.setIdGiftList(idGiftList);
+
+                gifts.add(gift);
+            }
+            connection.close();
+
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return gifts;
+    }
+
 }
