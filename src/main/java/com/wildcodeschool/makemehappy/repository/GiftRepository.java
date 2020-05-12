@@ -81,15 +81,15 @@ public class GiftRepository {
         return null;
     }
 
-
-    public List<Gift> findAllGift() {
+    public List<Gift> findAllGiftById(int idGiftList) {
 
         List<Gift> gifts = new ArrayList<>();
 
         try {
             Connection connection = DriverManager.getConnection(URL_DATABASE, SQL_USER, SQL_PASSWORD);
-            String request = "SELECT * FROM gift;";
+            String request = "SELECT * FROM gift WHERE id_gift_list = ?;";
             PreparedStatement statement = connection.prepareStatement(request);
+            statement.setInt(1, idGiftList);
             ResultSet resultSet = statement.executeQuery();
 
             while (resultSet.next()) {
@@ -101,7 +101,6 @@ public class GiftRepository {
                 String urlGiftPicture = resultSet.getString("image");
                 String urlDealer = resultSet.getString("url_dealer");
                 float price = resultSet.getFloat("price");
-                int idGiftList = resultSet.getInt("id_gift_list");
 
                 Gift gift = new Gift();
                 gift.setId(id);

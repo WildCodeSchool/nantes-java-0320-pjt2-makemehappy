@@ -37,17 +37,17 @@ public class GiftController {
         return "gift-list";
     }
     @GetMapping("/gift-list")
-    public String showGiftList(Model out) {
+    public String showGiftList(Model out, @RequestParam int id) {
         String pseudo = "Alan";
         out.addAttribute("pseudo", pseudo);
 
         GiftListRepository giftListRepository = new GiftListRepository();
-        GiftList giftList = giftListRepository.findGiftListById(1);
+        GiftList giftList = giftListRepository.findGiftListById(id);
         out.addAttribute("giftList", giftList);
 
         List<Gift> gifts = new ArrayList<>();
         GiftRepository giftRepository = new GiftRepository();
-        gifts = giftRepository.findAllGift();
+        gifts = giftRepository.findAllGiftById(id);
 
         out.addAttribute("gifts",gifts);
 

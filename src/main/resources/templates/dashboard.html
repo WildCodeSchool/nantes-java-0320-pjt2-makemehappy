@@ -15,7 +15,7 @@
     <ul>
         <li th:each="giftList : ${dashboard}">
             <div class="dashboard-card">
-                <a class="dashboard-card-link" href="/gift-list">
+                <a class="dashboard-card-link" th:href="@{/gift-list(id=${giftList.getIdGiftList()})}">
 
                     <div class="dashboard-gift-card-image"><img class="dashboard-img-placeholder" src="https://via.placeholder.com/200" alt="cadeau" />
                     </div>
@@ -31,9 +31,7 @@
                         <div class="dashboard-button-message">
                             <a href="#"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></a>
                         </div>
-                        <div class="dashboard-cards-icons">
-                            <a href="#">
-                                <div class="dashboard-card-icons-trash"><i class="fa fa-trash-o" aria-hidden="true"></i>
+                            <div class="dashboard-card-icons-trash"><i class="fa fa-trash-o" aria-hidden="true"></i>
                                 </div>
                             </a>
                             <a href="#">
