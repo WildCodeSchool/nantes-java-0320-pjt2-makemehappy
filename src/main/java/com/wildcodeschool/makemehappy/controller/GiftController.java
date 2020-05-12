@@ -1,6 +1,8 @@
 package com.wildcodeschool.makemehappy.controller;
 
 import com.wildcodeschool.makemehappy.model.Gift;
+import com.wildcodeschool.makemehappy.model.GiftList;
+import com.wildcodeschool.makemehappy.repository.GiftListRepository;
 import com.wildcodeschool.makemehappy.repository.GiftRepository;
 import org.apache.catalina.Store;
 import org.springframework.stereotype.Controller;
@@ -65,20 +67,19 @@ public class GiftController {
 
 
     @GetMapping("/gift-list")
-    public String showGiftList(Model out) {
+    public String showGiftList(Model out, @RequestParam int id) {
         String pseudo = "Alan";
         out.addAttribute("pseudo", pseudo);
 
+        GiftListRepository giftListRepository = new GiftListRepository();
+        GiftList giftList = giftListRepository.findGiftListById(id);
+        out.addAttribute("giftList", giftList);
+
         List<Gift> gifts = new ArrayList<>();
-        Gift gift3 = new Gift(3, "casque", 60, 3, "https://www.cdiscount.com/high-tech/casques-baladeur-hifi/casque-filaire-beats-by-dr-dre-beats-solo-hd-ver/f-1065420-bea0709885231454.html","https://www.cdiscount.com/pdt2/4/5/4/1/700x700/bea0709885231454/rw/casque-filaire-beats-by-dr-dre-beats-solo-hd-ver.jpg", "filaire", 3);
-        Gift gift4 = new Gift(4, "ecran", 9499, 5, "https://www.boulanger.com/ref/1123090","https://boulanger.scene7.com/is/image/Boulanger/4718017169349_h_f_l_0?wid=400&hei=270", "écran gamer incurvé", 4);
-        Gift gift5 = new Gift(5, "xbox", 499, 1, "https://www.xbox.com/fr-FR/consoles/xbox-one-x/star-wars-jedi-fallen-order-1tb","https://compass-ssl.xbox.com/assets/c6/6b/c66b3c27-0c9c-4ee6-9243-869675526a74.jpg?n=X1X-993554_Content-Placement-0_Console-hub_740x417_02.jpg", "pack console plus jeu", 5);
+        GiftRepository giftRepository = new GiftRepository();
+        gifts = giftRepository.findAllGiftById(id);
 
-        gifts.add(gift3);
-        gifts.add(gift4);
-        gifts.add(gift5);
-
-        out.addAttribute("listGift", gifts);
+        out.addAttribute("gifts",gifts);
 
         return "gift-list";
     }

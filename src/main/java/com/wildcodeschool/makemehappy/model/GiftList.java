@@ -25,7 +25,9 @@ public class GiftList {
         this.notifyGift = notifyGift;
         this.idUser = idUser;
         this.idTheme = idTheme;
+
     }
+
 
     public int getIdGiftList() {
         return idGiftList;
@@ -90,4 +92,5 @@ public class GiftList {
     public void setIdTheme(int idTheme) {
         this.idTheme = idTheme;
     }
+
 }
