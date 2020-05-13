@@ -14,16 +14,16 @@
         <h2 class="title">Mon Cadeau</h2>
         <div class="gift-user-reserved-bloc">
             <div class="gift-user-reserved-image">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Headphones_1.jpg/1200px-Headphones_1.jpg" alt="image casque"/>
+                <img alt="title" th:alt="${giftDetails.getNameGift()}" th:src="${giftDetails.getUrlGiftPicture()}">
             </div>
             <div class="gift-user-reserved-gift-name">
-                <p>Casque</p>
+                <p th:text="${giftDetails.getNameGift()}"></p>
             </div>
             <div class="gift-user-reserved">
-                <p class="bloc-p">Cadeau réservé par Diablotin44</p>
+                <p class="bloc-p" th:text="|Cadeau réservé par ${userGift.getPseudo()}|">Cadeau réservé par Diablotin44</p>
             </div>
             <div class="gift-user-reserved-message">
-                <p class="bloc-p">Je te souhaite beaucoup d'amour et de tacos, ton petit diablotin</p>
+                <p class="bloc-p" th:text="${userGift.getMessage()}"></p>
             </div>
         </div>
     </div>

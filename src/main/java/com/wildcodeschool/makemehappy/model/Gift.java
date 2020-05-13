@@ -25,9 +25,6 @@ public class Gift {
 
     public Gift() {}
 
-    public Gift(int id, String nameGift, String description, int note, String urlGiftPicture, String urlDealer, float price) {
-    }
-
     public int getId() {
 
         return id;
