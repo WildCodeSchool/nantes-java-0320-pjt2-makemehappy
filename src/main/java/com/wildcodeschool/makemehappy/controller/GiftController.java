@@ -97,12 +97,12 @@ public class GiftController {
     @GetMapping("/gift-user-reserved")
     public String showGiftUserReserved(Model out) throws SQLException {
 
-        GiftRepository repository = new GiftRepository();
-        Gift gift = repository.findGift();
+        GiftRepository giftrepository = new GiftRepository();
+        Gift gift = giftrepository.findGift();
         out.addAttribute("giftDetails", gift);
 
-        UserGiftRepository repository1 = new UserGiftRepository();
-        UserGift userGift = repository1.findUserGift();
+        UserGiftRepository userGiftRepository= new UserGiftRepository();
+        UserGift userGift = userGiftRepository.findUserGift();
         out.addAttribute("userGift", userGift);
 
         return "gift-user-reserved";
