@@ -1,10 +1,15 @@
 package com.wildcodeschool.makemehappy.controller;
 
+<<<<<<< HEAD
 import com.wildcodeschool.makemehappy.entity.UserGift;
+=======
+import com.wildcodeschool.makemehappy.entity.User;
+>>>>>>> 6fea6a91bd6c76fda2bc85f4e291982a4a45be15
 import com.wildcodeschool.makemehappy.model.Gift;
 import com.wildcodeschool.makemehappy.model.GiftList;
 import com.wildcodeschool.makemehappy.repository.GiftListRepository;
 import com.wildcodeschool.makemehappy.repository.GiftRepository;
+<<<<<<< HEAD
 import com.wildcodeschool.makemehappy.repository.UserGiftRepository;
 import org.apache.catalina.Store;
 import org.springframework.stereotype.Controller;
@@ -15,6 +20,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.sql.SQLException;
+=======
+import com.wildcodeschool.makemehappy.repository.UserRepository;
+import org.apache.catalina.Store;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
+
+>>>>>>> 6fea6a91bd6c76fda2bc85f4e291982a4a45be15
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,7 +37,12 @@ public class GiftController {
     GiftRepository giftRepository = new GiftRepository();
 
     @GetMapping("/gift-create")
-    public String showGiftCreate() {
+    public String showGiftCreate(Model out,
+                                 @CookieValue(value = "currentId", defaultValue = "tacos") String currentId) {
+
+        UserRepository userRepository = new UserRepository();
+        User user = userRepository.getUserById(Integer.parseInt(currentId));
+        out.addAttribute("avatarUrl", user.getAvatar());
         return "gift-create";
     }
     @PostMapping("/gift-create")
@@ -36,19 +54,20 @@ public class GiftController {
                            @RequestParam (required = true) float price,
                            @RequestParam (required = false, defaultValue = "1") Integer note) {
 
-
         out.addAttribute("gift", giftRepository.save(nameGift, description, urlGiftPicture, urlDealer, price, note));
-
         return "gift-list";
     }
 
     @GetMapping("/modification-gift")
     public String getGiftUpdate(Model out,
-                                @RequestParam int id) {
+                                @RequestParam int id,
+                                @CookieValue(value = "currentId", defaultValue = "tacos") String currentId) {
 
         out.addAttribute("giftModif", giftRepository.findById(id));
 
-
+        UserRepository userRepository = new UserRepository();
+        User user = userRepository.getUserById(Integer.parseInt(currentId));
+        out.addAttribute("avatarUrl", user.getAvatar());
         return "modification-gift";
     }
 
@@ -68,10 +87,11 @@ public class GiftController {
         return "gift-list";
     }
 
-
-
     @GetMapping("/gift-list")
-    public String showGiftList(Model out, @RequestParam int id) {
+    public String showGiftList(Model out,
+                               @RequestParam int id,
+                               @CookieValue(value = "currentId", defaultValue = "tacos") String currentId) {
+
         String pseudo = "Alan";
         out.addAttribute("pseudo", pseudo);
 
@@ -84,17 +104,23 @@ public class GiftController {
         gifts = giftRepository.findAllGiftById(id);
 
         out.addAttribute("gifts",gifts);
-
+        UserRepository userRepository = new UserRepository();
+        User user = userRepository.getUserById(Integer.parseInt(currentId));
+        out.addAttribute("avatarUrl", user.getAvatar());
         return "gift-list";
     }
     @GetMapping("/gift")
-    public String showGift(Model out) {
+    public String showGift(Model out,
+                           @CookieValue(value = "currentId", defaultValue = "tacos") String currentId) {
         String pseudo = "Bastien";
         out.addAttribute("pseudo", pseudo);
-
+        UserRepository userRepository = new UserRepository();
+        User user = userRepository.getUserById(Integer.parseInt(currentId));
+        out.addAttribute("avatarUrl", user.getAvatar());
         return "gift";
     }
     @GetMapping("/gift-user-reserved")
+<<<<<<< HEAD
     public String showGiftUserReserved(Model out) throws SQLException {
 
         GiftRepository giftrepository = new GiftRepository();
@@ -104,16 +130,26 @@ public class GiftController {
         UserGiftRepository userGiftRepository= new UserGiftRepository();
         UserGift userGift = userGiftRepository.findUserGift();
         out.addAttribute("userGift", userGift);
+=======
+    public String showGiftUserReserved(Model out,
+                                       @CookieValue(value = "currentId", defaultValue = "tacos") String currentId) {
+>>>>>>> 6fea6a91bd6c76fda2bc85f4e291982a4a45be15
 
+        UserRepository userRepository = new UserRepository();
+        User user = userRepository.getUserById(Integer.parseInt(currentId));
+        out.addAttribute("avatarUrl", user.getAvatar());
         return "gift-user-reserved";
     }
     @GetMapping("/gift-visitor-resa-connected")
-    public String showGiftVisitorResaConnected(Model out) {
+    public String showGiftVisitorResaConnected(Model out,
+                                               @CookieValue(value = "currentId", defaultValue = "tacos") String currentId) {
 
         GiftRepository repository = new GiftRepository();
         Gift gift = repository.findGift();
         out.addAttribute("giftDetails", gift);
-
+        UserRepository userRepository = new UserRepository();
+        User user = userRepository.getUserById(Integer.parseInt(currentId));
+        out.addAttribute("avatarUrl", user.getAvatar());
         return "gift-visitor-resa-connected";
     }
 }

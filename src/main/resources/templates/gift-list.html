@@ -8,16 +8,16 @@
     <title>Gift List</title>
 </head>
 <body>
-<header th:replace="fragments/mobile-logo-avatar.html :: mobile-logo-avatar(${null})"></header>
+<header th:replace="fragments/mobile-logo-avatar.html :: mobile-logo-avatar(${avatarUrl})"></header>
     <h2 th:text="${giftList.title}"class="giftlist-h2">Mes Cadeaux</h2>
         <div  th:each="gift : ${gifts}" class="card">
             <img th:src="${gift.getUrlGiftPicture()}" class="gift-card-image">
         <div class="gift-card-body">
         <div class="gift-card-title">
-            <h3 th:text="${gift.getNameGift()}" class="title-gift">Cadeau pseudo<br>
-                <a href="#" class="btn btn-inverse"><i id="trash" class="fa fa-trash-o" aria-hidden="true"></i></a>
-                <a class="share" href="#"><i
-                    class="fas fa-share-alt text-primary"></i></a></h3>
+            <h3 th:text="${gift.getNameGift()}" class="title-gift">Cadeau pseudo<br></h3>
+                <div>
+                    <a href="#" class="btn btn-inverse"><i id="trash" class="fa fa-trash-o" aria-hidden="true"></i></a>
+                </div>
         </div>
         <div class="rating" id="like">
             <input th:checked="${gift.getNote() == 5}" id="heart_5" th:name="|like-${gift.getId()}|" disabled type="radio" value="5"/>

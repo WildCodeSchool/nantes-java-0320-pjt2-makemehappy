@@ -53,7 +53,7 @@ public class UserController {
             return "/connection";
         }
 
-        return "dashboard";
+        return "redirect:/dashboard";
     }
 
     @GetMapping("/create-profile")
@@ -111,7 +111,7 @@ public class UserController {
 
         userRepository.updateAvatar(Integer.parseInt(currentId), idAvatar, nameAvatar);
 
-        return "redirect:/user-profile";
+        return "redirect:/dashboard";
     }
 
     @GetMapping("/user-profile")
@@ -132,7 +132,7 @@ public class UserController {
         String sha256hex = Hashing.sha256().hashString(password, StandardCharsets.UTF_8).toString();
         model.addAttribute("user", userRepository.updateProfile(Integer.parseInt(currentId), pseudo, sha256hex));
 
-        return "dashboard";
+        return "redirect:/dashboard";
     }
 
     @GetMapping("/disconnected")
