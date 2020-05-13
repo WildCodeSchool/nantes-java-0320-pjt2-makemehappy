@@ -1,6 +1,6 @@
 package com.wildcodeschool.makemehappy.repository;
 
-import com.wildcodeschool.makemehappy.model.Avatar;
+import com.wildcodeschool.makemehappy.entity.Avatar;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -24,8 +24,9 @@ public class AvatarRepository {
 
             while(resultSet.next()) {
 
+                int id = resultSet.getInt("id_avatar");
                 String path = resultSet.getString("name");
-                Avatar newAvatar = new Avatar("", path);
+                Avatar newAvatar = new Avatar(id, path);
                 avatarList.add(newAvatar);
             }
 
@@ -36,5 +37,29 @@ public class AvatarRepository {
         }
 
         return avatarList;
+    }
+
+    public Avatar findById(int idSelected) {
+
+        Avatar avatar = new Avatar();
+        try {
+            Connection connection = DriverManager.getConnection(URL_DATABASE, SQL_USER, SQL_PASSWORD);
+            String request = "SELECT * FROM avatar WHERE id_avatar = ?;";
+            PreparedStatement statement = connection.prepareStatement(request);
+            statement.setInt(1, idSelected);
+            ResultSet resultSet = statement.executeQuery();
+            resultSet.next();
+            String name = resultSet.getString("name");
+
+            avatar.setId(idSelected);
+            avatar.setName(name);
+
+            connection.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return avatar;
     }
 }

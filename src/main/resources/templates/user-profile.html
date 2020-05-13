@@ -17,12 +17,12 @@
         <a href="/disconnected"><i class="fas fa-power-off"></i></a>
     </div>
     <div>
-        <form action="/user-profile" method="post" class="user">
+        <form action="/user-profile" method="post" class="user" th:object="${currentUser}">
             <div>
-                <input class="generality-input" type="text" name="pseudo" placeholder="Nouveau Pseudo">
+                <input class="generality-input" th:value="${currentUser.getPseudo()}" type="text" name="pseudo" placeholder="Nouveau Pseudo">
             </div>
             <div>
-                <input class="generality-input" type="password" name="password" placeholder="Nouveau Password">
+                <input class="generality-input" th:value="${currentUser.getPassword()}" type="password" name="password" placeholder="Nouveau Password">
             </div>
             <div>
                 <input class="generality-input" type="date" name="birthday" value="2020-04-23" min="1900-01-01" max="2100-12-31">
@@ -33,7 +33,7 @@
                         <a class="button" href="/selection-avatar">Avatar</a>
                     </div>
                     <div class="profile-avatar">
-                        <img src="image/boy-1.svg" alt="avatar">
+                        <img th:src="*{avatar}" src="image/avatar-vide.svg" alt="avatar">
                     </div>
                 </div>
                 <div class="profile-button">

@@ -1,7 +1,5 @@
 package com.wildcodeschool.makemehappy.repository;
 
-import com.wildcodeschool.makemehappy.model.Avatar;
-import com.wildcodeschool.makemehappy.model.Gift;
 import com.wildcodeschool.makemehappy.model.GiftList;
 
 import java.sql.*;
