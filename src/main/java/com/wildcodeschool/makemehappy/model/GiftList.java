@@ -28,6 +28,13 @@ public class GiftList {
 
     }
 
+    public GiftList(int idGiftList, String title, Date deadLine, String description, int idTheme) {
+        this.idGiftList = idGiftList;
+        this.title = title;
+        this.deadLine = deadLine;
+        this.description = description;
+        this.idTheme = idTheme;
+    }
 
     public int getIdGiftList() {
         return idGiftList;

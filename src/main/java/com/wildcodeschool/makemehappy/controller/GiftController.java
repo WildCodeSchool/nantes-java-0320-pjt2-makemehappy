@@ -70,8 +70,6 @@ public class GiftController {
         return "modification-gift";
     }
 
-
-
     @GetMapping("/gift-list")
     public String showGiftList(Model out,
                                @RequestParam int id,
