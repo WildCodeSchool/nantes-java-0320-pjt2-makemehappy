@@ -2,7 +2,7 @@ package com.wildcodeschool.makemehappy.controller;
 
 import com.google.common.hash.Hashing;
 import com.wildcodeschool.makemehappy.entity.User;
-import com.wildcodeschool.makemehappy.model.Avatar;
+import com.wildcodeschool.makemehappy.entity.Avatar;
 import com.wildcodeschool.makemehappy.repository.AvatarRepository;
 import com.wildcodeschool.makemehappy.repository.UserRepository;
 import org.springframework.stereotype.Controller;
@@ -65,29 +65,61 @@ public class UserController {
     @PostMapping("/create-profile")
     public String createUser(Model model,
                              @RequestParam (required = true) String pseudo,
-                             @RequestParam (required = true) String password) {
+                             @RequestParam (required = true) String password,
+                             @RequestParam (required = false, defaultValue = "image/avatar-vide.svg") String avatar,
+                             HttpServletResponse response) {
 
         String sha256hex = Hashing.sha256().hashString(password, StandardCharsets.UTF_8).toString();
-        model.addAttribute("user", userRepository.createUser(pseudo, sha256hex));
 
-        return "dashboard-empty";
+        boolean hasAccount = userRepository.hasAccount(pseudo, sha256hex);
+
+        if (!hasAccount) {
+            User user = userRepository.createUser(pseudo, sha256hex, avatar);
+            model.addAttribute("user" , user);
+            Cookie cookie = new Cookie("currentId" , Integer.toString(user.getId()));
+            /*cookie.setSecure(true);*/
+            cookie.setHttpOnly(true);
+            cookie.setMaxAge(60 * 60);
+            cookie.setPath("/");
+            response.addCookie(cookie);
+            model.addAttribute("user", user);
+        } else {
+            return "/connection";
+        }
+        return "redirect:/selection-avatar";
     }
 
     @GetMapping("/selection-avatar")
-    public String chooseYourAvatar(Model model) {
+    public String chooseYourAvatar(Model model,
+                                   @CookieValue(value = "currentId", defaultValue = "tacos") String currentId) {
 
+        User user = userRepository.getUserById(Integer.parseInt(currentId));
         AvatarRepository avatarRepository = new AvatarRepository();
 
         List<Avatar> avatarList = avatarRepository.findAll();
 
         model.addAttribute("avatarList", avatarList);
+        model.addAttribute("avatarUrl", user.getAvatar());
 
         return "selection-avatar";
     }
 
-    @GetMapping("/user-profile")
-    public String showUserProfile(@CookieValue(value = "currentId", defaultValue = "tacos") String currentId) {
+    @PostMapping("/selection-avatar")
+    public String saveAvatar(@RequestParam int idAvatar,
+                             @RequestParam String nameAvatar,
+                             @CookieValue(value = "currentId", defaultValue = "tacos") String currentId) {
 
+        userRepository.updateAvatar(Integer.parseInt(currentId), idAvatar, nameAvatar);
+
+        return "redirect:/user-profile";
+    }
+
+    @GetMapping("/user-profile")
+    public String showUserProfile(Model model,
+                                  @CookieValue(value = "currentId", defaultValue = "tacos") String currentId) {
+
+        User currentUser = userRepository.getUserById(Integer.parseInt(currentId));
+        model.addAttribute("currentUser", currentUser);
         return "user-profile";
     }
 

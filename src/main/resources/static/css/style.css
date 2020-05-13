@@ -174,10 +174,7 @@ ul, li {
 .home-connection {
     background-color: midnightblue;
     border-radius: 10px;
-    padding-bottom: 1.5rem;
-    padding-top: 1.5rem;
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
+    padding: 1.5rem 2.5rem;
     margin-top: 2rem;
 }
 .home-connection a {
@@ -199,13 +196,7 @@ ul, li {
 .forgot-password {
     padding: 1.5rem;
 }
-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 35vh;
-}
+
 .home-page-main {
     display: flex;
     flex-direction: column;
@@ -314,6 +305,12 @@ form {
     width: 5rem;
     margin-top: 1rem;
 }
+.user-connection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 .connection-main p {
     text-align: center;
@@ -329,13 +326,7 @@ form {
     padding-top: 1rem;
     padding-bottom: 1rem;
 }
-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 35vh;
-}
+
 .connection-main {
     display: flex;
     flex-direction: column;
@@ -446,6 +437,7 @@ form {
     height: 64px;
     border: 2px solid gray;
     border-radius: var(--mobile-logo-border_radius);
+    overflow: hidden;
 }
 .profile-button {
     display: flex;
@@ -901,10 +893,10 @@ form {
     border-radius: var(--mobile-logo-border_radius);
 }
 .fragment-mobile-logo-avatar-img-avatar {
-    background-image: url("/image/girl.svg");
     width: var(--mobile-avatar-width);
     height: var(--mobile-avatar-height);
     border-radius: var(--mobile-avatar-border_radius);
+    overflow: hidden;
 }
 /* ----------   END OF FRAGMENT MOBILE LOGO AVATAR  ------------------ */
 /* ----------   START OF FRAGMENT MOBILE LOGO ET TITRE XL  ------------------ */
