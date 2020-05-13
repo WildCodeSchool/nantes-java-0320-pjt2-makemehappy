@@ -14,14 +14,15 @@ public class GiftListRepository {
     private static final String SQL_USER = "donkey";
     private static final String SQL_PASSWORD = "projet2$";
 
-    public List<GiftList> findAllWishList() {
+    public List<GiftList> findAllWishList(int id) {
 
         List<GiftList> dashboard = new ArrayList<>();
 
         try {
             Connection connection = DriverManager.getConnection(URL_DATABASE, SQL_USER, SQL_PASSWORD);
-            String request = "SELECT * FROM gift_list;";
+            String request = "SELECT * FROM gift_list WHERE id_user = ?;";
             PreparedStatement statement = connection.prepareStatement(request);
+            statement.setInt(1, id);
             ResultSet resultSet = statement.executeQuery();
 
             while(resultSet.next()) {
@@ -96,7 +97,7 @@ public class GiftListRepository {
         return null;
     }
 
-    public GiftList save(String title, int idTheme, Date deadLine, String description) {
+    public GiftList save(String title, int idTheme, Date deadLine, String description, int idUser) {
 
 
         Connection connection = null;
@@ -105,13 +106,14 @@ public class GiftListRepository {
         try {
             connection = DriverManager.getConnection(URL_DATABASE, SQL_USER, SQL_PASSWORD);
             statement = connection.prepareStatement(
-                    "INSERT INTO gift_list (title, id_theme, dead_line, description) VALUES (?, ?, ?, ?)",
+                    "INSERT INTO gift_list (title, id_theme, dead_line, description, id_user) VALUES (?, ?, ?, ?, ?)",
                     Statement.RETURN_GENERATED_KEYS
             );
             statement.setString(1, title);
             statement.setInt(2, idTheme);
             statement.setDate(3, deadLine);
             statement.setString(4, description);
+            statement.setInt(5, idUser);
 
             if (statement.executeUpdate() != 1) {
                 throw new SQLException("failed to insert data");
@@ -121,7 +123,7 @@ public class GiftListRepository {
 
             if (generatedKeys.next()) {
                 int idGiftList = generatedKeys.getInt(1);
-                return new GiftList(idGiftList, title, deadLine, description, idTheme);
+                return new GiftList(idGiftList, title, deadLine, description, idTheme, idUser);
             } else {
                 throw new SQLException("failed to get inserted id");
             }

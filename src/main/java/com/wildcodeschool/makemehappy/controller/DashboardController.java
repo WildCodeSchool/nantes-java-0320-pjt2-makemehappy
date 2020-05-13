@@ -20,7 +20,7 @@ public class DashboardController {
                                  @CookieValue(value = "currentId", defaultValue = "tacos") String currentId) {
 
         GiftListRepository repository = new GiftListRepository();
-        List<GiftList> dashboard = repository.findAllWishList();
+        List<GiftList> dashboard = repository.findAllWishList(Integer.parseInt(currentId));
         model.addAttribute("dashboard", dashboard);
 
         UserRepository userRepository = new UserRepository();

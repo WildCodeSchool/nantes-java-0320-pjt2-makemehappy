@@ -31,12 +31,13 @@ public class ListController {
     @PostMapping("/list-create")
     public String postList(Model out,
                            @RequestParam(required = true) String title,
-                           @RequestParam (required = false, defaultValue = "0") int idTheme,
+                           @RequestParam (required = false, defaultValue = "1") int idTheme,
                            @RequestParam (required = false) Date deadLine,
-                           @RequestParam (required = false) String description)
+                           @RequestParam (required = false) String description,
+                           @CookieValue(value = "currentId", defaultValue = "tacos") String currentId)
                            {
 
-        out.addAttribute("giftList", giftListRepository.save(title, 1, deadLine, description));
+        out.addAttribute("giftList", giftListRepository.save(title, idTheme, deadLine, description, Integer.parseInt(currentId)));
 
         return "redirect:/dashboard";
     }
