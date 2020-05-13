@@ -746,7 +746,6 @@ ul, li {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 70vh;
 }
 .list-create-name input:hover {
     border: 2px solid gainsboro;
@@ -766,6 +765,13 @@ ul, li {
     flex-direction: column;
     justify-content: space-around;
     margin-top: 3rem;
+}
+.gift-user-reserved-encadrement h2 {
+    margin-bottom: 2rem;
+}
+.gift-user-reserved-gift-name {
+    margin-top: 1rem ;
+    margin-bottom: 1rem;
 }
 .gift-user-block p:nth-child(4) {
     padding-top: 2rem;
