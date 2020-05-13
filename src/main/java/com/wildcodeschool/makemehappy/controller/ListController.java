@@ -28,7 +28,7 @@ public class ListController {
                            @RequestParam (required = false) String description)
                            {
 
-        out.addAttribute("giftList", giftListRepository.save(title, idTheme, deadLine, description));
+        out.addAttribute("giftList", giftListRepository.save(title, 1, deadLine, description));
 
         return "redirect:/dashboard";
     }

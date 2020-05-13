@@ -121,7 +121,7 @@ public class GiftListRepository {
 
             if (generatedKeys.next()) {
                 int idGiftList = generatedKeys.getInt(1);
-                return new GiftList(idGiftList, title, deadLine, description,idTheme);
+                return new GiftList(idGiftList, title, deadLine, description, idTheme);
             } else {
                 throw new SQLException("failed to get inserted id");
             }
