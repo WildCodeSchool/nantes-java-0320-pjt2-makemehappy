@@ -28,15 +28,11 @@
                         <input class="dashboard-card-date" type="date" name="anniversaire">
                         <textarea class="dashboard-card-textarea" placeholder="ecris ton message" rows="9" cols="20">
                         </textarea>
-                        <div class="dashboard-button-message">
-                            <a href="#"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></a>
-                        </div>
-                            <div class="dashboard-card-icons-trash"><i class="fa fa-trash-o" aria-hidden="true"></i>
-                                </div>
-                            </a>
-                            <a href="#">
-                                <div class="dashboard-card-icons-trash"><i class="fa fa-share" aria-hidden="true"></i>
-                                </a>
+                    </div>
+                            <form method="post" action="/delete-wishlist">
+                                <input type="hidden" name="idGiftList" th:value="${giftList.getIdGiftList()}">
+                                <input type="submit" value="Supprimer">
+                            </form>
                             </div>
                         </div>
                     </div>
