@@ -31,11 +31,13 @@ public class GiftController {
 
     @GetMapping("/gift-create")
     public String showGiftCreate(Model out,
-                                 @CookieValue(value = "currentId", defaultValue = "tacos") String currentId) {
+                                 @CookieValue(value = "currentId", defaultValue = "tacos") String currentId,
+                                 @RequestParam (required = true) int idGiftList) {
 
         UserRepository userRepository = new UserRepository();
         User user = userRepository.getUserById(Integer.parseInt(currentId));
         out.addAttribute("avatarUrl", user.getAvatar());
+        out.addAttribute("idGiftList", idGiftList);
         return "gift-create";
     }
     @PostMapping("/gift-create")
@@ -45,10 +47,12 @@ public class GiftController {
                            @RequestParam (required = false) String urlGiftPicture,
                            @RequestParam (required = false) String urlDealer,
                            @RequestParam (required = true) float price,
-                           @RequestParam (required = false, defaultValue = "1") Integer note) {
+                           @RequestParam (required = false, defaultValue = "1") Integer note,
+                           @RequestParam (required = true) int idGiftList) {
 
-        out.addAttribute("gift", giftRepository.save(nameGift, description, urlGiftPicture, urlDealer, price, note));
-        return "gift-list";
+        out.addAttribute("gift", giftRepository.save(nameGift, description, urlGiftPicture, urlDealer, price, note, idGiftList));
+
+        return "redirect:/gift-list?id="+idGiftList;
     }
 
     @GetMapping("/modification-gift")
