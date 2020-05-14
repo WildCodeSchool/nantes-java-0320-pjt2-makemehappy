@@ -48,7 +48,7 @@ public class GiftController {
                            @RequestParam (required = false, defaultValue = "1") Integer note) {
 
         out.addAttribute("gift", giftRepository.save(nameGift, description, urlGiftPicture, urlDealer, price, note));
-        return "gift-list";
+        return "redirect:/gift-list";
     }
 
     @GetMapping("/modification-gift")
