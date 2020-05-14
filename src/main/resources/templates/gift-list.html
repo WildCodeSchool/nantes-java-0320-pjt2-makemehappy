@@ -15,9 +15,10 @@
         <div class="gift-card-body">
         <div class="gift-card-title">
             <h3 th:text="${gift.getNameGift()}" class="title-gift">Cadeau pseudo<br></h3>
-                <div>
-                    <a href="#" class="btn btn-inverse"><i id="trash" class="fa fa-trash-o" aria-hidden="true"></i></a>
-                </div>
+                <form method="post" action="/delete-gift">
+                    <input type="hidden" name="idGift" th:value="${gift.getId()}">
+                    <input type="submit" value="Supprimer">
+                </form>
         </div>
         <div class="rating" id="like">
             <input th:checked="${gift.getNote() == 5}" id="heart_5" th:name="|like-${gift.getId()}|" disabled type="radio" value="5"/>

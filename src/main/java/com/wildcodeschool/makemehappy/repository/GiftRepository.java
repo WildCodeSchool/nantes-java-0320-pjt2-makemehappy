@@ -180,4 +180,25 @@ public class GiftRepository {
         }
         return gifts;
     }
+
+    public Gift deleteById(int id) {
+        Connection connection = null;
+        PreparedStatement statement = null;
+        ResultSet resultSet = null;
+        try {
+            connection = DriverManager.getConnection(
+                    URL_DATABASE, SQL_USER, SQL_PASSWORD
+            );
+            statement = connection.prepareStatement(
+                    "DELETE FROM gift WHERE id_gift = ?"
+            );
+            statement.setInt(1, id);
+            if (statement.executeUpdate() != 1) {
+                throw new SQLException("failed to delete data");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }
