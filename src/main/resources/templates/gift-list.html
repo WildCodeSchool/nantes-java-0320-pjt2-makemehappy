@@ -38,7 +38,7 @@
         <p>Ajouter un cadeau</p>
     </div>
     <div class="plusOne">
-        <a href="/gift-create"><i class="fas fa-plus-square"></i></a>
+        <a th:href="@{/gift-create(idGiftList=${giftList.getIdGiftList()})}"><i class="fas fa-plus-square"></i></a>
     </div>
 </div>
 <footer th:replace="/fragments/navigation-mobile.html :: nav-bar-mobile"></footer>
