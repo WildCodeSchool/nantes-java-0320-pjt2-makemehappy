@@ -51,7 +51,6 @@ public class GiftController {
                            @RequestParam (required = true) int idGiftList) {
 
         out.addAttribute("gift", giftRepository.save(nameGift, description, urlGiftPicture, urlDealer, price, note, idGiftList));
-
         return "redirect:/gift-list?id="+idGiftList;
     }
 
