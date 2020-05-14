@@ -123,4 +123,11 @@ public class GiftController {
         out.addAttribute("avatarUrl", user.getAvatar());
         return "gift-visitor-resa-connected";
     }
+
+    @PostMapping("/delete-gift")
+    public String deleteGift(@RequestParam int idGift) {
+        giftRepository.deleteById(idGift);
+        return "redirect:/gift-list";
+    }
+
 }
