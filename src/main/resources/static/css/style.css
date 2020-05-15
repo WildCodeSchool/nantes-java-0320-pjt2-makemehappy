@@ -260,7 +260,9 @@ ul, li {
 /* ----------   END OF DASHBOARD  ------------------ */
 /* ----------   START OF DASHBOARD-EMPTY  ------------------ */
 /*START SECTION 1*/
+
 .dashboard-empty-text{
+    margin-top: 7rem;
     text-align: center;
 }
 .dashboard-empty-text p{

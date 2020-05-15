@@ -12,6 +12,19 @@
 </head>
 <header th:replace="fragments/mobile-logo-avatar.html :: mobile-logo-avatar(${avatarUrl})"></header>
 <body>
+    <div th:if="${dashboard.size() == 0}">
+        <div class="dashboard-empty-text">
+            <p>Bonjour "Votre Pseudo".</p>
+            <p>Bienvenue dans votre tableau de bord.</p>
+            <p>Pour créer une liste, cliquez sur l'onglet "Ajouter".</p>
+        </div>
+        <a class="container-dashboard-empty-link" href="/list-create">
+            <div class="container-dashboard-empty">
+                <p>Ajouter votre liste</p>
+                <i class="fas fa-plus-square"></i>
+            </div>
+        </a>
+    </div>
     <ul>
         <li th:each="giftList : ${dashboard}">
             <div class="dashboard-card">

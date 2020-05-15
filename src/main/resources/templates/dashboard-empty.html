@@ -10,19 +10,17 @@
 <body>
     <header th:replace="/fragments/mobile-title.html :: mobile-logo-title-xl">
     </header>
-    <div class="dashboard-empty-text">
-        <p>Bonjour "Votre Pseudo".</p>
-        <p>Bienvenue dans votre tableau de bord.</p>
-        <p>Pour créer une liste, cliquez sur l'onglet "Ajouter".</p>
-    </div>
-        <a class="container-dashboard-empty-link" href="/list-create">
-        <div class="container-dashboard-empty">
-                <p>Ajouter votre liste</p>
-                <i class="fas fa-plus-square"></i>
-            </div>
+        <div class="dashboard-empty-text">
+            <p th:text="">Bonjour</p>
+            <p>Bienvenue dans votre tableau de bord.</p>
+            <p>Pour créer une liste, cliquez sur l'onglet "Ajouter".</p>
         </div>
-    </div>
-    </a>
+            <a class="container-dashboard-empty-link" href="/list-create">
+            <div class="container-dashboard-empty">
+                    <p>Ajouter votre liste</p>
+                    <i class="fas fa-plus-square"></i>
+                </div>
+        </a>
     <footer th:replace="/fragments/navigation-mobile.html :: nav-bar-mobile"></footer>
 </body>
 </html>
