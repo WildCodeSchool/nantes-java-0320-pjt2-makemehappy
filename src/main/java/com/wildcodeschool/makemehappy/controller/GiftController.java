@@ -152,8 +152,9 @@ public class GiftController {
     }
 
     @PostMapping("/delete-gift")
-    public String deleteGift(@RequestParam int idGift) {
+    public String deleteGift(@RequestParam int idGift,
+                             @RequestParam int idGiftList) {
         giftRepository.deleteById(idGift);
-        return "redirect:/gift-list";
+        return "redirect:/gift-list?id="+ idGiftList;
     }
 }

@@ -11,20 +11,16 @@
 <header th:replace="fragments/mobile-logo-avatar.html :: mobile-logo-avatar(${avatarUrl})"></header>
     <h2 th:text="${giftList.title}" class="giftlist-h2">Mes Cadeaux</h2>
         <div  th:each="gift : ${gifts}" class="card">
-            <div class="gift-card-body">
-                <a class="gift-card-body-link" th:href="@{/modification-gift(id=${gift.getId()})}">
-                    <div class="gift-card-image">
-                        <img th:src="${gift.getUrlGiftPicture()}">
-                    </div>
-                </a>
-                <div class="gift-card-title">
-                    <h3 th:text="${gift.getNameGift()}" class="title-gift">Cadeau pseudo<br></h3>
-                    <form method="post" action="/delete-gift">
-                        <input type="hidden" name="idGift" th:value="${gift.getId()}">
-                        <input type="submit" value="Supprimer">
-                    </form>
-                </div>
-                <div class="rating" id="like">
+            <img th:src="${gift.getUrlGiftPicture()}" class="gift-card-image">
+        <div class="gift-card-body">
+        <div class="gift-card-title">
+            <h3 th:text="${gift.getNameGift()}" class="title-gift">Cadeau pseudo<br></h3>
+                <form method="post" action="/delete-gift">
+                    <input type="hidden" name="idGift" th:value="${gift.id}">
+                    <input type="hidden" name="idGiftList" th:value="${giftList.getIdGiftList()}">
+                    <input type="submit" value="Supprimer">
+                </form>
+                    <div class="rating" id="like">
                     <input th:checked="${gift.getNote() == 5}" id="heart_5" th:name="|like-${gift.getId()}|" disabled type="radio" value="5"/>
                     <label for="heart_5" title="Five">&#10084;</label>
                     <input th:checked="${gift.getNote() == 4}" id="heart_4" th:name="|like-${gift.getId()}|" disabled type="radio" value="4"/>
