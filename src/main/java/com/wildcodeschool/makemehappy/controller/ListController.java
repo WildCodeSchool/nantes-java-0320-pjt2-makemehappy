@@ -6,10 +6,7 @@ import com.wildcodeschool.makemehappy.repository.GiftRepository;
 import com.wildcodeschool.makemehappy.repository.UserRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.CookieValue;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.sql.Date;
 
@@ -31,11 +28,10 @@ public class ListController {
     @PostMapping("/list-create")
     public String postList(Model out,
                            @RequestParam(required = true) String title,
-                           @RequestParam (required = false, defaultValue = "1") int idTheme,
-                           @RequestParam (required = false) Date deadLine,
-                           @RequestParam (required = false) String description,
-                           @CookieValue(value = "currentId", defaultValue = "tacos") String currentId)
-                           {
+                           @RequestParam(required = false, defaultValue = "1") int idTheme,
+                           @RequestParam(required = false) Date deadLine,
+                           @RequestParam(required = false) String description,
+                           @CookieValue(value = "currentId", defaultValue = "tacos") String currentId) {
 
         out.addAttribute("giftList", giftListRepository.save(title, idTheme, deadLine, description, Integer.parseInt(currentId)));
 
@@ -43,4 +39,9 @@ public class ListController {
     }
 
 
+    @PostMapping("/delete-wishlist")
+    public String deleteWishList(@RequestParam int idGiftList) {
+        giftListRepository.deleteById(idGiftList);
+        return "redirect:/dashboard";
+    }
 }
