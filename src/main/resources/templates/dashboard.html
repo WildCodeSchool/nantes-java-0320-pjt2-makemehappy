@@ -29,8 +29,8 @@
         <li th:each="giftList : ${dashboard}">
             <div class="dashboard-card">
                 <a class="dashboard-card-link" th:href="@{/gift-list(id=${giftList.getIdGiftList()})}">
-
-                    <div class="dashboard-gift-card-image"><img class="dashboard-img-placeholder" src="https://via.placeholder.com/200" alt="cadeau" />
+                    <div class="dashboard-gift-card-image">
+                        <img class="dashboard-img-placeholder" th:src="|image/${giftList.getImageTheme()}|" src="https://via.placeholder.com/200" alt="cadeau" />
                     </div>
                 </a>
                 <div class="dashboard-gift-card-body">

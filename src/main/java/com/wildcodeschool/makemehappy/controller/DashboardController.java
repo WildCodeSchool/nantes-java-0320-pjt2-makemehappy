@@ -1,8 +1,10 @@
 package com.wildcodeschool.makemehappy.controller;
 
+import com.wildcodeschool.makemehappy.entity.Theme;
 import com.wildcodeschool.makemehappy.entity.User;
 import com.wildcodeschool.makemehappy.model.GiftList;
 import com.wildcodeschool.makemehappy.repository.GiftListRepository;
+import com.wildcodeschool.makemehappy.repository.ThemeRepository;
 import com.wildcodeschool.makemehappy.repository.UserRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -23,6 +25,12 @@ public class DashboardController {
 
         GiftListRepository repository = new GiftListRepository();
         List<GiftList> dashboard = repository.findAllWishList(Integer.parseInt(currentId));
+
+        ThemeRepository themeRepository = new ThemeRepository();
+        for (GiftList giftList: dashboard) {
+            giftList.setImageTheme(themeRepository.findThemeById(giftList.getIdTheme()));
+        }
+
         model.addAttribute("dashboard", dashboard);
 
         UserRepository userRepository = new UserRepository();
