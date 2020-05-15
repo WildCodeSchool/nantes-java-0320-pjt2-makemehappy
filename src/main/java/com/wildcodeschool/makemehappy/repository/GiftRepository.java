@@ -96,7 +96,7 @@ public class GiftRepository {
             if (statement.executeUpdate() != 1) {
                 throw new SQLException("failed to update data");
             }
-            return new Gift(1, nameGift, price, note, urlGiftPicture, urlDealer, description, 0);
+            return new Gift(id, nameGift, price, note, urlGiftPicture, urlDealer, description);
         } catch (SQLException e) {
             e.printStackTrace();
         }

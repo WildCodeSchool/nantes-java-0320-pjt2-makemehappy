@@ -15,6 +15,7 @@
     <div class="gift-create-form">
         <form method="Post" action="/modification-gift" th:object="${giftModif}">
             <input th:value="${giftModif.id}" name="id" type="hidden">
+
             <div class="gift-create-nameCadeau">
                 <input th:value="*{nameGift}" class="input" type="text" name="nameGift" id="gift-title" placeholder="Nom du cadeau" size="50" />
             </div>
