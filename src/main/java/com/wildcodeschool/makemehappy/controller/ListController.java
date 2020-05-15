@@ -38,6 +38,7 @@ public class ListController {
         return "redirect:/dashboard";
     }
 
+
     @PostMapping("/delete-wishlist")
     public String deleteWishList(@RequestParam int idGiftList) {
         giftListRepository.deleteById(idGiftList);

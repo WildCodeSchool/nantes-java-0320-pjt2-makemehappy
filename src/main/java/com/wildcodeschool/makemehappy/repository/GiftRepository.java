@@ -50,16 +50,17 @@ public class GiftRepository {
         return null;
     }
 
-    public Gift save(String nameGift, String description, String urlGiftPicture, String urlDealer, float price, int note) {
+    public Gift save(String nameGift, String description, String urlGiftPicture, String urlDealer, float price, int note, int idGiftList) {
         try {
             Connection connection = DriverManager.getConnection(URL_DATABASE, SQL_USER, SQL_PASSWORD);
-            PreparedStatement statement = connection.prepareStatement("INSERT INTO gift(title, description, image, url_dealer, price, preference) VALUES (?, ?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
+            PreparedStatement statement = connection.prepareStatement("INSERT INTO gift(title, description, image, url_dealer, price, preference, id_gift_list) VALUES (?, ?, ?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
             statement.setString(1, nameGift);
             statement.setString(2, description);
             statement.setString(3, urlGiftPicture);
             statement.setString(4, urlDealer);
             statement.setFloat(5, price);
             statement.setInt(6, note);
+            statement.setInt(7, idGiftList);
 
             if (statement.executeUpdate() != 1) {
                 throw new SQLException("failed to insert data");
@@ -69,7 +70,7 @@ public class GiftRepository {
 
             if (generatedKeys.next()) {
                 int id = generatedKeys.getInt(1);
-                return new Gift(id, nameGift, price, note, urlGiftPicture, urlDealer, description, 0);
+                return new Gift(id, nameGift, price, note, urlGiftPicture, urlDealer, description, idGiftList);
             } else {
                 throw new SQLException("failed to get inserted id");
             }
@@ -178,5 +179,26 @@ public class GiftRepository {
             throwables.printStackTrace();
         }
         return gifts;
+    }
+
+    public Gift deleteById(int id) {
+        Connection connection = null;
+        PreparedStatement statement = null;
+        ResultSet resultSet = null;
+        try {
+            connection = DriverManager.getConnection(
+                    URL_DATABASE, SQL_USER, SQL_PASSWORD
+            );
+            statement = connection.prepareStatement(
+                    "DELETE FROM gift WHERE id_gift = ?"
+            );
+            statement.setInt(1, id);
+            if (statement.executeUpdate() != 1) {
+                throw new SQLException("failed to delete data");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }

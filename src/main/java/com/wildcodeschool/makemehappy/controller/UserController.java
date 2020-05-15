@@ -126,13 +126,16 @@ public class UserController {
     @PostMapping("/user-profile")
     public String updateUser(Model model,
                            @RequestParam (required = true) String pseudo,
-                           @RequestParam (required = true) String password,
+                           @RequestParam (required = false, defaultValue = "") String password,
                            @CookieValue(value = "currentId", defaultValue = "tacos") String currentId) {
 
-        String sha256hex = Hashing.sha256().hashString(password, StandardCharsets.UTF_8).toString();
-        model.addAttribute("user", userRepository.updateProfile(Integer.parseInt(currentId), pseudo, sha256hex));
+        String sha256hex = "";
+        if (!password.isEmpty()) {
+            sha256hex = Hashing.sha256().hashString(password, StandardCharsets.UTF_8).toString();
+        }
+        userRepository.updateProfile(Integer.parseInt(currentId), pseudo, sha256hex);
 
-        return "redirect:/dashboard";
+        return "redirect:/user-profile";
     }
 
     @GetMapping("/disconnected")
