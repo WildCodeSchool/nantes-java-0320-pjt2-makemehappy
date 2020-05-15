@@ -181,7 +181,7 @@ public class GiftRepository {
         return gifts;
     }
 
-    public Gift deleteById(int id) {
+    public Gift deleteById(int idGift) {
         Connection connection = null;
         PreparedStatement statement = null;
         ResultSet resultSet = null;
@@ -192,7 +192,7 @@ public class GiftRepository {
             statement = connection.prepareStatement(
                     "DELETE FROM gift WHERE id_gift = ?"
             );
-            statement.setInt(1, id);
+            statement.setInt(1, idGift);
             if (statement.executeUpdate() != 1) {
                 throw new SQLException("failed to delete data");
             }

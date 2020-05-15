@@ -16,7 +16,8 @@
         <div class="gift-card-title">
             <h3 th:text="${gift.getNameGift()}" class="title-gift">Cadeau pseudo<br></h3>
                 <form method="post" action="/delete-gift">
-                    <input type="hidden" name="idGift" th:value="${gift.getId()}">
+                    <input type="hidden" name="idGift" th:value="${gift.id}">
+                    <input type="hidden" name="idGiftList" th:value="${giftList.getIdGiftList()}">
                     <input type="submit" value="Supprimer">
                 </form>
         </div>
