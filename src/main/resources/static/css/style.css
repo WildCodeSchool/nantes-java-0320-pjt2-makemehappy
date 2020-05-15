@@ -303,7 +303,6 @@ ul, li {
     height: 2.5rem;
     border-color: transparent;
 }
-
 .connection-main .input-button-connection {
     background-color: midnightblue;
     border-color: midnightblue;
@@ -469,6 +468,12 @@ ul, li {
     border: 2px solid gray;
     border-radius: var(--mobile-logo-border_radius);
     overflow: hidden;
+}
+.create-profile-container {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 .new-profile-button {
     display: flex;
