@@ -13,6 +13,8 @@ public class GiftList {
     private int idUser;
     private int idTheme;
 
+    private String imageTheme;
+
     public GiftList() {
     }
 
@@ -99,6 +101,14 @@ public class GiftList {
 
     public void setIdTheme(int idTheme) {
         this.idTheme = idTheme;
+    }
+
+    public String getImageTheme() {
+        return imageTheme;
+    }
+
+    public void setImageTheme(String imageTheme) {
+        this.imageTheme = imageTheme;
     }
 
 }
