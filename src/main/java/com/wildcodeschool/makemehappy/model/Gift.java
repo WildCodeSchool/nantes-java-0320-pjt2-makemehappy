@@ -22,6 +22,16 @@ public class Gift {
         this.description = description;
         this.idGiftList= idGiftList;
     }
+    public Gift(int id, String nameGift, float price, int note, String urlDealer, String urlGiftPicture, String description) {
+
+        this.id = id;
+        this.nameGift = nameGift;
+        this.price = price;
+        this.note = note;
+        this.urlDealer = urlDealer;
+        this.urlGiftPicture = urlGiftPicture;
+        this.description = description;
+    }
 
     public Gift() {}
 

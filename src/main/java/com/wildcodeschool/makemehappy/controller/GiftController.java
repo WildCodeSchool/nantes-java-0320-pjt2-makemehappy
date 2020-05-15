@@ -64,6 +64,7 @@ public class GiftController {
         UserRepository userRepository = new UserRepository();
         User user = userRepository.getUserById(Integer.parseInt(currentId));
         out.addAttribute("avatarUrl", user.getAvatar());
+
         return "modification-gift";
     }
 
@@ -80,7 +81,7 @@ public class GiftController {
 
         out.addAttribute("giftModif", giftRepository.update(id, nameGift, description, urlGiftPicture, urlDealer, price, note));
 
-        return "gift-list";
+        return "redirect:/dashboard";
     }
 
     @GetMapping("/gift-list")
@@ -98,13 +99,16 @@ public class GiftController {
         List<Gift> gifts = new ArrayList<>();
         GiftRepository giftRepository = new GiftRepository();
         gifts = giftRepository.findAllGiftById(id);
-
         out.addAttribute("gifts",gifts);
+
         UserRepository userRepository = new UserRepository();
         User user = userRepository.getUserById(Integer.parseInt(currentId));
         out.addAttribute("avatarUrl", user.getAvatar());
+
         return "gift-list";
     }
+
+
     @GetMapping("/gift")
     public String showGift(Model out,
                            @CookieValue(value = "currentId", defaultValue = "tacos") String currentId) {
@@ -152,5 +156,4 @@ public class GiftController {
         giftRepository.deleteById(idGift);
         return "redirect:/gift-list";
     }
-
 }
