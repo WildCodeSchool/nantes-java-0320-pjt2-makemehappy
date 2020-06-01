@@ -4,6 +4,11 @@
 #        Script MySQL.
 #------------------------------------------------------------
 
+CREATE DATABASE IF NOT EXISTS nantes_java_0320_pjt2_makemehappy CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE nantes_java_0320_pjt2_makemehappy;
+CREATE USER IF NOT EXISTS 'donkey'@'%' IDENTIFIED BY 'projet2$';
+GRANT ALL PRIVILEGES ON nantes_java_0320_pjt2_makemehappy.* TO 'donkey'@'%';
+FLUSH PRIVILEGES;
 
 #------------------------------------------------------------
 # Table: theme
@@ -33,8 +38,8 @@ CREATE TABLE avatar(
 
 CREATE TABLE user(
         id_user    Int  Auto_increment  NOT NULL ,
-        pseudo     Varchar (250) NOT NULL ,
-        password   Varchar (250) NOT NULL ,
+        pseudo     Varchar (255) NOT NULL ,
+        password   Varchar (255) NOT NULL ,
         birth_date Date NOT NULL ,
         avatar     Varchar (80) NOT NULL ,
         id_avatar  Int
