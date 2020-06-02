@@ -1,19 +1,17 @@
 package com.wildcodeschool.makemehappy.repository;
 
+import com.wildcodeschool.makemehappy.util.JdbcSingleton;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ThemeRepository {
 
-    private static final String URL_DATABASE = "jdbc:mysql://localhost:3306/make_me_happy?serverTimezone=Europe/Paris";
-    private static final String SQL_USER = "donkey";
-    private static final String SQL_PASSWORD = "projet2$";
-
     public String findThemeById(int idTheme) {
 
         try {
-            Connection connection = DriverManager.getConnection(URL_DATABASE, SQL_USER, SQL_PASSWORD);
+            Connection connection = JdbcSingleton.getInstance().getConnection();
             String request = "SELECT * FROM theme WHERE id_theme = ?;";
             PreparedStatement statement = connection.prepareStatement(request);
             statement.setInt(1, idTheme);

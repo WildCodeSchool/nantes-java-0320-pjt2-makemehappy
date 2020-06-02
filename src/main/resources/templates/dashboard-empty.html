@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header th:replace="/fragments/mobile-title.html :: mobile-logo-title-xl">
+    <header th:replace="fragments/mobile-title.html :: mobile-logo-title-xl">
     </header>
         <div class="dashboard-empty-text">
             <p th:text="">Bonjour</p>
@@ -21,6 +21,6 @@
                     <i class="fas fa-plus-square"></i>
                 </div>
         </a>
-    <footer th:replace="/fragments/navigation-mobile.html :: nav-bar-mobile"></footer>
+    <footer th:replace="fragments/navigation-mobile.html :: nav-bar-mobile"></footer>
 </body>
 </html>

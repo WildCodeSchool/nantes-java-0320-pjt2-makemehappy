@@ -1,6 +1,7 @@
 package com.wildcodeschool.makemehappy.repository;
 
 import com.wildcodeschool.makemehappy.entity.Avatar;
+import com.wildcodeschool.makemehappy.util.JdbcSingleton;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -8,16 +9,12 @@ import java.util.List;
 
 public class AvatarRepository {
 
-    private static final String URL_DATABASE = "jdbc:mysql://localhost:3306/make_me_happy?serverTimezone=Europe/Paris";
-    private static final String SQL_USER = "donkey";
-    private static final String SQL_PASSWORD = "projet2$";
-
     public List<Avatar> findAll() {
 
         List<Avatar> avatarList = new ArrayList<>();
 
         try {
-            Connection connection = DriverManager.getConnection(URL_DATABASE, SQL_USER, SQL_PASSWORD);
+            Connection connection = JdbcSingleton.getInstance().getConnection();
             String request = "SELECT * FROM avatar;";
             PreparedStatement statement = connection.prepareStatement(request);
             ResultSet resultSet = statement.executeQuery();
@@ -43,7 +40,7 @@ public class AvatarRepository {
 
         Avatar avatar = new Avatar();
         try {
-            Connection connection = DriverManager.getConnection(URL_DATABASE, SQL_USER, SQL_PASSWORD);
+            Connection connection = JdbcSingleton.getInstance().getConnection();
             String request = "SELECT * FROM avatar WHERE id_avatar = ?;";
             PreparedStatement statement = connection.prepareStatement(request);
             statement.setInt(1, idSelected);

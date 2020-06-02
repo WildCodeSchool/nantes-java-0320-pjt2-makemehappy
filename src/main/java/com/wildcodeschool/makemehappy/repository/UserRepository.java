@@ -1,18 +1,16 @@
 package com.wildcodeschool.makemehappy.repository;
 
 import com.wildcodeschool.makemehappy.entity.User;
+import com.wildcodeschool.makemehappy.util.JdbcSingleton;
+
 import java.sql.*;
 
 public class UserRepository {
 
-    private static final String URL_DATABASE = "jdbc:mysql://localhost:3306/make_me_happy?serverTimezone=Europe/Paris";
-    private static final String SQL_USER = "donkey";
-    private static final String SQL_PASSWORD = "projet2$";
-
     public boolean hasAccount(String pseudo, String password) {
 
         try {
-            Connection connection = DriverManager.getConnection(URL_DATABASE, SQL_USER, SQL_PASSWORD);
+            Connection connection = JdbcSingleton.getInstance().getConnection();
             String request = "select * from user where pseudo = ? and password = ?;";
             PreparedStatement statement = connection.prepareStatement(request);
             statement.setString(1, pseudo);
@@ -33,7 +31,7 @@ public class UserRepository {
         User user = new User();
 
         try {
-            Connection connection = DriverManager.getConnection(URL_DATABASE, SQL_USER, SQL_PASSWORD);
+            Connection connection = JdbcSingleton.getInstance().getConnection();
             String request = "select * from user where pseudo = ? and password = ?;";
             PreparedStatement statement = connection.prepareStatement(request);
             statement.setString(1, pseudo);
@@ -65,7 +63,7 @@ public class UserRepository {
 
         User user = new User();
         try {
-            Connection connection = DriverManager.getConnection(URL_DATABASE, SQL_USER, SQL_PASSWORD);
+            Connection connection = JdbcSingleton.getInstance().getConnection();
             String request = "select * from user where id_user = ?;";
             PreparedStatement statement = connection.prepareStatement(request);
             statement.setInt(1, id);
@@ -95,7 +93,7 @@ public class UserRepository {
     public User createUser(String pseudo, String password, String avatar) {
 
         try {
-            Connection connection = DriverManager.getConnection(URL_DATABASE, SQL_USER, SQL_PASSWORD);
+            Connection connection = JdbcSingleton.getInstance().getConnection();
             String request = "INSERT INTO user (pseudo, password, avatar) VALUES (?, ?, ?);";
             PreparedStatement statement = connection.prepareStatement(request, Statement.RETURN_GENERATED_KEYS);
             statement.setString(1, pseudo);
@@ -124,7 +122,7 @@ public class UserRepository {
 
         PreparedStatement statement;
         try {
-            Connection connection = DriverManager.getConnection(URL_DATABASE, SQL_USER, SQL_PASSWORD);
+            Connection connection = JdbcSingleton.getInstance().getConnection();
             if (!password.isEmpty()) {
                 String request = "UPDATE user SET pseudo=?, password=? WHERE id_user=?;";
                 statement = connection.prepareStatement(request);
@@ -152,7 +150,7 @@ public class UserRepository {
     public void updateAvatar(int idUser,int idAvatar, String avatar) {
 
         try {
-            Connection connection = DriverManager.getConnection(URL_DATABASE, SQL_USER, SQL_PASSWORD);
+            Connection connection = JdbcSingleton.getInstance().getConnection();
             String request = "UPDATE user SET avatar=?, id_avatar=? WHERE id_user=?;";
             PreparedStatement statement = connection.prepareStatement(request);
             statement.setString(1, avatar);

@@ -50,7 +50,7 @@ public class UserController {
             cookie.setPath("/");
             response.addCookie(cookie);
         } else {
-            return "/connection";
+            return "connection";
         }
 
         return "redirect:/dashboard";
@@ -84,7 +84,7 @@ public class UserController {
             response.addCookie(cookie);
             model.addAttribute("user", user);
         } else {
-            return "/connection";
+            return "connection";
         }
         return "redirect:/selection-avatar";
     }

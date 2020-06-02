@@ -1,6 +1,7 @@
 package com.wildcodeschool.makemehappy.repository;
 
 import com.wildcodeschool.makemehappy.model.Gift;
+import com.wildcodeschool.makemehappy.util.JdbcSingleton;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -8,14 +9,10 @@ import java.util.List;
 
 public class GiftRepository {
 
-    private static final String URL_DATABASE = "jdbc:mysql://localhost:3306/make_me_happy?serverTimezone=Europe/Paris";
-    private static final String SQL_USER = "donkey";
-    private static final String SQL_PASSWORD = "projet2$";
-
     public Gift findGift() {
 
         try {
-            Connection connection = DriverManager.getConnection(URL_DATABASE, SQL_USER, SQL_PASSWORD);
+            Connection connection = JdbcSingleton.getInstance().getConnection();
 
             String request = "SELECT * FROM gift;";
             PreparedStatement statement = connection.prepareStatement(request);
@@ -52,7 +49,7 @@ public class GiftRepository {
 
     public Gift save(String nameGift, String description, String urlGiftPicture, String urlDealer, float price, int note, int idGiftList) {
         try {
-            Connection connection = DriverManager.getConnection(URL_DATABASE, SQL_USER, SQL_PASSWORD);
+            Connection connection = JdbcSingleton.getInstance().getConnection();
             PreparedStatement statement = connection.prepareStatement("INSERT INTO gift(title, description, image, url_dealer, price, preference, id_gift_list) VALUES (?, ?, ?, ?, ?, ?, ?)", Statement.RETURN_GENERATED_KEYS);
             statement.setString(1, nameGift);
             statement.setString(2, description);
@@ -83,7 +80,7 @@ public class GiftRepository {
     public Gift update(int id, String nameGift, String description, String urlGiftPicture, String urlDealer, float price, int note) {
 
         try {
-            Connection connection = DriverManager.getConnection(URL_DATABASE, SQL_USER, SQL_PASSWORD);
+            Connection connection = JdbcSingleton.getInstance().getConnection();
             PreparedStatement statement = connection.prepareStatement("UPDATE  gift SET title = ?, description = ?, image = ?, url_dealer = ?, price = ? ,preference = ? WHERE id_gift = ?");
             statement.setString(1, nameGift);
             statement.setString(2, description);
@@ -105,7 +102,7 @@ public class GiftRepository {
 
     public Gift findById(int id) {
         try {
-            Connection connection = DriverManager.getConnection(URL_DATABASE, SQL_USER, SQL_PASSWORD);
+            Connection connection = JdbcSingleton.getInstance().getConnection();
             PreparedStatement statement = connection.prepareStatement("SELECT * FROM gift WHERE id_gift = ?");
             statement.setInt(1, id);
 
@@ -145,7 +142,7 @@ public class GiftRepository {
         List<Gift> gifts = new ArrayList<>();
 
         try {
-            Connection connection = DriverManager.getConnection(URL_DATABASE, SQL_USER, SQL_PASSWORD);
+            Connection connection = JdbcSingleton.getInstance().getConnection();
             String request = "SELECT * FROM gift WHERE id_gift_list = ?;";
             PreparedStatement statement = connection.prepareStatement(request);
             statement.setInt(1, idGiftList);
@@ -182,13 +179,10 @@ public class GiftRepository {
     }
 
     public Gift deleteById(int idGift) {
-        Connection connection = null;
         PreparedStatement statement = null;
         ResultSet resultSet = null;
         try {
-            connection = DriverManager.getConnection(
-                    URL_DATABASE, SQL_USER, SQL_PASSWORD
-            );
+            Connection connection = JdbcSingleton.getInstance().getConnection();
             statement = connection.prepareStatement(
                     "DELETE FROM gift WHERE id_gift = ?"
             );
