@@ -9,40 +9,33 @@
     <script src="https://kit.fontawesome.com/68562b10c3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<header th:replace="/fragments/mobile-title.html :: mobile-logo-title-xl">
+<header th:replace="fragments/mobile-title.html :: mobile-logo-title-xl">
     to replace
 </header>
-<h2 class="title">Mon profile</h2>
+<h2 class="title">Mon profil</h2>
 <div>
-    <form action="/modification-user" method="post" class="user">
-        <div>
-            <input class="generality-input" type="text" name="pseudo" required placeholder="Votre Pseudo">
-        </div>
-        <div>
-            <input class="generality-input" type="password" name="password" required placeholder="Votre Password">
-        </div>
-        <div>
-            <input class="generality-input" type="date" name="birthday" value="2020-04-23" min="1900-01-01" max="2100-12-31">
-        </div>
-        <div>
-            <div class="profile-area-avatar">
+    <form action="/create-profile" method="post" class="user">
+        <div class="create-profile-container">
+            <div>
                 <div>
-                    <a class="button" href="/selection-avatar">Avatar</a>
+                    <input class="generality-input" type="text" name="pseudo" required autofocus placeholder="Votre Pseudo">
                 </div>
-                <div class="new-profile-avatar">
-                    <img src="/image/avatar-vide.svg" alt="avatar">
+                <div>
+                    <input class="generality-input" type="password" name="password" required placeholder="Votre Password">
                 </div>
             </div>
-            <div class="new-profile-button">
-                <input class="input-button" type="submit" value="Créer">
-                <div class="path-error">
-                    <p>Déja un compte ?</p>
-                    <a href="/connection">Connexion</a>
+            <div>
+                <div class="new-profile-button">
+                    <input class="input-button" type="submit" value="Créer">
+                    <div class="path-error">
+                        <p>Déja un compte ?</p>
+                        <a href="/connection">Connexion</a>
+                    </div>
                 </div>
             </div>
         </div>
     </form>
 </div>
-<footer th:replace="/fragments/navigation-mobile-simple.html :: nav-bar-mobile-about-us"></footer>
+<footer th:replace="fragments/navigation-mobile-simple.html :: nav-bar-mobile-about-us"></footer>
 </body>
 </html>

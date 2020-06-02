@@ -10,39 +10,48 @@
     <meta charset="UTF-8">
     <title>Dashboard</title>
 </head>
-<header th:replace="fragments/mobile-logo-avatar.html :: mobile-logo-avatar"></header>
+<header th:replace="fragments/mobile-logo-avatar.html :: mobile-logo-avatar(${avatarUrl})"></header>
 <body>
-    <div class="dashboard-card">
-        <a class="dashboard-card-link" href="/gift-list">
-
-            <div class="dashboard-gift-card-image"><img class="dashboard-img-placeholder" src="https://via.placeholder.com/200" alt="cadeau" />
+    <div th:if="${dashboard.size() == 0}">
+        <div class="dashboard-empty-text">
+            <p>Bonjour,</p>
+            <p>Bienvenue dans votre tableau de bord.</p>
+            <p>Pour créer une liste, cliquez sur l'onglet "Ajouter".</p>
+        </div>
+        <a class="container-dashboard-empty-link" href="/list-create">
+            <div class="container-dashboard-empty">
+                <p>Ajouter votre liste</p>
+                <i class="fas fa-plus-square"></i>
             </div>
         </a>
-        <div class="dashboard-gift-card-body">
-            <div class="dashboard-gift-card-title">
-                <h3>Liste d'anniversaire de Ganout</h3>
-            </div>
-            <div class="dashboard-card-excerpt">
-                <input class="dashboard-card-date" type="date" name="anniversaire">
-                <textarea class="dashboard-card-textarea" placeholder="ecris ton message" rows="9" cols="20">
-                </textarea>
-                <div class="dashboard-button-message">
-                    <a href="#"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></a>
-                </div>
-                <div class="dashboard-cards-icons">
-                    <a href="#">
-                        <div class="dashboard-card-icons-trash"><i class="fa fa-trash-o" aria-hidden="true"></i>
+    </div>
+    <ul>
+        <li th:each="giftList : ${dashboard}">
+            <div class="dashboard-card">
+                <a class="dashboard-card-link" th:href="@{/gift-list(id=${giftList.getIdGiftList()})}">
+                    <div class="dashboard-gift-card-image">
+                        <img class="dashboard-img-placeholder" th:src="|image/${giftList.getImageTheme()}|" src="https://via.placeholder.com/200" alt="cadeau" />
+                    </div>
+                </a>
+                <div class="dashboard-gift-card-body">
+                    <div class="dashboard-gift-card-title">
+                        <h3 th:text="*{giftList.getTitle()}"> Mon titre</h3>
+                    </div>
+                    <div class="dashboard-card-excerpt">
+                        <input class="dashboard-card-date" type="date" name="anniversaire">
+                        <textarea class="dashboard-card-textarea" placeholder="ecris ton message" rows="9" cols="20">
+                        </textarea>
+                    </div>
+                            <form method="post" action="/delete-wishlist">
+                                <input type="hidden" name="idGiftList" th:value="${giftList.getIdGiftList()}">
+                                <input type="submit" value="Supprimer">
+                            </form>
+                            </div>
                         </div>
-                    </a>
-                    <a href="#">
-                        <div class="dashboard-card-icons-trash"><i class="fa fa-share" aria-hidden="true"></i>
-                        </a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    </div>
-    <footer th:replace="/fragments/navigation-mobile.html :: nav-bar-mobile"></footer>
+         </li>
+    </ul>
+    <footer th:replace="fragments/navigation-mobile.html :: nav-bar-mobile"></footer>
 </body>
 </html>

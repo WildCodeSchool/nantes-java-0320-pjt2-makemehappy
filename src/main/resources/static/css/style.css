@@ -76,7 +76,6 @@ ul, li {
 .title {
     text-align: center;
     font-size: var(--generality-title-font_size);
-    padding-bottom: 2rem;
 }
 .button {
     display: block;
@@ -160,22 +159,60 @@ ul, li {
 }
 /* ----------   END OF GENERALITY  ------------------ */
 /* ----------   START OF HOME PAGE  ------------------ */
+.home-page-main input {
+    border-radius: 10px;
+    height: 2.5rem;
+    border-color: transparent;
+}
+.home-page-main a {
+    color: white;
+    width: 5rem;
+}
+.home-page-main .button {
+    padding: 2rem;
+}
+.home-connection {
+    background-color: midnightblue;
+    border-radius: 10px;
+    padding: 1.5rem 2.5rem;
+    margin-top: 2rem;
+}
+.home-connection a {
+    text-decoration: none;
+}
+.home-page-main p {
+    text-align: center;
+    color: black;
+    font-size: 1.2rem;
+}
+.home-create {
+    background-color: midnightblue;
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+.home-create a {
+    text-decoration: none;
+}
+.forgot-password {
+    padding: 1.5rem;
+}
+
 .home-page-main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 40vh;
+    width: 20rem;
+    height: 30rem;
+    border-radius: 30px;
+    margin-bottom: 3rem;
     justify-content: center;
+    background-color: cadetblue;
 }
-.home-page-main > div > p {
-    text-align: center;
-}
-.forgot-password {
-    margin-top: 1vh;
-}
-.forgot-password a {
-    font-style: italic;
-    font-size: calc(var(--generality-text-font_size) - 0.2rem);
+.home-bloc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 /* ----------   END OF HOME PAGE  ------------------ */
 /* ----------   START OF DASHBOARD  ------------------ */
@@ -194,7 +231,7 @@ ul, li {
   }
   
   .dashboard-img-placeholder{
-    border-radius: .5rem .5rem 0 0;
+      border-radius: .5rem .5rem 0 0;
   }
   
   .dashboard-card-date{
@@ -220,10 +257,18 @@ ul, li {
     justify-content: flex-end;
     margin-top: 2.9rem;
   }
+
+  .dashboard-gift-card-image img{
+      width: 200px;
+      height: 244px;
+      background: center;
+  }
 /* ----------   END OF DASHBOARD  ------------------ */
 /* ----------   START OF DASHBOARD-EMPTY  ------------------ */
 /*START SECTION 1*/
+
 .dashboard-empty-text{
+    margin-top: 7rem;
     text-align: center;
 }
 .dashboard-empty-text p{
@@ -254,21 +299,125 @@ ul, li {
 /*END SECTION 2*/
 /* ----------   END OF DASHBOARD-EMPTY  ------------------ */
 /* ----------   START OF CONNECTION  ------------------ */
-.connection-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 40vh;
-    justify-content: center;
+
+.connection-main input {
+    border-radius: 10px;
+    height: 2.5rem;
+    border-color: transparent;
 }
-.connection-main p {
-    text-align: center;
+.connection-main .input-button-connection {
+    background-color: midnightblue;
+    border-color: midnightblue;
+    color: white;
+    width: 5rem;
+    margin-top: 1rem;
 }
 .user-connection {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
+
+.connection-main p {
+    text-align: center;
+    color: black;
+}
+.connection-main a {
+    color: white;
+}
+.error {
+    text-align: center;
+}
+.error p {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.connection-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20rem;
+    height: 30rem;
+    border-radius: 30px;
+    margin-bottom: 3rem;
+    justify-content: center;
+    background-color: cadetblue;
+}
+.connection-bloc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.connection-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: black;
+    min-height: 80vh;
+    padding: 5rem;
+}
+.connection-container img {
+    width: 20rem;
+    height: 15rem;
+    border-radius: 10px 10px 0px 0px;
+}
+.one-text{
+    width: 20rem;
+    background-color: white;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+.connection-one {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.connection-two {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.two-text {
+    width: 20rem;
+    background-color: white;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+.connection-three {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.three-text {
+    width: 20rem;
+    background-color: white;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+.connection-four {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.four-text {
+    width: 20rem;
+    background-color: white;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+.connection-container h3, p {
+    text-align: center;
+}
+
 /* ----------   END OF CONNECTION  ------------------ */
 /* ----------   START OF USER PROFILE  ------------------ */
 .user {
@@ -295,6 +444,7 @@ ul, li {
     height: 64px;
     border: 2px solid gray;
     border-radius: var(--mobile-logo-border_radius);
+    overflow: hidden;
 }
 .profile-button {
     display: flex;
@@ -304,6 +454,14 @@ ul, li {
 .profile-button > input {
     margin: auto 0;
 }
+.log-out{
+    display: flex;
+    justify-content: center;
+}
+.fa-power-off{
+    color: var(--generality-color-third);
+    margin-left: 2rem;
+}
 /* ----------   END OF USER PROFILE  ------------------ */
 /* ----------   START OF CREATE PROFILE  ------------------ */
 .new-profile-avatar {
@@ -312,6 +470,12 @@ ul, li {
     border: 2px solid gray;
     border-radius: var(--mobile-logo-border_radius);
     overflow: hidden;
+}
+.create-profile-container {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 .new-profile-button {
     display: flex;
@@ -329,7 +493,6 @@ ul, li {
     margin-bottom: 3rem;
     color: #002962;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
 }
 .card{
     display: flex;
@@ -338,7 +501,7 @@ ul, li {
     align-items: center;
     border: 2px solid gray;
     width: 12rem;
-    height: 40vh;
+    height: 45vh;
     margin: 0 auto 3rem auto;
     text-align: center;
 }
@@ -351,13 +514,26 @@ ul, li {
 .title-gift {
     text-align: center;
 }
-.gift-card-image {
+.gift-card-image img {
     width: 12rem;
     height: 12rem;
-    background-image: url("../image/girl-1.svg");
 }
 .fa-share-alt {
     font-size: 1rem;
+}
+.container-newGift {
+    text-align: center;
+    border: 2px solid gray;
+    width: 12rem;
+    height: 40vh;
+    margin: 0 auto 3rem auto;
+}
+.ajout-gift {
+    margin-top: 3rem;
+}
+.plusOne {
+    text-align: center;
+    margin-top: 3rem;
 }
 /* - - - - - RATINGS */
 .rating {
@@ -440,9 +616,7 @@ ul, li {
     border: none;
     box-shadow: 3px 5px 3px black;
 }
-.gift-create-form {
-    height: 120vh;
-}
+
 .gift-create-form form {
     display: flex;
     flex-direction: column;
@@ -454,19 +628,23 @@ ul, li {
 .gift-create-block {
     display: flex;
     justify-content: space-around;
-    width: 15rem;
+}
+.gift-create-price .input{
+    width: 5rem;
 }
 .gift-create-checkbox {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 7rem;
 }
 .gift-create-message textarea {
     height: auto;
 }
 .gift-create-price input {
     width: 7rem;
+}
+.gift-create-bouton input {
+    margin-top: 0rem;
 }
 .gift-create-message textarea:hover {
     border-top: 2px solid gainsboro;
@@ -581,7 +759,6 @@ ul, li {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 70vh;
 }
 .list-create-name input:hover {
     border: 2px solid gainsboro;
@@ -601,6 +778,13 @@ ul, li {
     flex-direction: column;
     justify-content: space-around;
     margin-top: 3rem;
+}
+.gift-user-reserved-encadrement h2 {
+    margin-bottom: 2rem;
+}
+.gift-user-reserved-gift-name {
+    margin-top: 1rem ;
+    margin-bottom: 1rem;
 }
 .gift-user-block p:nth-child(4) {
     padding-top: 2rem;
@@ -667,7 +851,8 @@ ul, li {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 130vh;
+    height: 150vh;
+    margin-top: 2rem;
 }
 
 .gift-visitor-resa-connected-bloc-price {
@@ -677,21 +862,31 @@ ul, li {
 }
 
 .gift-visitor-resa-connected-price p {
-    width: 7rem;
+    width: 5rem;
 }
 
 .gift-visitor-resa-connected-note p {
     width: 6rem;
+}
+.gift-visitor-resa-connected-note {
+    display: flex;
 }
 
 .gift-visitor-resa-connected-description p {
     padding-bottom: 3rem;
     padding-top: 3rem;
 }
+.gift-visitor-resa-connected-message  {
+    text-align: center;
+}
 
 .gift-visitor-resa-connected-message form textarea{
     min-height: 6rem;
     padding: 1rem;
+}
+.gift-visitor-resa-connected-message form input {
+    margin: auto;
+    margin-top: 3rem;
 }
 .gift-visitor-resa-connected-resa {
     height: 9rem;
@@ -717,10 +912,10 @@ ul, li {
     border-radius: var(--mobile-logo-border_radius);
 }
 .fragment-mobile-logo-avatar-img-avatar {
-    background-image: url("/image/girl.svg");
     width: var(--mobile-avatar-width);
     height: var(--mobile-avatar-height);
     border-radius: var(--mobile-avatar-border_radius);
+    overflow: hidden;
 }
 /* ----------   END OF FRAGMENT MOBILE LOGO AVATAR  ------------------ */
 /* ----------   START OF FRAGMENT MOBILE LOGO ET TITRE XL  ------------------ */
@@ -798,7 +993,6 @@ ul, li {
     grid-template-rows: 1fr 1fr 1fr;
     gap: 1px 1px;
     grid-template-areas: ". ." ". ." ". .";
-    margin-bottom: 10vh;
 }
 .avatar-container {
     height: 8rem;
@@ -811,4 +1005,110 @@ ul, li {
 /* ----------   END PAGE OF AVATAR   ------------------------------------- */
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END MOBILE VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START DESKTOP VERSION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 768px) {
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START GIFT CREATE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    .gift-create-body {
+        background-image: url("/image/cadeau17.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    footer {
+        display: none;
+    }
+    .gift-create-encadrement {
+        margin: 2rem 15rem 2rem 50rem;
+        background-color: white;
+        padding-top: 3rem;
+        border-radius: 30px;
+        border: 1px solid gainsboro;
+        padding-bottom: 3rem;
+        width: 30rem;
+    }
+    .input-button {
+        width: 10rem;
+        height: 3rem;
+    }
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END GIFT CREATE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START GIFT VISITOR RESA CONNECTED ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    .gift-visitor-resa-connected-body {
+        background-image: url("/image/cadeau20.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .gift-visitor-resa-connected-encadrement {
+        margin: auto;
+        width: 30rem;
+        padding-top: 3rem;
+        border-radius: 30px;
+        background-color: white;
+        padding-bottom: 3rem;
+    }
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END GIFT VISITOR RESA CONNECTED ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START GIFT USER RESERVED ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    .gift-user-reserved-body {
+        background-image: url("/image/cadeau22.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .gift-user-reserved-encadrement {
+        margin: 2rem 15rem 2rem 50rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        width: 30rem;
+    }
+    .gift-user-reserved-encadrement h2 {
+        padding-bottom: 2rem;
+    }
+    .gift-user-reserved-image img {
+        box-shadow: 1px 3px 2px black;
+    }
+    .bloc-p {
+        box-shadow: 1px 3px 2px black;
+    }
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END GIFT USER RESERVED ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START CONNECTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    .connection-bloc {
+        background-image: url("/image/imageCdadeau3.jpg");
+        background-size: cover;
+        height: 65vh;
+        display:flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .connection-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 28rem;
+        background-color: cadetblue;
+        border-radius: 10px;
+        padding: 1.5rem;
+        margin-right: 18rem;
+        margin-left: 14rem;
+    }
+
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  END CONNECTION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START HOME PAGE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    .home-bloc {
+        background-image: url("/image/imageCdadeau3.jpg");
+        background-size: cover;
+        height: 65vh;
+        display:flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+    .home-page-main {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 28rem;
+        background-color: cadetblue;
+        min-height: 45vh;
+        border-radius: 10px;
+        padding: 1.5rem;
+        margin-right: 18rem;
+        margin-left: 14rem;
+    }
+}

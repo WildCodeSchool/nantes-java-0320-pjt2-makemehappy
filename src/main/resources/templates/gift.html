@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <header th:replace="fragments/mobile-logo-avatar.html :: mobile-logo-avatar">test
+    <header th:replace="fragments/mobile-logo-avatar.html :: mobile-logo-avatar(${avatarUrl})">test
     </header>
     <h2 class="title">Mes Cadeaux</h2>
     <div class="gift-user-block">
@@ -25,6 +25,6 @@
             </div>
         </div>
     </div>
-    <footer th:replace="/fragments/navigation-mobile.html :: nav-bar-mobile"></footer>
+    <footer th:replace="fragments/navigation-mobile.html :: nav-bar-mobile"></footer>
 </body>
 </html>

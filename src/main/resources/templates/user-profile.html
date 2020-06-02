@@ -9,20 +9,20 @@
     <script src="https://kit.fontawesome.com/68562b10c3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header th:replace="/fragments/mobile-title.html :: mobile-logo-title-xl">
+    <header th:replace="fragments/mobile-title.html :: mobile-logo-title-xl">
         to replace
     </header>
-    <h2 class="title">Mon profil</h2>
+    <div class="log-out">
+        <h2 class="title">Mon profil</h2>
+        <a href="/disconnected"><i class="fas fa-power-off"></i></a>
+    </div>
     <div>
-        <form action="/dashboard" method="get" class="user">
+        <form action="/user-profile" method="post" class="user" th:object="${currentUser}">
             <div>
-                <input class="generality-input" type="text" name="pseudo" placeholder="Nouveau Pseudo">
+                <input class="generality-input" th:value="${currentUser.getPseudo()}" type="text" name="pseudo" placeholder="Nouveau Pseudo">
             </div>
             <div>
                 <input class="generality-input" type="password" name="password" placeholder="Nouveau Password">
-            </div>
-            <div>
-                <input class="generality-input" type="date" name="birthday" value="2020-04-23" min="1900-01-01" max="2100-12-31">
             </div>
             <div>
                 <div class="profile-area-avatar">
@@ -30,7 +30,7 @@
                         <a class="button" href="/selection-avatar">Avatar</a>
                     </div>
                     <div class="profile-avatar">
-                        <img src="image/boy-1.svg" alt="avatar">
+                        <img th:src="*{avatar}" src="image/avatar-vide.svg" alt="avatar">
                     </div>
                 </div>
                 <div class="profile-button">
@@ -40,6 +40,6 @@
             </div>
         </form>
     </div>
-    <footer th:replace="/fragments/navigation-mobile.html :: nav-bar-mobile"></footer>
+    <footer th:replace="fragments/navigation-mobile.html :: nav-bar-mobile"></footer>
 </body>
 </html>

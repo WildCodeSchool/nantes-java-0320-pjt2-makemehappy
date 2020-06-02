@@ -8,35 +8,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <header th:replace="fragments/mobile-logo-avatar.html :: mobile-logo-avatar">test
+    <header th:replace="fragments/mobile-logo-avatar.html :: mobile-logo-avatar(${avatarUrl})">test
     </header>
     <h2 class="title">Nouvelle liste</h2>
     <div class="list-create-form">
-        <form action="/dashboard" method="get">
+        <form action="/list-create" method="Post">
             <div class="list-create-name">
-                <input class="input" type="text" name="intitulé" id="intitulé" placeholder="Nom de la liste" size="50" />
+                <input class="input" type="text" name="title" id="intitulé" placeholder="Nom de la liste" size="50" />
             </div>
             <div class="list-create-theme">
-                <select class="input" name="Thème">
-                    <option value="Anniversaire">Anniversaire</option>
-                    <option value="Naissance">Naissance</option>
-                    <option value="Mariage">Mariage</option>
-                    <option value="Baptême">Baptême</option>
-                    <option value="Cremaillère">Crémaillère</option>
-                    <option value="Autre">Autre</option>
+                <select class="input" name="idTheme">
+                    <option value="1">Anniversaire</option>
+                    <option value="2">Naissance</option>
+                    <option value="3">Mariage</option>
+                    <option value="4">Noël</option>
+                    <option value="5">Crémaillère</option>
+                    <option value="6">Baptême</option>
+                    <option value="7">Autre</option>
                 </select>
             </div>
             <div class="list-create-date">
-                <input class="input" type="date" placeholder="Date de fin" name="Date de fin" size="50">
+                <input class="input" type="date" placeholder="Date de fin" name="deadLine" size="50">
             </div>
             <div class="list-create-description">
-                <textarea  class="input" placeholder="Description" name="user_message" rows="10" cols="30" size=""></textarea>
+                <textarea  class="input" placeholder="Description" name="description" rows="10" cols="30" size=""></textarea>
             </div>
             <div class="list-create-button">
                 <input class="input-button" type="submit" value="Créer">
             </div>
         </form>
     </div>
-    <footer th:replace="/fragments/navigation-mobile.html :: nav-bar-mobile"></footer>
+    <footer th:replace="fragments/navigation-mobile.html :: nav-bar-mobile"></footer>
 </body>
 </html>
