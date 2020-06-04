@@ -9,6 +9,7 @@ import com.wildcodeschool.makemehappy.repository.GiftListRepository;
 import com.wildcodeschool.makemehappy.repository.GiftRepository;
 import com.wildcodeschool.makemehappy.repository.UserGiftRepository;
 import org.apache.catalina.Store;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,14 +28,20 @@ import java.util.List;
 @Controller
 public class GiftController {
 
-    GiftRepository giftRepository = new GiftRepository();
+    @Autowired
+    private GiftRepository giftRepository;
+    @Autowired
+    private UserRepository userRepository;
+    @Autowired
+    private GiftListRepository giftListRepository;
+    @Autowired
+    private UserGiftRepository userGiftRepository;
 
     @GetMapping("/gift-create")
     public String showGiftCreate(Model out,
                                  @CookieValue(value = "currentId", defaultValue = "tacos") String currentId,
                                  @RequestParam (required = true) int idGiftList) {
 
-        UserRepository userRepository = new UserRepository();
         User user = userRepository.getUserById(Integer.parseInt(currentId));
         out.addAttribute("avatarUrl", user.getAvatar());
         out.addAttribute("idGiftList", idGiftList);
@@ -61,7 +68,6 @@ public class GiftController {
 
         out.addAttribute("giftModif", giftRepository.findById(id));
 
-        UserRepository userRepository = new UserRepository();
         User user = userRepository.getUserById(Integer.parseInt(currentId));
         out.addAttribute("avatarUrl", user.getAvatar());
 
@@ -92,16 +98,13 @@ public class GiftController {
         String pseudo = "Alan";
         out.addAttribute("pseudo", pseudo);
 
-        GiftListRepository giftListRepository = new GiftListRepository();
         GiftList giftList = giftListRepository.findGiftListById(id);
         out.addAttribute("giftList", giftList);
 
         List<Gift> gifts = new ArrayList<>();
-        GiftRepository giftRepository = new GiftRepository();
         gifts = giftRepository.findAllGiftById(id);
         out.addAttribute("gifts",gifts);
 
-        UserRepository userRepository = new UserRepository();
         User user = userRepository.getUserById(Integer.parseInt(currentId));
         out.addAttribute("avatarUrl", user.getAvatar());
 
@@ -114,7 +117,6 @@ public class GiftController {
                            @CookieValue(value = "currentId", defaultValue = "tacos") String currentId) {
         String pseudo = "Bastien";
         out.addAttribute("pseudo", pseudo);
-        UserRepository userRepository = new UserRepository();
         User user = userRepository.getUserById(Integer.parseInt(currentId));
         out.addAttribute("avatarUrl", user.getAvatar());
         return "gift";
@@ -124,15 +126,12 @@ public class GiftController {
     public String showGiftUserReserved(Model out,
                                       @CookieValue(value = "currentId", defaultValue = "tacos") String currentId) throws SQLException {
 
-        GiftRepository giftrepository = new GiftRepository();
-        Gift gift = giftrepository.findGift();
+        Gift gift = giftRepository.findGift();
         out.addAttribute("giftDetails", gift);
 
-        UserGiftRepository userGiftRepository= new UserGiftRepository();
         UserGift userGift = userGiftRepository.findUserGift();
         out.addAttribute("userGift", userGift);
 
-        UserRepository userRepository = new UserRepository();
         User user = userRepository.getUserById(Integer.parseInt(currentId));
         out.addAttribute("avatarUrl", user.getAvatar());
         return "gift-user-reserved";
@@ -142,10 +141,8 @@ public class GiftController {
     public String showGiftVisitorResaConnected(Model out,
                                                @CookieValue(value = "currentId", defaultValue = "tacos") String currentId) {
 
-        GiftRepository repository = new GiftRepository();
-        Gift gift = repository.findGift();
+        Gift gift = giftRepository.findGift();
         out.addAttribute("giftDetails", gift);
-        UserRepository userRepository = new UserRepository();
         User user = userRepository.getUserById(Integer.parseInt(currentId));
         out.addAttribute("avatarUrl", user.getAvatar());
         return "gift-visitor-resa-connected";

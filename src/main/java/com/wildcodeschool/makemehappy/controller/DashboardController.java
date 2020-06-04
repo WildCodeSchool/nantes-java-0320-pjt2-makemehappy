@@ -6,6 +6,7 @@ import com.wildcodeschool.makemehappy.model.GiftList;
 import com.wildcodeschool.makemehappy.repository.GiftListRepository;
 import com.wildcodeschool.makemehappy.repository.ThemeRepository;
 import com.wildcodeschool.makemehappy.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CookieValue;
@@ -19,21 +20,25 @@ import java.util.List;
 @Controller
 public class DashboardController {
 
+    @Autowired
+    private GiftListRepository giftListRepository;
+    @Autowired
+    private ThemeRepository themeRepository;
+    @Autowired
+    private UserRepository userRepository;
+
     @GetMapping("/dashboard")
     public String showDashboard (Model model,
                                  @CookieValue(value = "currentId", defaultValue = "tacos") String currentId) {
 
-        GiftListRepository repository = new GiftListRepository();
-        List<GiftList> dashboard = repository.findAllWishList(Integer.parseInt(currentId));
+        List<GiftList> dashboard = giftListRepository.findAllWishList(Integer.parseInt(currentId));
 
-        ThemeRepository themeRepository = new ThemeRepository();
         for (GiftList giftList: dashboard) {
             giftList.setImageTheme(themeRepository.findThemeById(giftList.getIdTheme()));
         }
 
         model.addAttribute("dashboard", dashboard);
 
-        UserRepository userRepository = new UserRepository();
         User user = userRepository.getUserById(Integer.parseInt(currentId));
         model.addAttribute("avatarUrl",user.getAvatar());
         return "dashboard";
