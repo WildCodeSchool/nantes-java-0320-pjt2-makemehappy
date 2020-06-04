@@ -4,6 +4,7 @@ import com.wildcodeschool.makemehappy.entity.User;
 import com.wildcodeschool.makemehappy.repository.GiftListRepository;
 import com.wildcodeschool.makemehappy.repository.GiftRepository;
 import com.wildcodeschool.makemehappy.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -13,13 +14,15 @@ import java.sql.Date;
 @Controller
 public class ListController {
 
-    GiftListRepository giftListRepository = new GiftListRepository();
+    @Autowired
+    private GiftListRepository giftListRepository;
+    @Autowired
+    private UserRepository userRepository;
 
     @GetMapping("/list-create")
     public String showListCreate(Model out,
                                  @CookieValue(value = "currentId", defaultValue = "tacos") String currentId) {
 
-        UserRepository userRepository = new UserRepository();
         User user = userRepository.getUserById(Integer.parseInt(currentId));
         out.addAttribute("avatarUrl", user.getAvatar());
         return "list-create";
