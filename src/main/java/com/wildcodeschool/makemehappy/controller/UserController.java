@@ -5,6 +5,7 @@ import com.wildcodeschool.makemehappy.entity.User;
 import com.wildcodeschool.makemehappy.entity.Avatar;
 import com.wildcodeschool.makemehappy.repository.AvatarRepository;
 import com.wildcodeschool.makemehappy.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +17,10 @@ import java.util.List;
 @Controller
 public class UserController {
 
-    UserRepository userRepository = new UserRepository();
+    @Autowired
+    private UserRepository userRepository;
+    @Autowired
+    private AvatarRepository avatarRepository;
 
     @GetMapping("/")
     public String showHomePage() {
@@ -94,7 +98,6 @@ public class UserController {
                                    @CookieValue(value = "currentId", defaultValue = "tacos") String currentId) {
 
         User user = userRepository.getUserById(Integer.parseInt(currentId));
-        AvatarRepository avatarRepository = new AvatarRepository();
 
         List<Avatar> avatarList = avatarRepository.findAll();
 

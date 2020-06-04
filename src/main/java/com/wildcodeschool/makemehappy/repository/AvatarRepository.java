@@ -1,20 +1,26 @@
 package com.wildcodeschool.makemehappy.repository;
 
 import com.wildcodeschool.makemehappy.entity.Avatar;
-import com.wildcodeschool.makemehappy.util.JdbcSingleton;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class AvatarRepository {
+
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
 
     public List<Avatar> findAll() {
 
         List<Avatar> avatarList = new ArrayList<>();
 
         try {
-            Connection connection = JdbcSingleton.getInstance().getConnection();
+            Connection connection = jdbcTemplate.getDataSource().getConnection();
             String request = "SELECT * FROM avatar;";
             PreparedStatement statement = connection.prepareStatement(request);
             ResultSet resultSet = statement.executeQuery();
@@ -40,7 +46,7 @@ public class AvatarRepository {
 
         Avatar avatar = new Avatar();
         try {
-            Connection connection = JdbcSingleton.getInstance().getConnection();
+            Connection connection = jdbcTemplate.getDataSource().getConnection();
             String request = "SELECT * FROM avatar WHERE id_avatar = ?;";
             PreparedStatement statement = connection.prepareStatement(request);
             statement.setInt(1, idSelected);

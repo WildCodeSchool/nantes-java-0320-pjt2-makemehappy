@@ -1,16 +1,22 @@
 package com.wildcodeschool.makemehappy.repository;
 
 import com.wildcodeschool.makemehappy.entity.User;
-import com.wildcodeschool.makemehappy.util.JdbcSingleton;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import java.sql.*;
 
+@Repository
 public class UserRepository {
+
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
 
     public boolean hasAccount(String pseudo, String password) {
 
         try {
-            Connection connection = JdbcSingleton.getInstance().getConnection();
+            Connection connection = jdbcTemplate.getDataSource().getConnection();
             String request = "select * from user where pseudo = ? and password = ?;";
             PreparedStatement statement = connection.prepareStatement(request);
             statement.setString(1, pseudo);
@@ -31,7 +37,7 @@ public class UserRepository {
         User user = new User();
 
         try {
-            Connection connection = JdbcSingleton.getInstance().getConnection();
+            Connection connection = jdbcTemplate.getDataSource().getConnection();
             String request = "select * from user where pseudo = ? and password = ?;";
             PreparedStatement statement = connection.prepareStatement(request);
             statement.setString(1, pseudo);
@@ -63,7 +69,7 @@ public class UserRepository {
 
         User user = new User();
         try {
-            Connection connection = JdbcSingleton.getInstance().getConnection();
+            Connection connection = jdbcTemplate.getDataSource().getConnection();
             String request = "select * from user where id_user = ?;";
             PreparedStatement statement = connection.prepareStatement(request);
             statement.setInt(1, id);
@@ -93,7 +99,7 @@ public class UserRepository {
     public User createUser(String pseudo, String password, String avatar) {
 
         try {
-            Connection connection = JdbcSingleton.getInstance().getConnection();
+            Connection connection = jdbcTemplate.getDataSource().getConnection();
             String request = "INSERT INTO user (pseudo, password, avatar) VALUES (?, ?, ?);";
             PreparedStatement statement = connection.prepareStatement(request, Statement.RETURN_GENERATED_KEYS);
             statement.setString(1, pseudo);
@@ -122,7 +128,7 @@ public class UserRepository {
 
         PreparedStatement statement;
         try {
-            Connection connection = JdbcSingleton.getInstance().getConnection();
+            Connection connection = jdbcTemplate.getDataSource().getConnection();
             if (!password.isEmpty()) {
                 String request = "UPDATE user SET pseudo=?, password=? WHERE id_user=?;";
                 statement = connection.prepareStatement(request);
@@ -150,7 +156,7 @@ public class UserRepository {
     public void updateAvatar(int idUser,int idAvatar, String avatar) {
 
         try {
-            Connection connection = JdbcSingleton.getInstance().getConnection();
+            Connection connection = jdbcTemplate.getDataSource().getConnection();
             String request = "UPDATE user SET avatar=?, id_avatar=? WHERE id_user=?;";
             PreparedStatement statement = connection.prepareStatement(request);
             statement.setString(1, avatar);

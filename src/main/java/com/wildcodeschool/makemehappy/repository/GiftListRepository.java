@@ -1,22 +1,27 @@
 package com.wildcodeschool.makemehappy.repository;
 
 import com.wildcodeschool.makemehappy.model.GiftList;
-import com.wildcodeschool.makemehappy.util.JdbcSingleton;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.sql.Date;
 import java.util.List;
 
-
+@Repository
 public class GiftListRepository {
+
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
 
     public List<GiftList> findAllWishList(int id) {
 
         List<GiftList> dashboard = new ArrayList<>();
 
         try {
-            Connection connection = JdbcSingleton.getInstance().getConnection();
+            Connection connection = jdbcTemplate.getDataSource().getConnection();
             String request = "SELECT * FROM gift_list WHERE id_user = ?;";
             PreparedStatement statement = connection.prepareStatement(request);
             statement.setInt(1, id);
@@ -59,7 +64,7 @@ public class GiftListRepository {
     public GiftList findGiftListById(int id)  {
 
         try {
-            Connection connection = JdbcSingleton.getInstance().getConnection();
+            Connection connection = jdbcTemplate.getDataSource().getConnection();
             String request = "SELECT * FROM gift_list WHERE id_gift_list = ?;";
             PreparedStatement statement = connection.prepareStatement(request);
             statement.setInt(1, id);
@@ -100,7 +105,7 @@ public class GiftListRepository {
         PreparedStatement statement = null;
         ResultSet generatedKeys = null;
         try {
-            Connection connection = JdbcSingleton.getInstance().getConnection();
+            Connection connection = jdbcTemplate.getDataSource().getConnection();
             statement = connection.prepareStatement(
                     "INSERT INTO gift_list (title, id_theme, dead_line, description, id_user) VALUES (?, ?, ?, ?, ?)",
                     Statement.RETURN_GENERATED_KEYS
@@ -133,7 +138,7 @@ public class GiftListRepository {
         PreparedStatement statement = null;
         ResultSet resultSet = null;
         try {
-            Connection connection = JdbcSingleton.getInstance().getConnection();
+            Connection connection = jdbcTemplate.getDataSource().getConnection();
             statement = connection.prepareStatement(
                     "DELETE FROM gift_list WHERE id_gift_list=?"
             );

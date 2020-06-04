@@ -1,17 +1,23 @@
 package com.wildcodeschool.makemehappy.repository;
 
-import com.wildcodeschool.makemehappy.util.JdbcSingleton;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class ThemeRepository {
+
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
 
     public String findThemeById(int idTheme) {
 
         try {
-            Connection connection = JdbcSingleton.getInstance().getConnection();
+            Connection connection = jdbcTemplate.getDataSource().getConnection();
             String request = "SELECT * FROM theme WHERE id_theme = ?;";
             PreparedStatement statement = connection.prepareStatement(request);
             statement.setInt(1, idTheme);
